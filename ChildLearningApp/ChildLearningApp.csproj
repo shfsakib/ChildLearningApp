@@ -94,10 +94,261 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\add-alphabet.aspx" />
+    <Content Include="app\home.aspx" />
+    <Content Include="MenuLink\app-file\alpha.png" />
+    <Content Include="MenuLink\app-file\app.css" />
+    <Content Include="MenuLink\app-file\bg-music.mp3" />
+    <Content Include="MenuLink\app-file\numeric.png" />
+    <Content Include="MenuLink\app-file\quiz.png" />
+    <Content Include="MenuLink\app-file\rhymes.png" />
+    <Content Include="MenuLink\child.png" />
+    <Content Include="MenuLink\child_bg.jpg" />
+    <Content Include="MenuLink\css\bootstrap.min.css" />
+    <Content Include="MenuLink\css\colors\default.css" />
+    <Content Include="MenuLink\css\metisMenu.css" />
+    <Content Include="MenuLink\css\preloader.html" />
+    <Content Include="MenuLink\css\style.css" />
+    <Content Include="MenuLink\img\bak_hovers\sad.html" />
+    <Content Include="MenuLink\img\banner.png" />
+    <Content Include="MenuLink\img\card\card-2.png" />
+    <Content Include="MenuLink\img\card\card-5.png" />
+    <Content Include="MenuLink\img\crm\bg.svg" />
+    <Content Include="MenuLink\img\currency\1.svg" />
+    <Content Include="MenuLink\img\currency\2.svg" />
+    <Content Include="MenuLink\img\currency\3.svg" />
+    <Content Include="MenuLink\img\currency\4.svg" />
+    <Content Include="MenuLink\img\customers\1.png" />
+    <Content Include="MenuLink\img\default-skin\default-skin.png" />
+    <Content Include="MenuLink\img\default-skin\default-skin.svg" />
+    <Content Include="MenuLink\img\engage_bg.svg" />
+    <Content Include="MenuLink\img\icon\bell.svg" />
+    <Content Include="MenuLink\img\icon\calender_icon.svg" />
+    <Content Include="MenuLink\img\icon\msg.svg" />
+    <Content Include="MenuLink\img\line_img.png" />
+    <Content Include="MenuLink\img\logo.png" />
+    <Content Include="MenuLink\img\logo_white.png" />
+    <Content Include="MenuLink\img\menu-icon\1.svg" />
+    <Content Include="MenuLink\img\menu-icon\14.svg" />
+    <Content Include="MenuLink\img\menu-icon\16.svg" />
+    <Content Include="MenuLink\img\menu-icon\17.svg" />
+    <Content Include="MenuLink\img\menu-icon\18.svg" />
+    <Content Include="MenuLink\img\menu-icon\2.svg" />
+    <Content Include="MenuLink\img\menu-icon\3.svg" />
+    <Content Include="MenuLink\img\menu-icon\4.svg" />
+    <Content Include="MenuLink\img\menu-icon\5.svg" />
+    <Content Include="MenuLink\img\menu-icon\6.svg" />
+    <Content Include="MenuLink\img\menu-icon\7.svg" />
+    <Content Include="MenuLink\img\menu-icon\8.svg" />
+    <Content Include="MenuLink\img\menu-icon\forms.svg" />
+    <Content Include="MenuLink\img\menu-icon\General.svg" />
+    <Content Include="MenuLink\img\menu-icon\icon.svg" />
+    <Content Include="MenuLink\img\menu-icon\Mail_Box.svg" />
+    <Content Include="MenuLink\img\menu-icon\map.svg" />
+    <Content Include="MenuLink\img\menu-icon\Pages.svg" />
+    <Content Include="MenuLink\img\messages\1.jpg" />
+    <Content Include="MenuLink\img\messages\1.png" />
+    <Content Include="MenuLink\img\messages\2.jpg" />
+    <Content Include="MenuLink\img\messages\3.jpg" />
+    <Content Include="MenuLink\img\messages\4.jpg" />
+    <Content Include="MenuLink\img\mini_logo.png" />
+    <Content Include="MenuLink\img\news\1.svg" />
+    <Content Include="MenuLink\img\news\2.svg" />
+    <Content Include="MenuLink\img\plane_thumb.svg" />
+    <Content Include="MenuLink\img\products\01.png" />
+    <Content Include="MenuLink\img\products\02.png" />
+    <Content Include="MenuLink\img\products\img-1.png" />
+    <Content Include="MenuLink\img\products\img-2.png" />
+    <Content Include="MenuLink\img\products\img-4.png" />
+    <Content Include="MenuLink\img\products\img-5.png" />
+    <Content Include="MenuLink\img\profilebox\1.jpg" />
+    <Content Include="MenuLink\img\profilebox\2.jpg" />
+    <Content Include="MenuLink\img\profilebox\3.jpg" />
+    <Content Include="MenuLink\img\profilebox\7.jpg" />
+    <Content Include="MenuLink\img\profilebox\8.jpg" />
+    <Content Include="MenuLink\img\profilebox\9.jpg" />
+    <Content Include="MenuLink\img\profile\1.png" />
+    <Content Include="MenuLink\img\profile\2.png" />
+    <Content Include="MenuLink\img\profile\3.png" />
+    <Content Include="MenuLink\img\progress\design-progress-red.html" />
+    <Content Include="MenuLink\img\progress\design-progress-yellow.html" />
+    <Content Include="MenuLink\img\progress\progress-bg.html" />
+    <Content Include="MenuLink\img\pro_complete.png" />
+    <Content Include="MenuLink\img\shape_2.svg" />
+    <Content Include="MenuLink\img\staf\1.png" />
+    <Content Include="MenuLink\img\staf\2.png" />
+    <Content Include="MenuLink\img\staf\3.png" />
+    <Content Include="MenuLink\img\staf\4.png" />
+    <Content Include="MenuLink\img\staf\5.png" />
+    <Content Include="MenuLink\img\tilt\1.jpg" />
+    <Content Include="MenuLink\img\tilt\2.jpg" />
+    <Content Include="MenuLink\img\tilt\3.jpg" />
+    <Content Include="MenuLink\img\tilt\4.jpg" />
+    <Content Include="MenuLink\img\tilt\5.jpg" />
+    <Content Include="MenuLink\img\tilt\6.jpg" />
+    <Content Include="MenuLink\img\tilt\7.jpg" />
+    <Content Include="MenuLink\img\transfer\1.png" />
+    <Content Include="MenuLink\img\transfer\2.png" />
+    <Content Include="MenuLink\img\transfer\3.png" />
+    <Content Include="MenuLink\img\transfer\4.png" />
+    <Content Include="MenuLink\img\weather_1.png" />
+    <Content Include="MenuLink\js\bootstrap.min.js" />
+    <Content Include="MenuLink\js\chart.min.js" />
+    <Content Include="MenuLink\js\ckeditor-classic.js" />
+    <Content Include="MenuLink\js\custom.js" />
+    <Content Include="MenuLink\js\dashboard_init.js" />
+    <Content Include="MenuLink\js\jquery-3.4.1.min.js" />
+    <Content Include="MenuLink\js\metisMenu.js" />
+    <Content Include="MenuLink\js\popper.min.js" />
+    <Content Include="MenuLink\vendors\am_chart\amchart-init.js" />
+    <Content Include="MenuLink\vendors\am_chart\amcharts.js" />
+    <Content Include="MenuLink\vendors\am_chart\ammap.js" />
+    <Content Include="MenuLink\vendors\am_chart\amstock.js" />
+    <Content Include="MenuLink\vendors\am_chart\dataloader.min.js" />
+    <Content Include="MenuLink\vendors\am_chart\export.min.js" />
+    <Content Include="MenuLink\vendors\am_chart\pie.js" />
+    <Content Include="MenuLink\vendors\am_chart\serial.js" />
+    <Content Include="MenuLink\vendors\am_chart\worldLow.js" />
+    <Content Include="MenuLink\vendors\animation\tilt\tilt-custom.js" />
+    <Content Include="MenuLink\vendors\animation\tilt\tilt.jquery.js" />
+    <Content Include="MenuLink\vendors\animation\wow\animate.css" />
+    <Content Include="MenuLink\vendors\animation\wow\wow-init.js" />
+    <Content Include="MenuLink\vendors\animation\wow\wow.min.js" />
+    <Content Include="MenuLink\vendors\apex_chart\apex-chart2.js" />
+    <Content Include="MenuLink\vendors\apex_chart\apexcharts.js" />
+    <Content Include="MenuLink\vendors\apex_chart\apexchart_lists.js" />
+    <Content Include="MenuLink\vendors\apex_chart\apex_chart_list.js" />
+    <Content Include="MenuLink\vendors\apex_chart\apex_dashboard.js" />
+    <Content Include="MenuLink\vendors\apex_chart\bar_active_1.html" />
+    <Content Include="MenuLink\vendors\calender_js\activation.js" />
+    <Content Include="MenuLink\vendors\calender_js\core\main.css" />
+    <Content Include="MenuLink\vendors\calender_js\core\main.js" />
+    <Content Include="MenuLink\vendors\calender_js\daygrid\main.css" />
+    <Content Include="MenuLink\vendors\calender_js\daygrid\main.js" />
+    <Content Include="MenuLink\vendors\calender_js\interaction\main.js" />
+    <Content Include="MenuLink\vendors\calender_js\list\main.css" />
+    <Content Include="MenuLink\vendors\calender_js\list\main.js" />
+    <Content Include="MenuLink\vendors\calender_js\timegrid\main.css" />
+    <Content Include="MenuLink\vendors\calender_js\timegrid\main.js" />
+    <Content Include="MenuLink\vendors\chartjs\chartjs_init.js" />
+    <Content Include="MenuLink\vendors\chartjs\roundedBar.min.js" />
+    <Content Include="MenuLink\vendors\chartlist\Chart.min.js" />
+    <Content Include="MenuLink\vendors\chart_am\animated.js" />
+    <Content Include="MenuLink\vendors\chart_am\chart-custom.js" />
+    <Content Include="MenuLink\vendors\chart_am\charts.js" />
+    <Content Include="MenuLink\vendors\chart_am\core.js" />
+    <Content Include="MenuLink\vendors\chart_am\kelly.js" />
+    <Content Include="MenuLink\vendors\count_up\jquery.counterup.min.js" />
+    <Content Include="MenuLink\vendors\count_up\jquery.waypoints.min.js" />
+    <Content Include="MenuLink\vendors\datatable\css\buttons.dataTables.min.css" />
+    <Content Include="MenuLink\vendors\datatable\css\jquery.dataTables.min.css" />
+    <Content Include="MenuLink\vendors\datatable\css\responsive.dataTables.min.css" />
+    <Content Include="MenuLink\vendors\datatable\images\sort_asc.html" />
+    <Content Include="MenuLink\vendors\datatable\images\sort_asc_disabled.html" />
+    <Content Include="MenuLink\vendors\datatable\images\sort_both.html" />
+    <Content Include="MenuLink\vendors\datatable\images\sort_desc.html" />
+    <Content Include="MenuLink\vendors\datatable\images\sort_desc_disabled.html" />
+    <Content Include="MenuLink\vendors\datatable\js\buttons.flash.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\buttons.html5.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\buttons.print.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\dataTables.buttons.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\dataTables.responsive.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\jquery.dataTables.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\jszip.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\pdfmake.min.js" />
+    <Content Include="MenuLink\vendors\datatable\js\vfs_fonts.js" />
+    <Content Include="MenuLink\vendors\datepicker\date-picker.css" />
+    <Content Include="MenuLink\vendors\datepicker\datepicker.custom.js" />
+    <Content Include="MenuLink\vendors\datepicker\datepicker.en.js" />
+    <Content Include="MenuLink\vendors\datepicker\datepicker.js" />
+    <Content Include="MenuLink\vendors\drag\dragable_sortable.js" />
+    <Content Include="MenuLink\vendors\drag\jquery.ui.min.js" />
+    <Content Include="MenuLink\vendors\drag\sortable-custom.js" />
+    <Content Include="MenuLink\vendors\font_awesome\css\all.min.css" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400.html" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400.html" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900.html" />
+    <Content Include="MenuLink\vendors\gijgo\gijgo.min.css" />
+    <Content Include="MenuLink\vendors\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="MenuLink\vendors\jquery-sparkline\spactkine_init.js" />
+    <Content Include="MenuLink\vendors\mapJs\custom.js" />
+    <Content Include="MenuLink\vendors\mapJs\mapsjs-core.js" />
+    <Content Include="MenuLink\vendors\mapJs\mapsjs-mapevents.js" />
+    <Content Include="MenuLink\vendors\mapJs\mapsjs-ui.css" />
+    <Content Include="MenuLink\vendors\mapJs\mapsjs-ui.js" />
+    <Content Include="MenuLink\vendors\mapJs\mapsjs_service.js" />
+    <Content Include="MenuLink\vendors\material_icon\material-icons.css" />
+    <Content Include="MenuLink\vendors\morris\morris.css" />
+    <Content Include="MenuLink\vendors\niceselect\css\nice-select.css" />
+    <Content Include="MenuLink\vendors\niceselect\js\jquery.nice-select.min.js" />
+    <Content Include="MenuLink\vendors\nvd3\d3.min.js" />
+    <Content Include="MenuLink\vendors\nvd3\layers.js" />
+    <Content Include="MenuLink\vendors\nvd3\nv.d3.js" />
+    <Content Include="MenuLink\vendors\owl_carousel\css\owl.carousel.css" />
+    <Content Include="MenuLink\vendors\owl_carousel\css\owl.video.play.html" />
+    <Content Include="MenuLink\vendors\owl_carousel\js\owl.carousel.min.js" />
+    <Content Include="MenuLink\vendors\photoswip\photoswipe-ui-default.min.js" />
+    <Content Include="MenuLink\vendors\photoswip\photoswipe.js" />
+    <Content Include="MenuLink\vendors\photoswip\photoswipe.min.js" />
+    <Content Include="MenuLink\vendors\progressbar\jquery.barfiller.js" />
+    <Content Include="MenuLink\vendors\scroll\perfect-scrollbar.min.js" />
+    <Content Include="MenuLink\vendors\scroll\scrollable-custom.js" />
+    <Content Include="MenuLink\vendors\scroll\scrollable.css" />
+    <Content Include="MenuLink\vendors\scroll_reval\modernizr.js" />
+    <Content Include="MenuLink\vendors\scroll_reval\reveal-custom.js" />
+    <Content Include="MenuLink\vendors\scroll_reval\scrollreveal.min.js" />
+    <Content Include="MenuLink\vendors\select2\css\select2.min.html" />
+    <Content Include="MenuLink\vendors\swiper_slider\css\swiper.min.html" />
+    <Content Include="MenuLink\vendors\tagsinput\tagsinput.css" />
+    <Content Include="MenuLink\vendors\tagsinput\tagsinput.js" />
+    <Content Include="MenuLink\vendors\text_editor\summernote-bs4.css" />
+    <Content Include="MenuLink\vendors\text_editor\summernote-bs4.js" />
+    <Content Include="MenuLink\vendors\themefy_icon\fonts\themify9f24.svg" />
+    <Content Include="MenuLink\vendors\themefy_icon\themify-icons.css" />
+    <Content Include="MenuLink\vendors\vectormap-home\vectormap-2.0.2.css" />
+    <Content Include="MenuLink\vendors\vectormap-home\vectormap-2.0.2.min.js" />
+    <Content Include="MenuLink\vendors\vectormap-home\vectormap-world-mill-en.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-2.0.2.min.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-asia-mill.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-au-mill.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-chicago-mill-en.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-in-mill.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-uk-mill-en.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-us-aea-en.js" />
+    <Content Include="MenuLink\vendors\verctorMap\jvectormap-world-mill-en.js" />
+    <Content Include="MenuLink\vendors\verctorMap\map-vector.js" />
+    <Content Include="MenuLink\vendors\verctorMap\vector-map.css" />
+    <Content Include="MenuLink\vendors\webticker\jquery.webticker.min.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="MenuLink\vendors\font_awesome\webfonts\fa-solid-900d41d.eot" />
+    <Content Include="MenuLink\vendors\material_icon\material-icons.woff" />
+    <Content Include="MenuLink\vendors\material_icon\MaterialIcons-Regular.ttf" />
+    <Content Include="MenuLink\vendors\text_editor\fonts\summernote.eot" />
+    <Content Include="MenuLink\vendors\text_editor\fonts\summernote.ttf" />
+    <Content Include="MenuLink\vendors\text_editor\fonts\summernote.woff" />
+    <Content Include="MenuLink\vendors\themefy_icon\fonts\themify9f24.eot" />
+    <Content Include="MenuLink\vendors\themefy_icon\fonts\themify9f24.ttf" />
+    <Content Include="MenuLink\vendors\themefy_icon\fonts\themify9f24.woff" />
+    <Content Include="MenuLink\vendors\themefy_icon\fonts\themifyd41d.eot" />
+    <Content Include="admin\admin.Master" />
+    <None Include="Properties\PublishProfiles\KidsLearning.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +362,30 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\add-alphabet.aspx.cs">
+      <DependentUpon>add-alphabet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-alphabet.aspx.designer.cs">
+      <DependentUpon>add-alphabet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

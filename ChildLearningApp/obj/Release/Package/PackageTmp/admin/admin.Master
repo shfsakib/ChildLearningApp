@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="ChildLearningApp.admin.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Child Learning</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <link rel="icon" href="../MenuLink/child.png" type="image/png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../MenuLink/css/bootstrap.min.css" />
+    <!-- themefy CSS -->
+    <link rel="stylesheet" href="../MenuLink/vendors/themefy_icon/themify-icons.css" />
+    <!-- select2 CSS -->
+    <link rel="stylesheet" href="../MenuLink/vendors/niceselect/css/nice-select.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="../MenuLink/vendors/owl_carousel/css/owl.carousel.css" />
+    <!-- gijgo css -->
+    <link rel="stylesheet" href="../MenuLink/vendors/gijgo/gijgo.min.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="../MenuLink/vendors/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="../MenuLink/vendors/tagsinput/tagsinput.css" />
+
+    <!-- date picker -->
+    <link rel="stylesheet" href="../MenuLink/vendors/datepicker/date-picker.css" />
+
+    <link rel="stylesheet" href="../MenuLink/vendors/vectormap-home/vectormap-2.0.2.css" />
+
+    <!-- scrollabe  -->
+    <link rel="stylesheet" href="../MenuLink/vendors/scroll/scrollable.css" />
+    <!-- datatable CSS -->
+    <link rel="stylesheet" href="../MenuLink/vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="../MenuLink/vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="../MenuLink/vendors/datatable/css/buttons.dataTables.min.css" />
+    <!-- text editor css -->
+    <link rel="stylesheet" href="../MenuLink/vendors/text_editor/summernote-bs4.css" />
+    <!-- morris css -->
+    <link rel="stylesheet" href="../MenuLink/vendors/morris/morris.css" />
+    <!-- metarial icon css -->
+    <link rel="stylesheet" href="../MenuLink/vendors/material_icon/material-icons.css" />
+
+    <!-- menu css  -->
+    <link rel="stylesheet" href="../MenuLink/css/metisMenu.css" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../MenuLink/css/style.css" />
+    <link rel="stylesheet" href="../MenuLink/css/colors/default.css" id="colorSkinCSS" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="crm_body_bg">
+    <form id="form1" runat="server">
+        <!-- main content part here -->
+
+        <!-- sidebar  -->
+        <nav class="sidebar dark_sidebar">
+            <div class="logo d-flex justify-content-between">
+                <a class="large_logo" href="index-2.html" style="text-decoration: none; color: white; font-size: 20px;">
+                    <img src="../MenuLink/child.png" style="width: 40px; height: 40px;" alt="">&nbsp;Child Learning</a>
+                <a class="small_logo" href="index-2.html">
+                    <img src="../MenuLink/child.png" style="width: 40px; height: 40px;" alt=""></a>
+                <div class="sidebar_close_icon d-lg-none">
+                    <i class="ti-close"></i>
+                </div>
+            </div>
+            <ul id="sidebar_menu">
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Dashboard </span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="index_2.html">Default</a></li>
+                        <li><a href="index_3.html">Light Sidebar</a></li>
+                        <li><a href="index-2.html">Dark Sidebar</a></li>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="Trader_Profile.html" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <img src="img/menu-icon/4.svg" alt="">
+                        </div>
+                        <div class="nav_title">
+                            <span>Trader Profile</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <img src="img/menu-icon/18.svg" alt="">
+                        </div>
+                        <div class="nav_title">
+                            <span>UI Elements </span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="colors.html">colors</a></li>
+                        <li><a href="Alerts.html">Alerts</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="modal.html">modal</a></li>
+                        <li><a href="dropdown.html">Droopdowns</a></li>
+                        <li><a href="Badges.html">Badges</a></li>
+                        <li><a href="Loading_Indicators.html">Loading Indicators</a></li>
+                        <li><a href="color_plate.html">Color Plate</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                        <li><a href="datepicker.html">Date Picker</a></li>
+                        <li><a href="wow_animation.html">Animate</a></li>
+                        <li><a href="Scroll_Reveal.html">Scroll Reveal</a></li>
+                        <li><a href="tilt.html">Tilt Animation</a></li>
+                        <li><a href="navs.html">Navs</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <!--/ sidebar  -->
+
+
+        <section class="main_content dashboard_part large_header_bg">
+            <!-- menu  -->
+            <div class="container-fluid no-gutters">
+                <div class="row">
+                    <div class="col-lg-12 p-0 ">
+                        <div class="header_iner d-flex justify-content-between align-items-center">
+                            <div class="sidebar_icon d-lg-none">
+                                <i class="ti-menu"></i>
+                            </div>
+                            <div class="line_icon open_miniSide d-none d-lg-block">
+                                <img src="../MenuLink/img/line_img.png" alt="">
+                            </div>
+                            <div class="header_right d-flex justify-content-between align-items-center">
+                                <div class="header_notification_warp d-flex align-items-center">
+
+                                    <div class="profile_info d-flex align-items-center" style="position: absolute; right: 15px;">
+                                        <div class="profile_thumb mr_20">
+                                            <img src="../MenuLink/img/transfer/4.png" alt="#" />
+                                        </div>
+                                        <div class="author_name">
+                                            <h4 class="f_s_15 f_w_500 mb-0">Jiue Anderson</h4>
+                                            <p class="f_s_12 f_w_400">Manager</p>
+                                        </div>
+                                        <div class="profile_info_iner">
+                                            <div class="profile_author_name">
+                                                <p>Manager</p>
+                                                <h5>Jiue Anderson</h5>
+                                            </div>
+                                            <div class="profile_info_details">
+                                                <a href="#">My Profile </a>
+                                                <a href="#">Settings</a>
+                                                <a href="#">Log Out </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ menu  -->
+            <div class="main_content_iner overly_inner ">
+                <div class="container-fluid p-0 ">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- page title  -->
+                </div>
+            </div>
+
+             
+        </section>
+        <!-- main content part end -->
+        <div id="back-top" style="display: none;">
+            <a title="Go to Top" href="#">
+                <i class="ti-angle-up"></i>
+            </a>
+        </div>
+
+    </form>
+
+    <!-- footer  -->
+    <script src="../MenuLink/js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="../MenuLink/js/popper.min.js"></script>
+    <!-- bootstarp js -->
+    <script src="../MenuLink/js/bootstrap.min.js"></script>
+    <!-- sidebar menu  -->
+    <script src="../MenuLink/js/metisMenu.js"></script>
+    <!-- waypoints js -->
+    <script src="../MenuLink/vendors/count_up/jquery.waypoints.min.js"></script>
+    <!-- waypoints js -->
+    <script src="../MenuLink/vendors/chartlist/Chart.min.js"></script>
+    <!-- counterup js -->
+    <script src="../MenuLink/vendors/count_up/jquery.counterup.min.js"></script>
+
+    <!-- nice select -->
+    <script src="../MenuLink/vendors/niceselect/js/jquery.nice-select.min.js"></script>
+    <!-- owl carousel -->
+    <script src="../MenuLink/vendors/owl_carousel/js/owl.carousel.min.js"></script>
+
+    <!-- responsive table -->
+    <script src="../MenuLink/vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/buttons.flash.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/jszip.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/pdfmake.min.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/vfs_fonts.js"></script>
+    <script src="../MenuLink/vendors/datatable/js/buttons.html5.min.js"></script>
+    
+    <script src="../MenuLink/vendors/datatable/js/buttons.print.min.js"></script>
+
+    <!-- datepicker  -->
+    <script src="../MenuLink/vendors/datepicker/datepicker.js"></script>
+    <script src="../MenuLink/vendors/datepicker/datepicker.en.js"></script>
+    <script src="../MenuLink/vendors/datepicker/datepicker.custom.js"></script>
+
+    <script src="../MenuLink/js/chart.min.js"></script>
+    <script src="../MenuLink/vendors/chart../MenuLink/js/roundedBar.min.js"></script>
+
+    <!-- progressbar js -->
+    <script src="../MenuLink/vendors/progressbar/jquery.barfiller.js"></script>
+    <!-- tag input -->
+    <script src="../MenuLink/vendors/tagsinput/tagsinput.js"></script>
+    <!-- text editor js -->
+    <script src="../MenuLink/vendors/text_editor/summernote-bs4.js"></script>
+    <script src="../MenuLink/vendors/am_chart/amcharts.js"></script>
+
+    <!-- scrollabe  -->
+    <script src="../MenuLink/vendors/scroll/perfect-scrollbar.min.js"></script>
+    <script src="../MenuLink/vendors/scroll/scrollable-custom.js"></script>
+
+    <!-- vector map  -->
+    <script src="../MenuLink/vendors/vectormap-home/vectormap-2.0.2.min.js"></script>
+    <script src="../MenuLink/vendors/vectormap-home/vectormap-world-mill-en.js"></script>
+
+    <!-- apex chrat  -->
+    <script src="../MenuLink/vendors/apex_chart/apex-chart2.js"></script>
+    <script src="../MenuLink/vendors/apex_chart/apex_dashboard.js"></script>
+
+    <!-- <script src="../MenuLink/vendors/echart/echarts.min.js"></script> -->
+
+
+    <script src="../MenuLink/vendors/chart_am/core.js"></script>
+    <script src="../MenuLink/vendors/chart_am/charts.js"></script>
+    <script src="../MenuLink/vendors/chart_am/animated.js"></script>
+    <script src="../MenuLink/vendors/chart_am/kelly.js"></script>
+    <script src="../MenuLink/vendors/chart_am/chart-custom.js"></script>
+    <!-- custom js -->
+    <script src="../MenuLink/js/dashboard_init.js"></script>
+    <script src="../MenuLink/js/custom.js"></script>
+
+</body>
+</html>
