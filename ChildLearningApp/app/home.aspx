@@ -26,24 +26,21 @@
                     </div>
                     <div class="row">
                         <div class="col-1"></div>
-                        <div class="col-5 button-pad">
-                            <asp:Image ID="btnAlpha" ImageUrl="../MenuLink/app-file/alpha.png" class="button-size-quiz" runat="server" />
+                        <div class="col-5 button-pad"> 
+                            <asp:ImageButton ID="btnAlpha" ImageUrl="../MenuLink/app-file/alpha.png" class="button-size-quiz" runat="server" />
                         </div>
                         <div class="col-5 button-pad">
-                            <asp:Image ID="btnNumeric" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size-alpha" runat="server" />
+                            <asp:ImageButton ID="btnNumeric" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size-alpha" runat="server" />
                         </div>
                         <div class="col-1"></div>
-                    </div>
-                    <a href="#" id="test">test</a>
-                    <a href="#" id="test2">test</a>
-
+                    </div> 
                     <div class="row">
                         <div class="col-1"></div>
                         <div class="col-5 button-pad">
-                            <asp:Image ID="btnRhymes" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size-rhyme" runat="server" />
+                            <asp:ImageButton ID="btnRhymes" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size-rhyme" runat="server" />
                         </div>
                         <div class="col-5 button-pad">
-                            <asp:Image ID="btnQuiz" ImageUrl="../MenuLink/app-file/quiz.png" class="button-size-num" runat="server" />
+                            <asp:ImageButton ID="btnQuiz" ImageUrl="../MenuLink/app-file/quiz.png" class="button-size-num" runat="server" />
                         </div>
                         <div class="col-1"></div>
 

@@ -37,7 +37,7 @@ namespace ChildLearningApp.app {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image btnAlpha;
+        protected global::System.Web.UI.WebControls.ImageButton btnAlpha;
         
         /// <summary>
         /// btnNumeric control.
@@ -46,7 +46,7 @@ namespace ChildLearningApp.app {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image btnNumeric;
+        protected global::System.Web.UI.WebControls.ImageButton btnNumeric;
         
         /// <summary>
         /// btnRhymes control.
@@ -55,7 +55,7 @@ namespace ChildLearningApp.app {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image btnRhymes;
+        protected global::System.Web.UI.WebControls.ImageButton btnRhymes;
         
         /// <summary>
         /// btnQuiz control.
@@ -64,6 +64,6 @@ namespace ChildLearningApp.app {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image btnQuiz;
+        protected global::System.Web.UI.WebControls.ImageButton btnQuiz;
     }
 }
