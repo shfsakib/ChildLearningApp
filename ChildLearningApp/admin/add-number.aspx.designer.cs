@@ -10,7 +10,7 @@
 namespace ChildLearningApp.admin {
     
     
-    public partial class add_alphabet {
+    public partial class add_number {
         
         /// <summary>
         /// txtalpha control.

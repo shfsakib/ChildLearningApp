@@ -175,7 +175,7 @@
                 </div>
             </div>
 
-             
+
         </section>
         <!-- main content part end -->
         <div id="back-top" style="display: none;">
@@ -189,8 +189,15 @@
         .mt2 {
             margin-top: 2px !important;
         }
+
         .wd {
             width: 100% !important;
+        }
+
+        .form-control {
+            height: 40px !important;
+            font-weight: normal !important;
+            font-family: comic sans ms !important;
         }
     </style>
     <!-- footer  -->
@@ -222,7 +229,7 @@
     <script src="../MenuLink/vendors/datatable/js/pdfmake.min.js"></script>
     <script src="../MenuLink/vendors/datatable/js/vfs_fonts.js"></script>
     <script src="../MenuLink/vendors/datatable/js/buttons.html5.min.js"></script>
-    
+
     <script src="../MenuLink/vendors/datatable/js/buttons.print.min.js"></script>
 
     <!-- datepicker  -->
@@ -264,6 +271,13 @@
     <!-- custom js -->
     <script src="../MenuLink/js/dashboard_init.js"></script>
     <script src="../MenuLink/js/custom.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, "", window.location.href);
+            };
+        });
+    </script>
 </body>
 </html>

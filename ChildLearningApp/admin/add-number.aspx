@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.Master" AutoEventWireup="true" Async="true" CodeBehind="add-alphabet.aspx.cs" Inherits="ChildLearningApp.admin.add_alphabet" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.Master" AutoEventWireup="true" CodeBehind="add-number.aspx.cs" Inherits="ChildLearningApp.admin.add_number" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,19 +6,19 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-12">
-                    Alphabet:
-                    <asp:TextBox ID="txtalpha" placeholder="A,B,C etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                    Number:
+                    <asp:TextBox ID="txtalpha" placeholder="1,2,3 etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    Word with Alphabet:
-                    <asp:TextBox ID="txtWord" placeholder="A for Apple" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                    Spelling:
+                    <asp:TextBox ID="txtWord" placeholder="One, Two etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    Picture of Alphabet with word:
+                    Picture of Number:
                     <asp:FileUpload ID="filePic" accept=".png,.jpg,.jpeg" onchange="ImagePreview(this)" class="form-control" runat="server" />
                 </div>
             </div>
@@ -32,7 +31,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <br />
-                    <asp:Button ID="btnAdd" class="btn btn-primary" OnClick="btnAdd_OnClick" runat="server" Text="Add Alphabet" />
+                    <asp:Button ID="btnAdd" class="btn btn-primary" OnClick="btnAdd_OnClick" runat="server" Text="Add Number" />
                 </div>
             </div>
         </div>

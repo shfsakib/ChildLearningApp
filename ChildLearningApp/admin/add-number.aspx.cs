@@ -1,24 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Speech.Synthesis;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using ChildLearningApp.DAL;
 using ChildLearningApp.DAL.Gateway;
 using ChildLearningApp.DAL.Model;
 
 namespace ChildLearningApp.admin
 {
-    public partial class add_alphabet : System.Web.UI.Page
+    public partial class add_number : System.Web.UI.Page
     {
         private SpeechSynthesizer speech;
         private Function function;
-        private AlphabetModel alphabetModel;
-        private AlphabetGateway alphabetGateway;
+        private NumericModel numericModel;
+        private NumericGateway numericGateway;
         Random random = new Random();
-        public add_alphabet()
+        public add_number()
         {
             speech = new SpeechSynthesizer();
             function = Function.GetInstance();
-            alphabetModel = AlphabetModel.GetInstance();
-            alphabetGateway = AlphabetGateway.GetInstance();
+            numericModel = NumericModel.GetInstance();
+            numericGateway = NumericGateway.GetInstance();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,11 +32,10 @@ namespace ChildLearningApp.admin
 
             }
         }
-
-        private bool IsAlpha()
+        private bool IsNumber()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Alphabet FROM AlphabetInfo WHERE Alphabet='{txtalpha.Text}'");
+            string x = function.IsExist($"SELECT Number FROM Numeric WHERE Number='{txtalpha.Text}'");
             if (x != "")
             {
                 ans = true;
@@ -41,74 +45,60 @@ namespace ChildLearningApp.admin
         private bool IsWord()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Word FROM AlphabetInfo WHERE Word='{txtWord.Text}'");
+            string x = function.IsExist($"SELECT Word FROM Numeric WHERE Word='{txtWord.Text}'");
             if (x != "")
             {
                 ans = true;
             }
             return ans;
         }
-        //protected void lnkAdd_OnClick(object sender, EventArgs e)
-        //{
-        //    // Initialize a new instance of the SpeechSynthesizer.
-        //    speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child); // to change VoiceGender and VoiceAge check out those links below
-
-        //    speech.Volume = 100;  // (0 - 100)
-        //    speech.Rate = 0;
-        //    // Configure the audio output. 
-        //    string text = "B for Ball";
-        //    // Speak a string.
-        //    speech.Speak(text);
-
-        //}
         protected void btnAdd_OnClick(object sender, EventArgs e)
         {
             if (txtalpha.Text == "")
             {
-                function.ShowAlert(this, "Alphabet is required");
+                function.ShowAlert(this, "Number is required");
             }
             else if (txtWord.Text == "")
             {
-                function.ShowAlert(this, "Word is required");
+                function.ShowAlert(this, "Spelling is required");
             }
-            else if (IsAlpha())
+            else if (IsNumber())
             {
-                function.ShowAlert(this, "Alphabet already exist");
+                function.ShowAlert(this, "Number already exist");
 
             }
             else if (IsWord())
             {
-                function.ShowAlert(this, "Word already exist");
+                function.ShowAlert(this, "Spelling already exist");
             }
             else
             {
-                alphabetModel.Alphabet = txtalpha.Text;
-                alphabetModel.Word = txtWord.Text;
-                alphabetModel.InTime = function.Date();
+                numericModel.Number = txtalpha.Text;
+                numericModel.Word = txtWord.Text;
+                numericModel.InTime = function.Date();
                 if (filePic.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
                     string imagePath = Server.MapPath("/Image/") + val + filePic.FileName;
                     filePic.PostedFile.SaveAs(imagePath);
-                    alphabetModel.Picture = "/Image/" + val + filePic.FileName;
+                    numericModel.Picture = "/Image/" + val + filePic.FileName;
                 }
                 else
                 {
                     function.ShowAlert(this, "Picture is required");
 
                 }
-                bool ans = alphabetGateway.Insert(alphabetModel);
+                bool ans = numericGateway.Insert(numericModel);
                 if (ans)
                 {
                     txtalpha.Text = txtWord.Text = "";
-                    function.ShowAlert(this, "Alphabet added successfully");
+                    function.ShowAlert(this, "Number added successfully");
                 }
                 else
                 {
-                    function.ShowAlert(this, "Alphabet added failed");
+                    function.ShowAlert(this, "Number added failed");
                 }
             }
-
         }
     }
 }
