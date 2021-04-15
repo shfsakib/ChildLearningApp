@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="ChildLearningApp.app.home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="ChildLearningApp.app.home" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -34,7 +34,7 @@
                                     <asp:ImageButton ID="btnAlpha" OnClick="btnAlpha_OnClick" ImageUrl="../MenuLink/app-file/alpha.png" class="button-size-quiz" runat="server" />
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnNumeric" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size-alpha" runat="server" />
+                                    <asp:ImageButton ID="btnNumeric" OnClick="btnNumeric_OnClick" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size-alpha" runat="server" />
                                 </div>
                                 <div class="col-1"></div>
                             </div>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <a href="#" class="button-mic" id="btnMic" runat="server" OnServerClick="btnMic_OnServerClick"><i class="fas fa-volume-up"></i></a>
-                        <a href="#" class="button-mute" id="btnMute" runat="server" OnServerClick="btnMute_OnServerClick" style="display: none;"><i class="fas fa-volume-mute"></i></a>
+                        <a href="#" class="button-mute" id="btnMute" runat="server" OnServerClick="btnMute_OnServerClick" Visible="False"><i class="fas fa-volume-mute"></i></a>
                     </div>
                 </asp:Panel>
 
@@ -64,20 +64,54 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
-                                <asp:GridView ID="gridAlpha" Width="100%" class="table table-hover table-bordered table-striped" Style="background: aliceblue;" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Alphabet Found" runat="server">
+                                <asp:GridView ID="gridAlpha" Width="100%" class="table table-hover table-bordered" Style="background: transparent;color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Alphabet Found" runat="server">
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
                                                 <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("AlphaId")%>' />
-                                                <asp:Label ID="Label1" runat="server" Style="font-size: 30px; font-weight: Bold;" Text='<%#Eval("Alphabet")%>'></asp:Label>
+                                                <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Alphabet")%>'></asp:Label>
                                                 <div class="row">
                                                     <div class="col-12 text-center">
-                                                        <asp:Image ID="Image11" Width="150px" Height="150px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
+                                                        <asp:Image ID="Image11" Width="250px" Height="200px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
                                                     </div>
                                                     <div class="col-12 text-center">
-                                                        <asp:Label ID="lblWord" Style="font-size: 24px;font-weight: bold;" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
+                                                        <asp:Label ID="lblWord" Style="font-size: 24px;font-weight: bold;top: 5px;position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
                                                         <span>
-                                                            <asp:LinkButton href="#" runat="server" class="btn btn-success" style="border-radius: 50%;" ID="btnSpeak" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
+                                                            <asp:LinkButton runat="server" class="btn btn-success" style="border-radius: 50%;" ID="btnSpeakWord" OnClick="btnSpeakWord_OnClick" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
+                                                           </div>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+
+                                    </Columns>
+                                </asp:GridView>
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="panelNumber" runat="server" Visible="False">
+                    <div class="row">
+                        <div class="col-12" style="padding: 15px; margin-left: 15px;">
+                            <asp:LinkButton ID="lnkHomeNum" class="btn btn-primary" OnClick="lnkHome_OnClick" runat="server"><i class="fas fa-home fa-lg"></i></asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
+                                <asp:GridView ID="gridNum" Width="100%" class="table table-hover table-bordered" Style="background: transparent;color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Number Found" runat="server">
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Alphabet">
+                                            <ItemTemplate>
+                                                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("NumId")%>' />
+                                                <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Number")%>'></asp:Label>
+                                                <div class="row">
+                                                    <div class="col-12 text-center">
+                                                        <asp:Image ID="Image11" Width="250px" Height="200px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
+                                                    </div>
+                                                    <div class="col-12 text-center">
+                                                        <asp:Label ID="lblWord" Style="font-size: 24px;font-weight: bold;top: 5px;position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
+                                                        <span>
+                                                            <asp:LinkButton runat="server" class="btn btn-success" style="border-radius: 50%;" OnClick="btnSpeak_OnClick" ID="btnSpeak" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
                                                     </div>
                                                 </div>
                                             </ItemTemplate>
@@ -89,7 +123,7 @@
                         </div>
                     </div>
                 </asp:Panel>
-                <audio src="../MenuLink/app-file/bg-music.mp3" id="audioBg" runat="server" autoplay></audio>
+                <audio src="" id="audioBg" runat="server" autoplay></audio>
             </ContentTemplate>
             <Triggers>
                 <asp:PostBackTrigger ControlID="btnAlpha"/>
@@ -107,15 +141,13 @@
 
             //mySound.play();
             //mySound.loop = true;
-            $('#btnMute').click(function () {
-                $("#btnMute").css("display", "none");
-                $("#btnMic").css("display", "block");
-                mySound.play();
-            }); $('#btnMic').click(function () {
-                $("#btnMic").css("display", "none");
-                $("#btnMute").css("display", "block");
-                mySound.pause();
-            });
+            //$('#btnMute').click(function () {
+            //    $("#btnMute").css("display", "none");
+            //    $("#btnMic").css("display", "block"); 
+            //}); $('#btnMic').click(function () {
+            //    $("#btnMic").css("display", "none");
+            //    $("#btnMute").css("display", "block"); 
+            //});
         });
         function pageLoad() {
             //var mySound = new Audio('../MenuLink/app-file/bg-music.mp3');

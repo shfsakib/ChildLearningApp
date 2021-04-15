@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-12">
                     Alphabet:
-                    <asp:TextBox ID="txtalpha" placeholder="A,B,C etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtalpha" placeholder="Aa,Bb,Cc etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="row">
