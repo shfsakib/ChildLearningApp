@@ -47,20 +47,18 @@ namespace ChildLearningApp.app
         {
             function.LoadGrid(gridAlpha, "SELECT * FROM ALPHABETINFO ORDER BY ALPHABET ASC");
             function.LoadGrid(gridNum, "SELECT * FROM Numeric ORDER BY Number ASC");
-
+            function.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes ORDER BY RhymeName ASC");
         }
         protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = false;
             panelWord.Visible = true;
         }
-
         protected void lnkHome_OnClick(object sender, EventArgs e)
         {
             Panel1.Visible = true;
-            panelWord.Visible = false;
+            panelWord.Visible = panelNumber.Visible = panelRhymes.Visible = false;
         }
-
         protected void btnMic_OnServerClick(object sender, EventArgs e)
         {
             sound["play"] = "off";
@@ -70,7 +68,6 @@ namespace ChildLearningApp.app
             audioBg.Src = "";
             btnMute.Visible = true;
         }
-
         protected void btnMute_OnServerClick(object sender, EventArgs e)
         {
             sound["play"] = "on";
@@ -79,20 +76,17 @@ namespace ChildLearningApp.app
             btnMic.Visible = true;
             btnMute.Visible = false;
             audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
-
         }
-
         protected void btnNumeric_OnClick(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = false;
             panelNumber.Visible = true;
         }
-
         protected void btnSpeakWord_OnClick(object sender, EventArgs e)
         {
-            LinkButton linkButton = (LinkButton) sender;
-            Label lblWord = (Label) linkButton.Parent.FindControl("lblWord");
-            speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child); 
+            LinkButton linkButton = (LinkButton)sender;
+            Label lblWord = (Label)linkButton.Parent.FindControl("lblWord");
+            speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
             // to change VoiceGender and VoiceAge check out those links below
 
             speech.Volume = 100;  // (0 - 100)
@@ -102,8 +96,6 @@ namespace ChildLearningApp.app
             // Speak a string.
             speech.Speak(text);
         }
-
-
         protected void btnSpeak_OnClick(object sender, EventArgs e)
         {
             LinkButton linkButton = (LinkButton)sender;
@@ -117,6 +109,11 @@ namespace ChildLearningApp.app
             string text = lblWord.Text;
             // Speak a string.
             speech.Speak(text);
+        }
+        protected void btnRhymes_OnClick(object sender, ImageClickEventArgs e)
+        {
+            Panel1.Visible = false;
+            panelRhymes.Visible = true;
         }
     }
 }

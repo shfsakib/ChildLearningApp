@@ -97,8 +97,10 @@
   <ItemGroup>
     <Content Include="admin\add-alphabet.aspx" />
     <Content Include="admin\add-number.aspx" />
+    <Content Include="admin\add-rhymes.aspx" />
     <Content Include="admin\alphabet-list.aspx" />
     <Content Include="admin\number-list.aspx" />
+    <Content Include="admin\rhymes-list.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="MenuLink\app-file\alpha.png" />
     <Content Include="MenuLink\app-file\app.css" />
@@ -382,6 +384,13 @@
     <Compile Include="admin\add-number.aspx.designer.cs">
       <DependentUpon>add-number.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\add-rhymes.aspx.cs">
+      <DependentUpon>add-rhymes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-rhymes.aspx.designer.cs">
+      <DependentUpon>add-rhymes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -402,6 +411,13 @@
     </Compile>
     <Compile Include="admin\number-list.aspx.designer.cs">
       <DependentUpon>number-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rhymes-list.aspx.cs">
+      <DependentUpon>rhymes-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rhymes-list.aspx.designer.cs">
+      <DependentUpon>rhymes-list.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\Function.cs" />
     <Compile Include="app\home.aspx.cs">

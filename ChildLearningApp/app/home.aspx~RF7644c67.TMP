@@ -134,7 +134,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
-                                <asp:GridView ID="gridRhyemes" Width="100%" class="table table-hover table-bordered" Style="background: rgba(0,0,0,0.7); color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Number Found" runat="server">
+                                <asp:GridView ID="gridRhyemes" Width="100%" class="table table-hover table-bordered" Style="background: lightcyan; color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Number Found" runat="server">
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
@@ -142,7 +142,7 @@
                                                     <a href="#" runat="server" id="btnRhyme" style="text-decoration: none; color: white;">
                                                         <div class="col-12 text-center">
                                                             <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("RhymesId")%>' />
-                                                            <asp:Label ID="Label1" runat="server" Style="font-size: 25px; font-weight: Bold;font-family:comic sans ms; " Text='<%#Eval("RhymeName")%>'></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Style="font-size: 30px; font-weight: Bold;font-family:comic sans ms; " Text='<%#Eval("RhymeName")%>'></asp:Label>
                                                         </div>
                                                     </a>
                                                 </div>
