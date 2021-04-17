@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="card-title">
+        <h3>Add Alphabet</h3>
+    </div>
+    <hr />
     <div class="row">
         <div class="col-md-12">
             <div class="row">
@@ -26,7 +30,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <br />
-                    <asp:Image ID="imgPic"  ImageUrl="/MenuLink/image.png" Style="width: 150px; height: 150px; border: 2px solid #495057; border-radius: 5px;" runat="server" />
+                    <asp:Image ID="imgPic" ImageUrl="/MenuLink/image.png" Style="width: 150px; height: 150px; border: 2px solid #495057; border-radius: 5px;" runat="server" />
                 </div>
             </div>
             <div class="row">
@@ -37,10 +41,10 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-     <script>
+    <script>
         function ImagePreview(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();

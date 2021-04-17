@@ -184,6 +184,33 @@ namespace ChildLearningApp.app {
         protected global::System.Web.UI.WebControls.GridView gridRhyemes;
         
         /// <summary>
+        /// panelVideo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelVideo;
+        
+        /// <summary>
+        /// lnkBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkBack;
+        
+        /// <summary>
+        /// videoFrame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlIframe videoFrame;
+        
+        /// <summary>
         /// audioBg control.
         /// </summary>
         /// <remarks>

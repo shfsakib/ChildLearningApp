@@ -95,9 +95,13 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\add-admin.aspx" />
     <Content Include="admin\add-alphabet.aspx" />
+    <Content Include="admin\add-level.aspx" />
     <Content Include="admin\add-number.aspx" />
+    <Content Include="admin\add-question.aspx" />
     <Content Include="admin\add-rhymes.aspx" />
+    <Content Include="admin\admin-list.aspx" />
     <Content Include="admin\alphabet-list.aspx" />
     <Content Include="admin\number-list.aspx" />
     <Content Include="admin\rhymes-list.aspx" />
@@ -370,12 +374,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\add-admin.aspx.cs">
+      <DependentUpon>add-admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-admin.aspx.designer.cs">
+      <DependentUpon>add-admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\add-alphabet.aspx.cs">
       <DependentUpon>add-alphabet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\add-alphabet.aspx.designer.cs">
       <DependentUpon>add-alphabet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add-level.aspx.cs">
+      <DependentUpon>add-level.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-level.aspx.designer.cs">
+      <DependentUpon>add-level.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\add-number.aspx.cs">
       <DependentUpon>add-number.aspx</DependentUpon>
@@ -384,12 +402,26 @@
     <Compile Include="admin\add-number.aspx.designer.cs">
       <DependentUpon>add-number.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\add-question.aspx.cs">
+      <DependentUpon>add-question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-question.aspx.designer.cs">
+      <DependentUpon>add-question.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\add-rhymes.aspx.cs">
       <DependentUpon>add-rhymes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\add-rhymes.aspx.designer.cs">
       <DependentUpon>add-rhymes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin-list.aspx.cs">
+      <DependentUpon>admin-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin-list.aspx.designer.cs">
+      <DependentUpon>admin-list.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>

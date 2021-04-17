@@ -136,13 +136,14 @@
                             <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
                                 <asp:GridView ID="gridRhyemes" Width="100%" class="table table-hover table-bordered" Style="background: rgba(0,0,0,0.7); color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Number Found" runat="server">
                                     <Columns>
-                                        <asp:TemplateField HeaderText="Alphabet">
+                                        <asp:TemplateField HeaderText="">
                                             <ItemTemplate>
                                                 <div class="row">
-                                                    <a href="#" runat="server" id="btnRhyme" style="text-decoration: none; color: white;">
+                                                    <a href="#" class="col-12" runat="server" id="btnRhyme" OnServerClick="btnRhyme_OnServerClick" style="text-decoration: none; color: white;">
                                                         <div class="col-12 text-center">
                                                             <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("RhymesId")%>' />
-                                                            <asp:Label ID="Label1" runat="server" Style="font-size: 25px; font-weight: Bold;font-family:comic sans ms; " Text='<%#Eval("RhymeName")%>'></asp:Label>
+                                                            <asp:HiddenField ID="link" runat="server" Value='<%#Eval("Link")%>' />
+                                                            <asp:Label ID="Label1" runat="server" Style="font-size: 25px; font-weight: Bold; font-family: comic sans ms;" Text='<%#Eval("RhymeName")%>'></asp:Label>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -152,6 +153,18 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+                <asp:Panel ID="panelVideo" runat="server" Visible="False">
+                    <div class="row">
+                        <div class="col-12" style="padding: 15px; margin-left: 15px;">
+                            <asp:LinkButton ID="lnkBack" class="btn btn-primary" OnClick="lnkBack_OnClick" runat="server"><i class="fas fa-caret-left fa-lg"></i></asp:LinkButton>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="padding: 10px 20px;">
+                            <iframe width="100%" height="350px" runat="server" id="videoFrame" frameborder="0" allow="accelerometer; autoplay; clipboard-write;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                 </asp:Panel>
