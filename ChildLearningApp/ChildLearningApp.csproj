@@ -104,7 +104,9 @@
     <Content Include="admin\admin-list.aspx" />
     <Content Include="admin\alphabet-list.aspx" />
     <Content Include="admin\number-list.aspx" />
+    <Content Include="admin\question-list.aspx" />
     <Content Include="admin\rhymes-list.aspx" />
+    <Content Include="admin\update-question.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="MenuLink\app-file\alpha.png" />
     <Content Include="MenuLink\app-file\app.css" />
@@ -444,12 +446,26 @@
     <Compile Include="admin\number-list.aspx.designer.cs">
       <DependentUpon>number-list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\question-list.aspx.cs">
+      <DependentUpon>question-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question-list.aspx.designer.cs">
+      <DependentUpon>question-list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\rhymes-list.aspx.cs">
       <DependentUpon>rhymes-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\rhymes-list.aspx.designer.cs">
       <DependentUpon>rhymes-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-question.aspx.cs">
+      <DependentUpon>update-question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-question.aspx.designer.cs">
+      <DependentUpon>update-question.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\Function.cs" />
     <Compile Include="app\home.aspx.cs">
