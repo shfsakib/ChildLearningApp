@@ -20,6 +20,7 @@ namespace ChildLearningApp.admin
         {
             if (!IsPostBack)
             {
+                function.CheckCookies();
                 Load();
             }
         }

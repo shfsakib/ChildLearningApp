@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.Master" AutoEventWireup="true" CodeBehind="add-admin.aspx.cs" Inherits="ChildLearningApp.admin.add_admin" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -65,7 +66,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-6">
                 <br />
-                <img id="profilePicImage" runat="server" class="form-control wd" src="../MenuLink/image.png" alt="ProfilePic" style="height: 250px; width: 250px" />
+                <img id="profilePicImage" runat="server" class="form-control wd" src="../MenuLink/image.png" alt="ProfilePic" style="height: 250px!important; width: 250px" />
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -85,7 +86,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-2">Password : </div>
             <div class="col-md-6">
-                <input type="password" runat="server"  autocomplete="off" class="form-control wd" placeholder="enter password" id="txtNewPass" />
+                <input type="password" runat="server" autocomplete="off" class="form-control wd" placeholder="enter password" id="txtNewPass" />
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -114,20 +115,13 @@
         }
     </style>
     <!-- /.container-fluid -->
-    <!-- /.content -->
-    <script src="../ReferenceLink/plugins/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    <script src="../ReferenceLink/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../ReferenceLink/dist/js/adminlte.min.js"></script>
+    
     <script type="text/javascript">
         function ImagePreview(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    $('#<%=profilePicImage.ClientID%>').prop('src', e.target.result)
-                        .width(200)
-                        .height(200);
+                    $('#<%=profilePicImage.ClientID%>').prop('src', e.target.result);
                 };
                 reader.readAsDataURL(input.files[0]);
                 }

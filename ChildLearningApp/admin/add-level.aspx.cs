@@ -25,6 +25,8 @@ namespace ChildLearningApp.admin
         {
             if (!IsPostBack)
             {
+                func.CheckCookies();
+
                 Load();
             }
         }

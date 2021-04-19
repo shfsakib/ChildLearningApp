@@ -25,6 +25,7 @@ namespace ChildLearningApp.admin
         {
             if (!IsPostBack)
             {
+                function.CheckCookies();
                 function.BindDropDown(ddlLevel, "Choose", "SELECT LevelName Name,LevelId Id FROM LevelInfo ORDER BY LevelName ASC");
                 Load();
             }
@@ -85,7 +86,7 @@ namespace ChildLearningApp.admin
                 {
                     txtPoint.Text = txtAns.Text = txtOptA.Text = txtOptB.Text = txtQuestion.Text = "";
                     ddlLevel.SelectedIndex = -1;
-                    ScriptManager.RegisterStartupScript(this,Page.GetType(),"script", "alert('Question updated successfully');setTimeout(function(){location.replace('/admin/question-list.aspx');},1200);",true);
+                    ScriptManager.RegisterStartupScript(this, Page.GetType(), "script", "alert('Question updated successfully');setTimeout(function(){location.replace('/admin/question-list.aspx');},1200);", true);
                 }
                 else
                 {

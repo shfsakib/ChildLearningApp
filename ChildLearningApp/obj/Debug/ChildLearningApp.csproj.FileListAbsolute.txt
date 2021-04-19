@@ -30,3 +30,4 @@ D:\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.ApplicationInsights.xml
 D:\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.dll
 D:\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.pdb
+D:\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.csprojResolveAssemblyReference.cache

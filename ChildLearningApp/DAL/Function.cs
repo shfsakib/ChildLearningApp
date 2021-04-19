@@ -338,7 +338,7 @@ namespace ChildLearningApp.DAL
 
         public void CheckCookies()
         {
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             if (cookies == null)
             {
                 HttpContext.Current.Response.Redirect("/log-in.aspx", true);
@@ -347,14 +347,14 @@ namespace ChildLearningApp.DAL
 
         public void Logout()
         {
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             cookies.Expires = DateTime.Now.AddDays(-1);
             HttpContext.Current.Response.Cookies.Add(cookies);
             HttpContext.Current.Response.Redirect("/log-in.aspx");
         }
         public static HttpCookie InsertValueToCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
+            HttpCookie cookie = new HttpCookie("KidsLearn");
             if (cookie == null || cookie?.Value == "")
             {
                 cookie = null;
@@ -363,7 +363,7 @@ namespace ChildLearningApp.DAL
         }
         public static HttpCookie GetValueFromCookie()
         {
-            HttpCookie cookie = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = HttpContext.Current.Request.Cookies["KidsLearn"];
             if (cookie == null || cookie?.Value == "")
             {
                 cookie = null;
@@ -372,39 +372,39 @@ namespace ChildLearningApp.DAL
         }
         public string UserIdCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             return cookies["UserId"];
         }
         public string NameCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             return cookies["Name"];
         }
         public string MobileCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             return cookies["Mobile"];
         }
         public string EmailCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             return cookies["Email"];
         }
         public string TypeCookie()
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             return cookies["Type"];
         }
 
         public void CheckTypeCookie(Page page, string type)
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             if (cookies["Type"] != type)
             {
                 HttpContext.Current.Response.Redirect("/log-in.aspx");
@@ -413,8 +413,8 @@ namespace ChildLearningApp.DAL
         }
         public void AdminType(Page page, string type1, string type2)
         {
-            HttpCookie cookie = new HttpCookie("Cattle");
-            HttpCookie cookies = HttpContext.Current.Request.Cookies["Cattle"];
+            HttpCookie cookie = new HttpCookie("KidsLearn");
+            HttpCookie cookies = HttpContext.Current.Request.Cookies["KidsLearn"];
             if (cookies["Type"] == type1)
             {
             }

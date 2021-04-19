@@ -20,5 +20,10 @@ namespace ChildLearningApp.admin
         {
 
         }
+
+        protected void OnServerClick(object sender, EventArgs e)
+        {
+            function.Logout();
+        }
     }
 }

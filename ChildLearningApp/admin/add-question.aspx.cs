@@ -25,6 +25,8 @@ namespace ChildLearningApp.admin
         {
             if (!IsPostBack)
             {
+                function.CheckCookies();
+
                 function.BindDropDown(ddlLevel, "Choose", "SELECT LevelName Name,LevelId Id FROM LevelInfo ORDER BY LevelName ASC");
             }
         }
