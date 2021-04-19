@@ -25,7 +25,7 @@ namespace ChildLearningApp.admin
         {
             if (!IsPostBack)
             {
-                function.BindDropDown(ddlLevel,"Choose", "SELECT LevelName Name,LevelId Id FROM LevelInfo ORDER BY LevelName ASC");
+                function.BindDropDown(ddlLevel, "Choose", "SELECT LevelName Name,LevelId Id FROM LevelInfo ORDER BY LevelName ASC");
             }
         }
         private bool IsQuestion()
@@ -40,40 +40,47 @@ namespace ChildLearningApp.admin
         }
         protected void btnAdd_OnClick(object sender, EventArgs e)
         {
-            if (ddlLevel.Text=="--CHOOSE--")
+            if (ddlLevel.Text == "--CHOOSE--")
             {
-                function.ShowAlert(this,"Level is required");
-            }else if (txtQuestion.Text=="")
+                function.ShowAlert(this, "Level is required");
+            }
+            else if (txtQuestion.Text == "")
             {
-                function.ShowAlert(this,"Question is required");
-            }else if (txtOptA.Text=="")
+                function.ShowAlert(this, "Question is required");
+            }
+            else if (txtOptA.Text == "")
             {
-                function.ShowAlert(this,"Option A is required");
-            }else if (txtOptB.Text=="")
+                function.ShowAlert(this, "Option A is required");
+            }
+            else if (txtOptB.Text == "")
             {
-                function.ShowAlert(this,"Option B is required");
-            }else if (txtAns.Text=="")
+                function.ShowAlert(this, "Option B is required");
+            }
+            else if (txtAns.Text == "")
             {
-                function.ShowAlert(this,"Answer is required");
-            }else if (txtPoint.Text=="" || txtPoint.Text=="0")
+                function.ShowAlert(this, "Answer is required");
+            }
+            else if (txtPoint.Text == "" || txtPoint.Text == "0")
             {
-                function.ShowAlert(this,"Point is required");
-            }else if (IsQuestion())
+                function.ShowAlert(this, "Point is required");
+            }
+            else if (IsQuestion())
             {
-                function.ShowAlert(this,"Question already added");
+                function.ShowAlert(this, "Question already added");
             }
             else
             {
                 bool ans = Insert();
                 if (ans)
                 {
-                    txtPoint.Text = txtAns.Text = txtOptA.Text = txtOptB.Text = txtQuestion.Text = "";
+                    txtAns.Text = txtOptA.Text = txtOptB.Text = txtQuestion.Text = "";
+                    txtPoint.Text = "1";
                     ddlLevel.SelectedIndex = -1;
-                    function.ShowAlert(this,"Question added successfully");
+                    function.ShowAlert(this, "Question added successfully");
                 }
                 else
                 {
-                    function.ShowAlert(this,"Failed to add question");
+                    function.ShowAlert(this, "Failed to add question");
 
                 }
             }
@@ -93,8 +100,8 @@ namespace ChildLearningApp.admin
                 cmd.Parameters.AddWithValue("@OptionA", txtOptA.Text);
                 cmd.Parameters.AddWithValue("@OptionB", txtOptB.Text);
                 cmd.Parameters.AddWithValue("@Answer", txtAns.Text);
-                cmd.Parameters.AddWithValue("@Point",txtPoint.Text);
-                cmd.Parameters.AddWithValue("@Intime",function.Date());
+                cmd.Parameters.AddWithValue("@Point", txtPoint.Text);
+                cmd.Parameters.AddWithValue("@Intime", function.Date());
 
                 cmd.Transaction = transaction;
                 cmd.ExecuteNonQuery();

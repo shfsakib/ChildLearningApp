@@ -111,9 +111,13 @@
     <Content Include="MenuLink\app-file\alpha.png" />
     <Content Include="MenuLink\app-file\app.css" />
     <Content Include="MenuLink\app-file\bg-music.mp3" />
+    <Content Include="MenuLink\app-file\error.gif" />
+    <Content Include="MenuLink\app-file\loss.mp3" />
     <Content Include="MenuLink\app-file\numeric.png" />
     <Content Include="MenuLink\app-file\quiz.png" />
     <Content Include="MenuLink\app-file\rhymes.png" />
+    <Content Include="MenuLink\app-file\success.gif" />
+    <Content Include="MenuLink\app-file\win.mp3" />
     <Content Include="MenuLink\child.png" />
     <Content Include="MenuLink\child_bg.jpg" />
     <Content Include="MenuLink\css\bootstrap.min.css" />
@@ -213,6 +217,7 @@
     <Content Include="MenuLink\js\jquery-3.4.1.min.js" />
     <Content Include="MenuLink\js\metisMenu.js" />
     <Content Include="MenuLink\js\popper.min.js" />
+    <Content Include="MenuLink\quiz back.jpg" />
     <Content Include="MenuLink\user.png" />
     <Content Include="MenuLink\vendors\am_chart\amchart-init.js" />
     <Content Include="MenuLink\vendors\am_chart\amcharts.js" />

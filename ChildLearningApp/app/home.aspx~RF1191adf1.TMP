@@ -139,7 +139,7 @@
                                         <asp:TemplateField HeaderText="">
                                             <ItemTemplate>
                                                 <div class="row">
-                                                    <a href="#" class="col-12" runat="server" id="btnRhyme" onserverclick="btnRhyme_OnServerClick" style="text-decoration: none; color: white;">
+                                                    <a href="#" class="col-12" runat="server" id="btnRhyme" OnServerClick="btnRhyme_OnServerClick" style="text-decoration: none; color: white;">
                                                         <div class="col-12 text-center">
                                                             <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("RhymesId")%>' />
                                                             <asp:HiddenField ID="link" runat="server" Value='<%#Eval("Link")%>' />
@@ -168,97 +168,27 @@
                         </div>
                     </div>
                 </asp:Panel>
-                <asp:Panel ID="panelQuiz" runat="server" Visible="False" Style="height: 100vh; background: url('../MenuLink/quiz back.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">
+                 <asp:Panel ID="panelQuiz" runat="server" Visible="False" style="height: 100vh;background: url('../MenuLink/quiz back.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
                     <div class="row">
-                        <div class="col-12" style="padding: 20px 30px;">
+                        <div class="col-12" style="padding: 20px 30px; ">
                             <asp:LinkButton ID="LinkButton1" class="btn btn-primary" OnClick="lnkHome_OnClick" runat="server"><i class="fas fa-home fa-lg"></i></asp:LinkButton>
-                            <span style="font-size: 16px; font-family: comic sans ms; color: white; position: absolute; right: 25px;">High Score:
-                                <asp:Label ID="lblHigh" runat="server" Text="10"></asp:Label></span>
+                            <asp:Label ID="lblHigh" runat="server" style="font-size: 16px; font-family: comic sans ms; color: white; position: absolute; right: 25px;" Text="High Score: 10"></asp:Label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 text-right" style="padding: 20px 30px;">
-                            <span style="font-size: 16px; font-family: comic sans ms; color: white; top: -46px; position: relative;">Label:
-                                <asp:Label ID="lblLevel" runat="server" Text="0"></asp:Label>
-                            </span>
-                            <br />
-                            <span style="font-size: 16px; font-family: comic sans ms; color: white; top: -40px; position: relative;">Your Score: 
-                            <asp:Label ID="lblScore" runat="server" Text="0"></asp:Label></span>
+                        <div class="col-12 text-right" style="">
+                            <asp:Label ID="Label2" runat="server" style="font-size: 16px; font-family: comic sans ms; color: white;" Text="Level: 1"></asp:Label>
+                             
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center" style="padding: 20px 30px; color: white; font-size: 30px; font-weight: bold;">
-                            <asp:Label ID="lblQuestion" runat="server" Style="word-wrap: break-word; white-space: pre-line;" Text="Your question"></asp:Label>
-                        </div>
-                    </div>
-                    <div class="row" style="padding: 30px;">
-                        <asp:LinkButton ID="lnkA" OnClick="lnkA_OnClick" CssClass="btn col-12" Style="background: white; border-radius: 15px; color: black; height: 42px; font-size: 20px; font-weight: 600;" runat="server">dsasas</asp:LinkButton>
-                        <asp:LinkButton ID="lnkB" OnClick="lnkB_OnClick" CssClass="btn col-12" Style="background: white; border-radius: 15px; color: black; height: 42px; margin-top: 10px; font-size: 20px; font-weight: 600;" runat="server">dsds</asp:LinkButton>
-                        <asp:HiddenField ID="hiddenAns" runat="server" />
-                        <asp:HiddenField ID="hiddenPoint" runat="server" />
-                        <audio src="" id="audioQuiz" runat="server" autoplay></audio>
-
                     </div>
                 </asp:Panel>
-                <div class="alertModalBg" id="alertModalBg" runat="server" visible="False">
-                    <div class="successAlertModal">
-                        <div class="col-12 text-center pt-3">
-                            <img class="alertAnim" id="alertImg" runat="server" src="/MenuLink/app-file/success.gif" />
-                        </div>
-                        <div class="col-12 text-center p-3">
-                            <h3 class="alertMessage" id="alertMsg" runat="server"></h3>
-                        </div>
-                        <div class="col-12 text-center p-3">
-                            <asp:LinkButton ID="lnkOk" OnClick="lnkOk_OnClick" CssClass="btn btn-primary" runat="server">Ok</asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-                <audio src="" id="audioBg" runat="server" autoplay loop="loop"></audio>
+                <audio src="" id="audioBg" runat="server" autoplay></audio>
             </ContentTemplate>
             <Triggers>
                 <asp:PostBackTrigger ControlID="btnAlpha" />
             </Triggers>
         </asp:UpdatePanel>
-
     </form>
-    <style>
-        .successAlertModal {
-            width: 450px;
-            max-width: 450px;
-            min-height: 150px;
-            height: auto;
-            background: white;
-            padding: 0;
-            min-width: 350px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            position: relative;
-            border-radius: 15px;
-            border: 1px solid #a5a3d1;
-            border-bottom: 15px solid #8C93C7;
-            box-shadow: 2px 2px 5px 2px #a5a3d1;
-        }
-
-        .alertModalBg {
-            position: absolute;
-            width: calc(100%);
-            height: calc(100vh);
-            background: rgba(255, 255, 255, 0);
-            z-index: 10000;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
-            justify-content: center;
-            align-items: center;
-        }
-        /*Alert modal css*/
-        .alertAnim {
-            width: 75px;
-            height: 75px;
-        }
-    </style>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -276,11 +206,6 @@
             //}); $('#btnMic').click(function () {
             //    $("#btnMic").css("display", "none");
             //    $("#btnMute").css("display", "block"); 
-            //}); 
-            //$('.alertModalBg').click(function () {
-            //    //$('.alertModalBg').css("display", "none");
-            //    $('.successAlertModal').css("top", "-20%");
-            //    alert();
             //});
         });
         function pageLoad() {
@@ -298,7 +223,6 @@
                 mySound.pause();
             });
         }
-
     </script>
 </body>
 </html>
