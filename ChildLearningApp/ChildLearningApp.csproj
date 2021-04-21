@@ -106,6 +106,7 @@
     <Content Include="admin\number-list.aspx" />
     <Content Include="admin\question-list.aspx" />
     <Content Include="admin\rhymes-list.aspx" />
+    <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="log-in.aspx" />
@@ -583,6 +584,13 @@
     </Compile>
     <Compile Include="admin\rhymes-list.aspx.designer.cs">
       <DependentUpon>rhymes-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\update-password.aspx.cs">
+      <DependentUpon>update-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\update-password.aspx.designer.cs">
+      <DependentUpon>update-password.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\update-question.aspx.cs">
       <DependentUpon>update-question.aspx</DependentUpon>
