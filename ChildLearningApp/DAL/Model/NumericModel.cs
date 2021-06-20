@@ -21,6 +21,7 @@ namespace ChildLearningApp.DAL.Model
         public int NumId { get; set; }
         public string Number { get; set; }
         public string Word { get; set; }
+        public string Audio { get; set; }
         public string Picture { get; set; }
         public string InTime { get; set; }
     }

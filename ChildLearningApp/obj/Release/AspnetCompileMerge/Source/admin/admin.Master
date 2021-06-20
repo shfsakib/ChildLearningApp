@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="ChildLearningApp.admin.admin" %>
 
+<%@ Import Namespace="ChildLearningApp.DAL" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -65,61 +67,176 @@
                     <i class="ti-close"></i>
                 </div>
             </div>
+            <%Function function = Function.GetInstance();
+                HttpCookie cookieData = HttpContext.Current.Request.Cookies["KidsLearn"]; %>
             <ul id="sidebar_menu">
+                <% if (cookieData == null)
+                    {
+                        Response.Redirect("/log-in.aspx");
+                    }
+                    else if (function.TypeCookie() == "Admin")
+                    { %>
                 <li class="">
                     <a class="has-arrow" href="#" aria-expanded="false">
                         <div class="nav_icon_small">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-sort-alpha-down"></i>
                         </div>
                         <div class="nav_title">
-                            <span>Dashboard </span>
+                            <span>Alphabets</span>
                         </div>
                     </a>
                     <ul>
-                        <li><a href="index_2.html">Default</a></li>
-                        <li><a href="index_3.html">Light Sidebar</a></li>
-                        <li><a href="index-2.html">Dark Sidebar</a></li>
+                        <li><a href="/admin/add-alphabet.aspx">Add Alphabet</a></li>
+                        <li><a href="/admin/alphabet-list.aspx">Alphabet List</a></li>
                     </ul>
                 </li>
-
-                <li class="">
-                    <a href="Trader_Profile.html" aria-expanded="false">
-                        <div class="nav_icon_small">
-                            <img src="img/menu-icon/4.svg" alt="">
-                        </div>
-                        <div class="nav_title">
-                            <span>Trader Profile</span>
-                        </div>
-                    </a>
-                </li>
-
                 <li class="">
                     <a class="has-arrow" href="#" aria-expanded="false">
                         <div class="nav_icon_small">
-                            <img src="img/menu-icon/18.svg" alt="">
+                            <i class="fas fa-sort-numeric-down"></i>
                         </div>
                         <div class="nav_title">
-                            <span>UI Elements </span>
+                            <span>Numbers</span>
                         </div>
                     </a>
                     <ul>
-                        <li><a href="colors.html">colors</a></li>
-                        <li><a href="Alerts.html">Alerts</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="modal.html">modal</a></li>
-                        <li><a href="dropdown.html">Droopdowns</a></li>
-                        <li><a href="Badges.html">Badges</a></li>
-                        <li><a href="Loading_Indicators.html">Loading Indicators</a></li>
-                        <li><a href="color_plate.html">Color Plate</a></li>
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="datepicker.html">Date Picker</a></li>
-                        <li><a href="wow_animation.html">Animate</a></li>
-                        <li><a href="Scroll_Reveal.html">Scroll Reveal</a></li>
-                        <li><a href="tilt.html">Tilt Animation</a></li>
-                        <li><a href="navs.html">Navs</a></li>
+                        <li><a href="/admin/add-number.aspx">Add Number</a></li>
+                        <li><a href="/admin/number-list.aspx">Number List</a></li>
                     </ul>
                 </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Rhymes</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-rhymes.aspx">Add Rhymes</a></li>
+                        <li><a href="/admin/rhymes-list.aspx">Rhymes List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Question</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-question.aspx">Add Question</a></li>
+                        <li><a href="/admin/question-list.aspx">Question List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="" href="/admin/add-level.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Level Info</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="" href="/admin/update-password.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Update Password</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Admin</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-admin.aspx">Add Admin</a></li>
+                        <li><a href="/admin/admin-list.aspx">Admin List</a></li>
+                    </ul>
+                </li>
+                <% }
+                    else
+                    { %>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-sort-alpha-down"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Alphabets</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-alphabet.aspx">Add Alphabet</a></li>
+                        <li><a href="/admin/alphabet-list.aspx">Alphabet List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Numbers</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-number.aspx">Add Number</a></li>
+                        <li><a href="/admin/number-list.aspx">Number List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Rhymes</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-rhymes.aspx">Add Rhymes</a></li>
+                        <li><a href="/admin/rhymes-list.aspx">Rhymes List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="has-arrow" href="#" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Question</span>
+                        </div>
+                    </a>
+                    <ul>
+                        <li><a href="/admin/add-question.aspx">Add Question</a></li>
+                        <li><a href="/admin/question-list.aspx">Question List</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a class="" href="/admin/add-level.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Level Info</span>
+                        </div>
+                    </a>
+                </li>
 
+                <% } %>
             </ul>
         </nav>
         <!--/ sidebar  -->
@@ -134,34 +251,38 @@
                             <div class="sidebar_icon d-lg-none">
                                 <i class="ti-menu"></i>
                             </div>
+
+                            <% if (cookieData != null)
+                                { %>
+
+
                             <div class="line_icon open_miniSide d-none d-lg-block">
-                                <img src="../MenuLink/img/line_img.png" alt="">
+                                <img src='<%= cookieData["Picture"].ToString() %>' alt=""/>
                             </div>
                             <div class="header_right d-flex justify-content-between align-items-center">
                                 <div class="header_notification_warp d-flex align-items-center">
 
                                     <div class="profile_info d-flex align-items-center" style="position: absolute; right: 15px;">
                                         <div class="profile_thumb mr_20">
-                                            <img src="../MenuLink/img/transfer/4.png" alt="#" />
+                                            <img src='<%=cookieData["Picture"].ToString() %>' alt="#" />
                                         </div>
                                         <div class="author_name">
-                                            <h4 class="f_s_15 f_w_500 mb-0">Jiue Anderson</h4>
-                                            <p class="f_s_12 f_w_400">Manager</p>
+                                            <h4 class="f_s_15 f_w_500 mb-0"><%=cookieData["Name"].ToString() %></h4>
+                                            <p class="f_s_12 f_w_400"><%=cookieData["Type"].ToString() %></p>
                                         </div>
                                         <div class="profile_info_iner">
                                             <div class="profile_author_name">
-                                                <p>Manager</p>
-                                                <h5>Jiue Anderson</h5>
+                                                <p><%=cookieData["Type"].ToString() %></p>
+                                                <h5><%=cookieData["Name"].ToString() %></h5>
                                             </div>
                                             <div class="profile_info_details">
-                                                <a href="#">My Profile </a>
-                                                <a href="#">Settings</a>
-                                                <a href="#">Log Out </a>
+                                                <a href="#" runat="server" onserverclick="OnServerClick">Log Out </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -175,7 +296,7 @@
                 </div>
             </div>
 
-             
+
         </section>
         <!-- main content part end -->
         <div id="back-top" style="display: none;">
@@ -185,7 +306,21 @@
         </div>
 
     </form>
+    <style>
+        .mt2 {
+            margin-top: 2px !important;
+        }
 
+        .wd {
+            width: 100% !important;
+        }
+
+        .form-control {
+            height: 40px !important;
+            font-weight: normal !important;
+            font-family: comic sans ms !important;
+        }
+    </style>
     <!-- footer  -->
     <script src="../MenuLink/js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->
@@ -215,7 +350,7 @@
     <script src="../MenuLink/vendors/datatable/js/pdfmake.min.js"></script>
     <script src="../MenuLink/vendors/datatable/js/vfs_fonts.js"></script>
     <script src="../MenuLink/vendors/datatable/js/buttons.html5.min.js"></script>
-    
+
     <script src="../MenuLink/vendors/datatable/js/buttons.print.min.js"></script>
 
     <!-- datepicker  -->
@@ -257,6 +392,13 @@
     <!-- custom js -->
     <script src="../MenuLink/js/dashboard_init.js"></script>
     <script src="../MenuLink/js/custom.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, "", window.location.href);
+            };
+        });
+    </script>
 </body>
 </html>

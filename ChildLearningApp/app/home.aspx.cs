@@ -15,19 +15,21 @@ namespace ChildLearningApp.app
         private Function function;
         HttpCookie sound = new HttpCookie("Sound");
         HttpCookie quiz = new HttpCookie("QuizLevel");
-        private SpeechSynthesizer speech;
+       
         Random random = new Random();
         HttpCookie soundData = HttpContext.Current.Request.Cookies["Sound"];
         HttpCookie quizData = HttpContext.Current.Request.Cookies["QuizLevel"];
         public home()
         {
-            speech = new SpeechSynthesizer();
+            
             function = Function.GetInstance();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                audioGrid.Src = "";
+
                 Session["correct"] = 0;
                 if (soundData == null)
                 {
@@ -60,25 +62,37 @@ namespace ChildLearningApp.app
                         Response.Cookies.Add(quiz);
                     }
                 }
-                Load();
-
+                
             }
         }
-        private void Load()
-        {
-            function.LoadGrid(gridAlpha, "SELECT * FROM ALPHABETINFO ORDER BY ALPHABET ASC");
-            function.LoadGrid(gridNum, "SELECT * FROM Numeric ORDER BY Number ASC");
-            function.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes ORDER BY RhymeName ASC");
-        }
+        
         protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = false;
             panelWord.Visible = true;
+            function.LoadGrid(gridAlpha, "SELECT * FROM ALPHABETINFO ORDER BY ALPHABET ASC");
+            audioBg.Src = "";
+
         }
         protected void lnkHome_OnClick(object sender, EventArgs e)
         {
             Panel1.Visible = true;
             panelWord.Visible = panelNumber.Visible = panelRhymes.Visible = panelQuiz.Visible = false;
+            audioGrid.Src = "";
+            if (soundData == null)
+            {
+                audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
+            }
+            else if (soundData["play"].ToString() == "off")
+            {
+                audioBg.Src = "";
+                btnMic.Visible = false;
+                btnMute.Visible = true;
+            }
+            else
+            {
+                audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
+            }
         }
         protected void btnMic_OnServerClick(object sender, EventArgs e)
         {
@@ -102,39 +116,46 @@ namespace ChildLearningApp.app
         {
             Panel1.Visible = false;
             panelNumber.Visible = true;
+            function.LoadGrid(gridNum, "SELECT * FROM Numeric ORDER BY Number ASC");
+            audioBg.Src = "";
+
+
         }
         protected void btnSpeakWord_OnClick(object sender, EventArgs e)
         {
-            LinkButton linkButton = (LinkButton)sender;
-            Label lblWord = (Label)linkButton.Parent.FindControl("lblWord");
-            speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
-            // to change VoiceGender and VoiceAge check out those links below
 
-            speech.Volume = 100;  // (0 - 100)
-            speech.Rate = 0;
-            // Configure the audio output. 
-            string text = lblWord.Text;
-            // Speak a string.
-            speech.Speak(text);
+            LinkButton linkButton = (LinkButton)sender; 
+            HiddenField audio = (HiddenField)linkButton.Parent.FindControl("audioHidden");
+            
+            // to change VoiceGender and VoiceAge check out those links below
+            audioGrid.Src = "";
+            audioGrid.Src = audio.Value;
+
         }
         protected void btnSpeak_OnClick(object sender, EventArgs e)
-        {
+        { 
             LinkButton linkButton = (LinkButton)sender;
-            Label lblWord = (Label)linkButton.Parent.FindControl("lblWord");
-            speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
-            // to change VoiceGender and VoiceAge check out those links below
+            HiddenField audio = (HiddenField)linkButton.Parent.FindControl("audioHidden");
+            audioGrid.Src = "";
+            audioGrid.Src = audio.Value;
+            
+            //speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
+            //// to change VoiceGender and VoiceAge check out those links below
 
-            speech.Volume = 100;  // (0 - 100)
-            speech.Rate = 0;
-            // Configure the audio output. 
-            string text = lblWord.Text;
-            // Speak a string.
-            speech.Speak(text);
+            //speech.Volume = 100;  // (0 - 100)
+            //speech.Rate = 0;
+            //// Configure the audio output. 
+            //string text = lblNum.Text;
+            //// Speak a string.
+            //speech.Speak(text);
         }
         protected void btnRhymes_OnClick(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = false;
             panelRhymes.Visible = true;
+            function.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes ORDER BY RhymeName ASC");
+            audioBg.Src = "";
+
         }
 
         protected void lnkBack_OnClick(object sender, EventArgs e)
@@ -154,6 +175,7 @@ namespace ChildLearningApp.app
 
         protected void btnQuiz_OnClick(object sender, ImageClickEventArgs e)
         {
+            audioBg.Src = "";
             string maxLevel = function.IsExist("SELECT MAX(LEVELID) FROM Questions");
             if (Convert.ToInt32(lblLevel.Text) > Convert.ToInt32(maxLevel))
             {

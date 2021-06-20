@@ -31,6 +31,15 @@ namespace ChildLearningApp.admin {
         protected global::System.Web.UI.WebControls.TextBox txtWord;
         
         /// <summary>
+        /// fileAudio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileAudio;
+        
+        /// <summary>
         /// filePic control.
         /// </summary>
         /// <remarks>

@@ -77,6 +77,18 @@ namespace ChildLearningApp.admin
                 numericModel.Number = txtalpha.Text;
                 numericModel.Word = txtWord.Text;
                 numericModel.InTime = function.Date();
+                if (fileAudio.HasFile)
+                {
+                    string val = random.Next(1111, 999999).ToString();
+                    string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
+                    fileAudio.PostedFile.SaveAs(imagePath);
+                    numericModel.Audio = "/Audio/" + val + fileAudio.FileName;
+                }
+                else
+                {
+                    function.ShowAlert(this, "Audio is required");
+
+                }
                 if (filePic.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();

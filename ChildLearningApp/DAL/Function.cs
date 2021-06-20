@@ -25,7 +25,7 @@ namespace ChildLearningApp.DAL
             }
             return _instance;
         }
-       
+
         public Function()
         {
             if (con == null)
@@ -33,7 +33,20 @@ namespace ChildLearningApp.DAL
                 con = new SqlConnection(Connection);
             }
         }
-       public string Connection = @"Data Source=.\local;Initial Catalog=KidsLearningDb;Integrated Security=True";
+       
+        public string Connection = new SqlConnectionStringBuilder
+        {
+            DataSource = ".\\local",
+            InitialCatalog = "KidsLearningDb",
+            UserID = "sa",
+            Password = "ShfS@kib16",
+            MultipleActiveResultSets = true,
+            Pooling = true,
+            MinPoolSize = 0,
+            MaxPoolSize = 4000,
+            ConnectTimeout = 0
+        }.ToString();
+        public string Connection1 = @"Data Source=.\local;Initial Catalog=KidsLearningDb;Integrated Security=True";
         public void BindDropDown(DropDownList ddl, string root, string query)
         {
             con = new SqlConnection(Connection);
@@ -197,8 +210,8 @@ namespace ChildLearningApp.DAL
         }
 
         public void ShowAlert(Page page, string msg)
-        { 
-            ScriptManager.RegisterStartupScript(page, page.GetType(), "script", "alert('"+msg+"')", true);
+        {
+            ScriptManager.RegisterStartupScript(page, page.GetType(), "script", "alert('" + msg + "')", true);
 
         }
 

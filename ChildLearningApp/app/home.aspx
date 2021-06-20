@@ -69,6 +69,7 @@
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
+                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />                                               
                                                 <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("AlphaId")%>' />
                                                 <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Alphabet")%>'></asp:Label>
                                                 <div class="row">
@@ -104,6 +105,7 @@
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
+                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />
                                                 <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("NumId")%>' />
                                                 <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Number")%>'></asp:Label>
                                                 <div class="row">
@@ -111,7 +113,7 @@
                                                         <asp:Image ID="Image11" Width="250px" Height="200px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
                                                     </div>
                                                     <div class="col-12 text-center">
-                                                        <asp:Label ID="lblWord" Style="font-size: 24px; font-weight: bold; top: 5px; position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
+                                                        <asp:Label ID="lblNum" Style="font-size: 24px; font-weight: bold; top: 5px; position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
                                                         <span>
                                                             <asp:LinkButton runat="server" class="btn btn-success" Style="border-radius: 50%;" OnClick="btnSpeak_OnClick" ID="btnSpeak" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
                                                     </div>
@@ -213,6 +215,7 @@
                         </div>
                     </div>
                 </div>
+                <audio src="" id="audioGrid" runat="server" autoplay></audio>
                 <audio src="" id="audioBg" runat="server" autoplay loop="loop"></audio>
             </ContentTemplate>
             <Triggers>
@@ -259,7 +262,7 @@
             height: 75px;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

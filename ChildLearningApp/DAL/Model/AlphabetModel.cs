@@ -22,6 +22,7 @@ namespace ChildLearningApp.DAL.Model
         public string Alphabet { get; set; }
         public string Word { get; set; }
         public string Picture { get; set; }
+        public string Audio { get; set; }
         public string InTime { get; set; }
     }
 }

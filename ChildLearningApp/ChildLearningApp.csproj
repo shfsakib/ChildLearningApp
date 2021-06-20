@@ -622,6 +622,7 @@
     <Compile Include="test.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Audio\" />
     <Folder Include="Image\" />
   </ItemGroup>
   <PropertyGroup>

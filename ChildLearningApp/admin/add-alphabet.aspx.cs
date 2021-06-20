@@ -86,6 +86,18 @@ namespace ChildLearningApp.admin
                 alphabetModel.Alphabet = txtalpha.Text;
                 alphabetModel.Word = txtWord.Text;
                 alphabetModel.InTime = function.Date();
+                if (fileAudio.HasFile)
+                {
+                    string val = random.Next(1111, 999999).ToString();
+                    string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
+                    fileAudio.PostedFile.SaveAs(imagePath);
+                    alphabetModel.Audio = "/Audio/" + val + fileAudio.FileName;
+                }
+                else
+                {
+                    function.ShowAlert(this, "Audio is required");
+
+                }
                 if (filePic.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();

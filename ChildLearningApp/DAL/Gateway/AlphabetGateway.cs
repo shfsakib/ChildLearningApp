@@ -37,10 +37,11 @@ namespace ChildLearningApp.DAL.Gateway
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 transaction = con.BeginTransaction();
-                cmd = new SqlCommand("INSERT INTO AlphabetInfo(Alphabet,Word,Picture,InTime) VALUES(@Alphabet,@Word,@Picture,@InTime)", con);
+                cmd = new SqlCommand("INSERT INTO AlphabetInfo(Alphabet,Word,Audio,Picture,InTime) VALUES(@Alphabet,@Word,@Audio,@Picture,@InTime)", con);
                 cmd.Parameters.AddWithValue("@Alphabet", ob.Alphabet);
                 cmd.Parameters.AddWithValue("@Word", ob.Word);
                 cmd.Parameters.AddWithValue("@Picture", ob.Picture);
+                cmd.Parameters.AddWithValue("@Audio", ob.Audio);
                 cmd.Parameters.AddWithValue("@InTime", ob.InTime);
 
                 cmd.Transaction = transaction;

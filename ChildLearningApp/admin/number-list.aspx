@@ -22,6 +22,11 @@
                                 <asp:Label ID="lblWord" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
+                         <asp:TemplateField HeaderText="Audio">
+                            <ItemTemplate>
+                                <asp:Label ID="lblAudio" runat="server" Text='<%#Eval("Audio")%>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Picture">
                             <ItemTemplate>
                                 <asp:Image ID="Image11" Width="100px" Height="100px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
