@@ -69,6 +69,7 @@
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
+                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />                                               
                                                 <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("AlphaId")%>' />
                                                 <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Alphabet")%>'></asp:Label>
                                                 <div class="row">
@@ -104,6 +105,7 @@
                                     <Columns>
                                         <asp:TemplateField HeaderText="Alphabet">
                                             <ItemTemplate>
+                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />
                                                 <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("NumId")%>' />
                                                 <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Number")%>'></asp:Label>
                                                 <div class="row">
@@ -213,6 +215,7 @@
                         </div>
                     </div>
                 </div>
+                <audio src="" id="audioGrid" runat="server" autoplay></audio>
                 <audio src="" id="audioBg" runat="server" autoplay loop="loop"></audio>
             </ContentTemplate>
             <Triggers>

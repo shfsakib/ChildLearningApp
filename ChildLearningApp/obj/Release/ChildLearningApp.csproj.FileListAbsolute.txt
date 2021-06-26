@@ -62,3 +62,4 @@ D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.ApplicationInsig
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Release\ChildLearningApp.dll
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Release\ChildLearningApp.pdb
+D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Release\ChildLearningApp.csprojResolveAssemblyReference.cache

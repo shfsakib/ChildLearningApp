@@ -20,6 +20,12 @@
                     <asp:TextBox ID="txtWord" placeholder="One, Two etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
+             <div class="row">
+                <div class="col-md-12">
+                    Pronounce Audio (*.mp3,*.wav,*.aac):
+                    <asp:FileUpload ID="fileAudio" accept=".mp3,.wav,.aac" class="form-control" runat="server" />
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     Picture of Number:
