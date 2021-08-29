@@ -61,6 +61,6 @@ D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.AI.Web.xml
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.AI.WindowsServer.xml
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.ApplicationInsights.xml
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.csprojResolveAssemblyReference.cache
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.dll
 D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.pdb
+D:\Projects\Git\ChildLearningApp\ChildLearningApp\obj\Debug\ChildLearningApp.csprojResolveAssemblyReference.cache

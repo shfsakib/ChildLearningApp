@@ -15,13 +15,13 @@ namespace ChildLearningApp.app
         private Function function;
         HttpCookie sound = new HttpCookie("Sound");
         HttpCookie quiz = new HttpCookie("QuizLevel");
-       
+
         Random random = new Random();
         HttpCookie soundData = HttpContext.Current.Request.Cookies["Sound"];
-        HttpCookie quizData = HttpContext.Current.Request.Cookies["QuizLevel"];
+        
         public home()
         {
-            
+
             function = Function.GetInstance();
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -45,27 +45,9 @@ namespace ChildLearningApp.app
                 {
                     audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
                 }
-                if (quizData == null)
-                {
-                    quiz["level"] = "1";
-                    quiz["score"] = "0";
-                    quiz.Expires = DateTime.Now.AddYears(300);
-                    Response.Cookies.Add(quiz);
-                }
-                else
-                {
-                    if (quizData["level"] == "1")
-                    {
-                        quiz["level"] = "1";
-                        quiz["score"] = "0";
-                        quiz.Expires = DateTime.Now.AddYears(300);
-                        Response.Cookies.Add(quiz);
-                    }
-                }
-                
             }
         }
-        
+
         protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
         {
             Panel1.Visible = false;
@@ -77,7 +59,7 @@ namespace ChildLearningApp.app
         protected void lnkHome_OnClick(object sender, EventArgs e)
         {
             Panel1.Visible = true;
-            panelWord.Visible = panelNumber.Visible = panelRhymes.Visible = panelQuiz.Visible = false;
+            panelWord.Visible = panelNumber.Visible = false;
             audioGrid.Src = "";
             if (soundData == null)
             {
@@ -124,21 +106,21 @@ namespace ChildLearningApp.app
         protected void btnSpeakWord_OnClick(object sender, EventArgs e)
         {
 
-            LinkButton linkButton = (LinkButton)sender; 
+            LinkButton linkButton = (LinkButton)sender;
             HiddenField audio = (HiddenField)linkButton.Parent.FindControl("audioHidden");
-            
+
             // to change VoiceGender and VoiceAge check out those links below
             audioGrid.Src = "";
             audioGrid.Src = audio.Value;
 
         }
         protected void btnSpeak_OnClick(object sender, EventArgs e)
-        { 
+        {
             LinkButton linkButton = (LinkButton)sender;
             HiddenField audio = (HiddenField)linkButton.Parent.FindControl("audioHidden");
             audioGrid.Src = "";
             audioGrid.Src = audio.Value;
-            
+
             //speech.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Child);
             //// to change VoiceGender and VoiceAge check out those links below
 
@@ -151,170 +133,15 @@ namespace ChildLearningApp.app
         }
         protected void btnRhymes_OnClick(object sender, ImageClickEventArgs e)
         {
-            Panel1.Visible = false;
-            panelRhymes.Visible = true;
-            function.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes ORDER BY RhymeName ASC");
-            audioBg.Src = "";
-
-        }
-
-        protected void lnkBack_OnClick(object sender, EventArgs e)
-        {
-            panelRhymes.Visible = true;
-            panelVideo.Visible = false;
-        }
-
-        protected void btnRhyme_OnServerClick(object sender, EventArgs e)
-        {
-            HtmlAnchor anchor = (HtmlAnchor)sender;
-            HiddenField link = (HiddenField)anchor.Parent.FindControl("link");
-            videoFrame.Src = link.Value;
-            panelVideo.Visible = true;
-            panelRhymes.Visible = false;
+            Response.Redirect("/app/rhymes.aspx");
         }
 
         protected void btnQuiz_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            string maxLevel = function.IsExist("SELECT MAX(LEVELID) FROM Questions");
-            if (Convert.ToInt32(lblLevel.Text) > Convert.ToInt32(maxLevel))
-            {
-                quizData = null;
-                quiz["level"] = "1";
-                quiz["score"] = "0";
-                lblLevel.Text = "1";
-                quiz.Expires = DateTime.Now.AddYears(300);
-                Response.Cookies.Add(quiz);
-            }
-
-            panelQuiz.Visible = true;
-            Panel1.Visible = false;
-
-            if (quizData != null)
-            {
-                lblHigh.Text = function.IsExist("SELECT HighScore FROM HighScore");
-                lblLevel.Text = quizData["level"].ToString();
-                lblScore.Text = quizData["score"].ToString();
-                lblQuestion.Text =
-                      function.IsExist(
-                          $"SELECT TOP 1 Question FROM Questions WHERE LevelId='{lblLevel.Text}' ORDER BY NEWID()");
-                lnkA.Text = function.IsExist($"SELECT OptionA FROM Questions WHERE Question='{lblQuestion.Text}'");
-                lnkB.Text = function.IsExist($"SELECT OptionB FROM Questions WHERE Question='{lblQuestion.Text}'");
-                hiddenAns.Value =
-                    function.IsExist($"SELECT Answer FROM Questions WHERE Question='{lblQuestion.Text}'");
-                hiddenPoint.Value =
-                    function.IsExist($"SELECT Point FROM Questions WHERE Question='{lblQuestion.Text}'");
-            }
-        }
-
-        protected void lnkA_OnClick(object sender, EventArgs e)
-        {
-            if (lnkA.Text == hiddenAns.Value)
-            {
-                Question("Your answer is correct", "s");
-                Session["correct"] = Convert.ToInt32(Session["correct"]) + 1;
-            }
-            else
-            {
-                Question("Your answer is incorrect", "e");
-            }
-
-            quiz["Level"] = lblLevel.Text;
-            quiz["score"] = (Convert.ToInt32(quizData["score"]) + Convert.ToInt32(hiddenPoint.Value)).ToString();
-            quiz.Expires = DateTime.Now.AddYears(300);
-            Response.Cookies.Add(quiz);
-
-        }
-
-        protected void lnkOk_OnClick(object sender, EventArgs e)
-        {
-
-            alertModalBg.Visible = false;
-            lblHigh.Text = function.IsExist("SELECT HighScore FROM HighScore");
-            //lblLevel.Text = quizData["level"].ToString();
-            lblScore.Text = quizData["score"].ToString();
-            string correct = Session["correct"].ToString();
-            if (Convert.ToInt32(correct) > 3)
-            {
-                lblLevel.Text = (Convert.ToInt32(quizData["level"].ToString()) + 1).ToString();
-                quiz["level"] = (Convert.ToInt32(quizData["level"].ToString()) + 1).ToString();
-                quiz["score"] = quizData["score"];
-                quiz.Expires = DateTime.Now.AddYears(300);
-                Response.Cookies.Add(quiz);
-                quizData = HttpContext.Current.Request.Cookies["QuizLevel"];
-                Session["correct"] = 0;
-            }
-            if (lblHigh.Text=="0")
-            {
-                function.Execute("truncate table highscore");
-                function.Execute("INSERT INTO HighScore(HighScore) VALUES('" + quizData["score"].ToString() + "')");
-            }
-            else if (Convert.ToInt32(lblHigh.Text) <= Convert.ToInt32(lblScore.Text))
-            {
-                function.Execute("truncate table highscore");
-                function.Execute("INSERT INTO HighScore(HighScore) VALUES('" + quizData["score"].ToString() + "')");
-            }
-            lblQuestion.Text = function.IsExist($"SELECT TOP 1 Question FROM Questions WHERE LevelId='{lblLevel.Text}' ORDER BY NEWID()");
-            lnkA.Text = function.IsExist($"SELECT OptionA FROM Questions WHERE Question='{lblQuestion.Text}'");
-            lnkB.Text = function.IsExist($"SELECT OptionB FROM Questions WHERE Question='{lblQuestion.Text}'");
-            hiddenAns.Value = function.IsExist($"SELECT Answer FROM Questions WHERE Question='{lblQuestion.Text}'");
-            hiddenPoint.Value = function.IsExist($"SELECT Point FROM Questions WHERE Question='{lblQuestion.Text}'");
-            audioQuiz.Src = "";
-            string maxLevel = function.IsExist("SELECT MAX(LEVELID) FROM Questions");
-            if (Convert.ToInt32(lblLevel.Text) > Convert.ToInt32(maxLevel))
-            {
-                Question("Congratulations! You have successfully completed all levels.", "s");
-                quizData = null;
-                quiz["level"] = "1";
-                quiz["score"] = "0";
-                quiz.Expires = DateTime.Now.AddYears(300);
-                Response.Cookies.Add(quiz);
-                lblHigh.Text = function.IsExist("SELECT HighScore FROM HighScore");
-                lblLevel.Text = "1";
-                lblScore.Text = "0";
-                lblQuestion.Text = function.IsExist($"SELECT TOP 1 Question FROM Questions WHERE LevelId='{lblLevel.Text}' ORDER BY NEWID()");
-                lnkA.Text = function.IsExist($"SELECT OptionA FROM Questions WHERE Question='{lblQuestion.Text}'");
-                lnkB.Text = function.IsExist($"SELECT OptionB FROM Questions WHERE Question='{lblQuestion.Text}'");
-                hiddenAns.Value = function.IsExist($"SELECT Answer FROM Questions WHERE Question='{lblQuestion.Text}'");
-                hiddenPoint.Value = function.IsExist($"SELECT Point FROM Questions WHERE Question='{lblQuestion.Text}'");
-            }
-
-
-        }
-        protected void lnkB_OnClick(object sender, EventArgs e)
-        {
-            if (lnkB.Text == hiddenAns.Value)
-            {
-                Question("Your answer is correct", "s");
-                Session["correct"] = Convert.ToInt32(Session["correct"]) + 1;
-            }
-            else
-            {
-                Question("Your answer is incorrect", "e");
-            }
-            quiz["Level"] = lblLevel.Text;
-
-            quiz["score"] = (Convert.ToInt32(quizData["score"]) + Convert.ToInt32(hiddenPoint.Value)).ToString();
-            quiz.Expires = DateTime.Now.AddYears(300);
-            Response.Cookies.Add(quiz);
-        }
-        private void Question(string text, string type)
-        {
-            alertModalBg.Visible = true;
-            alertMsg.InnerText = text;
-            if (type == "s")
-            {
-                alertMsg.Style.Add("color", "green");
-                alertImg.Src = "/MenuLink/app-file/success.gif";
-                audioQuiz.Src = "/MenuLink/app-file/win.mp3";
-            }
-            else
-            {
-                alertMsg.Style.Add("color", "red");
-                alertImg.Src = "/MenuLink/app-file/error.gif";
-                audioQuiz.Src = "/MenuLink/app-file/loss.mp3";
-
-            }
-        }
+            Response.Redirect("/app/quizes.aspx");
+            
+        } 
+       
     }
 }

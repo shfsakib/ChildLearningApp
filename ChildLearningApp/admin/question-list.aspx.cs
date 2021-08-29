@@ -44,6 +44,10 @@ FROM            Questions INNER JOIN
             {
                 Load();
             }
+            else
+            {
+                function.ShowAlert(this,"Failed to remove");
+            }
         }
 
 

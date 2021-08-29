@@ -22,15 +22,6 @@ namespace ChildLearningApp.admin {
         protected global::System.Web.UI.WebControls.TextBox txtalpha;
         
         /// <summary>
-        /// txtWord control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtWord;
-        
-        /// <summary>
         /// fileAudio control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace ChildLearningApp.admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgPic;
+        
+        /// <summary>
+        /// txtWord control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWord;
         
         /// <summary>
         /// btnAdd control.

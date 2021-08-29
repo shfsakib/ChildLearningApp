@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Speech.Synthesis;
-using ChildLearningApp.DAL;
-using ChildLearningApp.DAL.Gateway;
-using ChildLearningApp.DAL.Model;
+using ChildLearningApp.DAL; 
 
 namespace ChildLearningApp.admin
 {
     public partial class add_alphabet : System.Web.UI.Page
     {
         private SpeechSynthesizer speech;
-        private Function function;
-        private AlphabetModel alphabetModel;
-        private AlphabetGateway alphabetGateway;
+        private Function function; 
         Random random = new Random();
         public add_alphabet()
         {
             speech = new SpeechSynthesizer();
-            function = Function.GetInstance();
-            alphabetModel = AlphabetModel.GetInstance();
-            alphabetGateway = AlphabetGateway.GetInstance();
+            function = Function.GetInstance(); 
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,10 +23,10 @@ namespace ChildLearningApp.admin
             }
         }
 
-        private bool IsAlpha()
+        private bool IsLetter()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Alphabet FROM AlphabetInfo WHERE Alphabet='{txtalpha.Text}'");
+            string x = function.IsExist($"SELECT Letter FROM LetterInfo WHERE Letter=N'{txtalpha.Text}'");
             if (x != "")
             {
                 ans = true;
@@ -42,7 +36,7 @@ namespace ChildLearningApp.admin
         private bool IsWord()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Word FROM AlphabetInfo WHERE Word='{txtWord.Text}'");
+            string x = function.IsExist($"SELECT Word FROM LetterInfo WHERE Word=N'{txtWord.Text}'");
             if (x != "")
             {
                 ans = true;
@@ -72,7 +66,7 @@ namespace ChildLearningApp.admin
             {
                 function.ShowAlert(this, "Word is required");
             }
-            else if (IsAlpha())
+            else if (IsLetter())
             {
                 function.ShowAlert(this, "Alphabet already exist");
 
@@ -83,38 +77,68 @@ namespace ChildLearningApp.admin
             }
             else
             {
-                alphabetModel.Alphabet = txtalpha.Text;
-                alphabetModel.Word = txtWord.Text;
-                alphabetModel.InTime = function.Date();
+                string letterAudio = "";
+                string wordAudio = "";
+                string letterPic = "";
+                string wordPic = "";
+                //letter audio file code
                 if (fileAudio.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
                     string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
                     fileAudio.PostedFile.SaveAs(imagePath);
-                    alphabetModel.Audio = "/Audio/" + val + fileAudio.FileName;
+                    letterAudio = "/Audio/" + val + fileAudio.FileName;
                 }
                 else
                 {
-                    function.ShowAlert(this, "Audio is required");
-
+                    function.ShowAlert(this, "Letter Audio is required");
+                    return;
                 }
+                //letter image code
+
                 if (filePic.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
                     string imagePath = Server.MapPath("/Image/") + val + filePic.FileName;
                     filePic.PostedFile.SaveAs(imagePath);
-                    alphabetModel.Picture = "/Image/" + val + filePic.FileName;
+                    letterPic = "/Image/" + val + filePic.FileName;
                 }
                 else
                 {
-                    function.ShowAlert(this, "Picture is required");
-
+                    function.ShowAlert(this, "Letter Picture is required");
+                    return;
                 }
-                bool ans = alphabetGateway.Insert(alphabetModel);
+                //word audio
+                if (fileWordAudio.HasFile)
+                {
+                    string val = random.Next(1111, 999999).ToString();
+                    string imagePath = Server.MapPath("/Audio/") + val + fileWordAudio.FileName;
+                    fileWordAudio.PostedFile.SaveAs(imagePath);
+                    wordAudio = "/Audio/" + val + fileWordAudio.FileName;
+                }
+                else
+                {
+                    function.ShowAlert(this, "Word Audio is required");
+                    return;
+                }
+                //word image
+                if (fileWord.HasFile)
+                {
+                    string val = random.Next(1111, 999999).ToString();
+                    string imagePath = Server.MapPath("/Image/") + val + fileWord.FileName;
+                    fileWord.PostedFile.SaveAs(imagePath);
+                    wordPic = "/Image/" + val + fileWord.FileName;
+                }
+                else
+                {
+                    function.ShowAlert(this, "Letter Picture is required");
+                    return;
+                }
+                string date = function.Date();
+                bool ans = function.Execute($@"INSERT INTO LetterInfo(Letter,LetterAudio,LetterPicture,Word,WordAudio,WordPicture,InTime,LetterType) VALUES('{txtalpha.Text}','{letterAudio}','{letterPic}','{txtWord.Text}','{wordAudio}','{wordPic}','{date}','Alphabet')");
                 if (ans)
                 {
-                    txtalpha.Text = txtWord.Text = "";
-                    function.ShowAlert(this, "Alphabet added successfully");
+                   function.AlertWithRedirect(this,"Alphabet added successfully","/admin/add-alphabet.aspx");
                 }
                 else
                 {

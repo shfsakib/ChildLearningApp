@@ -3938,7 +3938,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 @media (max-width: 991px) {
   /* line 265, G:/admin_project/10 admin/cryptocurrency/scss/_header.scss */
   .profile_info img {
-    max-width: 30px;
+    max-width: 45px; 
   }
 }
 
@@ -4618,7 +4618,7 @@ table.dataTable {
   text-align: center;
   line-height: 40px;
   position: absolute;
-  right: 30px;
+  right: 10px;
   font-size: 25px;
   top: 29px;
   cursor: pointer;

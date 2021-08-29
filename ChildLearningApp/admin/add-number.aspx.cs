@@ -6,24 +6,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ChildLearningApp.DAL;
-using ChildLearningApp.DAL.Gateway;
-using ChildLearningApp.DAL.Model;
+using ChildLearningApp.DAL.Gateway; 
 
 namespace ChildLearningApp.admin
 {
     public partial class add_number : System.Web.UI.Page
     {
         private SpeechSynthesizer speech;
-        private Function function;
-        private NumericModel numericModel;
+        private Function function; 
         private NumericGateway numericGateway;
         Random random = new Random();
         public add_number()
         {
             speech = new SpeechSynthesizer();
-            function = Function.GetInstance();
-            numericModel = NumericModel.GetInstance();
-            numericGateway = NumericGateway.GetInstance();
+            function = Function.GetInstance();  
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,10 +29,10 @@ namespace ChildLearningApp.admin
 
             }
         }
-        private bool IsNumber()
+        private bool IsLetter()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Number FROM Numeric WHERE Number='{txtalpha.Text}'");
+            string x = function.IsExist($"SELECT Letter FROM LetterInfo WHERE Letter=N'{txtalpha.Text}'");
             if (x != "")
             {
                 ans = true;
@@ -46,7 +42,7 @@ namespace ChildLearningApp.admin
         private bool IsWord()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Word FROM Numeric WHERE Word='{txtWord.Text}'");
+            string x = function.IsExist($"SELECT Word FROM LetterInfo WHERE Word=N'{txtWord.Text}'");
             if (x != "")
             {
                 ans = true;
@@ -63,7 +59,7 @@ namespace ChildLearningApp.admin
             {
                 function.ShowAlert(this, "Spelling is required");
             }
-            else if (IsNumber())
+            else if (IsLetter())
             {
                 function.ShowAlert(this, "Number already exist");
 
@@ -74,38 +70,43 @@ namespace ChildLearningApp.admin
             }
             else
             {
-                numericModel.Number = txtalpha.Text;
-                numericModel.Word = txtWord.Text;
-                numericModel.InTime = function.Date();
+                string letterAudio = "";
+                string wordAudio = "";
+                string letterPic = "";
+                string wordPic = "";
+                //letter audio file code
                 if (fileAudio.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
                     string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
                     fileAudio.PostedFile.SaveAs(imagePath);
-                    numericModel.Audio = "/Audio/" + val + fileAudio.FileName;
+                    letterAudio = "/Audio/" + val + fileAudio.FileName;
                 }
                 else
                 {
-                    function.ShowAlert(this, "Audio is required");
-
+                    function.ShowAlert(this, "Number Audio is required");
+                    return;
                 }
+                //letter image code
+
                 if (filePic.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
                     string imagePath = Server.MapPath("/Image/") + val + filePic.FileName;
                     filePic.PostedFile.SaveAs(imagePath);
-                    numericModel.Picture = "/Image/" + val + filePic.FileName;
+                    letterPic = "/Image/" + val + filePic.FileName;
                 }
                 else
                 {
-                    function.ShowAlert(this, "Picture is required");
-
+                    function.ShowAlert(this, "Number Picture is required");
+                    return;
                 }
-                bool ans = numericGateway.Insert(numericModel);
+                 
+                string date = function.Date();
+                bool ans = function.Execute($@"INSERT INTO LetterInfo(Letter,LetterAudio,LetterPicture,Word,WordAudio,WordPicture,InTime,LetterType) VALUES('{txtalpha.Text}','{letterAudio}','{letterPic}','{txtWord.Text}','{wordAudio}','{wordPic}','{date}','Number')");
                 if (ans)
                 {
-                    txtalpha.Text = txtWord.Text = "";
-                    function.ShowAlert(this, "Number added successfully");
+                    function.AlertWithRedirect(this, "Number added successfully", "/admin/add-number.aspx");
                 }
                 else
                 {

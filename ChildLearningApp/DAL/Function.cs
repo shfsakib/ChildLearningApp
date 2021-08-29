@@ -113,7 +113,7 @@ namespace ChildLearningApp.DAL
                     result = false;
                 if (Conn.State != ConnectionState.Closed) Conn.Close();
             }
-            catch { if (Conn.State != ConnectionState.Closed) Conn.Close(); }
+            catch (Exception ex) { if (Conn.State != ConnectionState.Closed) Conn.Close(); }
             return result;
         }
         public string IsExist(string str)
@@ -211,10 +211,13 @@ namespace ChildLearningApp.DAL
 
         public void ShowAlert(Page page, string msg)
         {
-            ScriptManager.RegisterStartupScript(page, page.GetType(), "script", "alert('" + msg + "')", true);
+            ScriptManager.RegisterStartupScript(page, page.GetType(), "script", "setTimeout(function(){alert('" + msg + "')},100);", true);
 
         }
-
+        public void AlertWithRedirect(Page page, string msg, string link)
+        {
+            ScriptManager.RegisterStartupScript(page, page.GetType(), "script", @"setTimeout(function(){alert('" + msg + "')},100);setTimeout(function(){location.replace('" + link + "')},800);", true);
+        }
         public bool EmailValidation(string email)
         {
             try

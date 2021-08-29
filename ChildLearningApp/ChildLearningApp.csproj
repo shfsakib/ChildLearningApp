@@ -97,18 +97,35 @@
   <ItemGroup>
     <Content Include="admin\add-admin.aspx" />
     <Content Include="admin\add-alphabet.aspx" />
+    <Content Include="admin\add-bangla-consonent.aspx" />
+    <Content Include="admin\add-bangla-number.aspx" />
     <Content Include="admin\add-level.aspx" />
     <Content Include="admin\add-number.aspx" />
     <Content Include="admin\add-question.aspx" />
     <Content Include="admin\add-rhymes.aspx" />
     <Content Include="admin\admin-list.aspx" />
     <Content Include="admin\alphabet-list.aspx" />
+    <Content Include="admin\add-bangla-vowel.aspx" />
+    <Content Include="admin\bangla-consonent-list.aspx" />
+    <Content Include="admin\bangla-number-list.aspx" />
+    <Content Include="admin\bangla-vowel-list.aspx" />
+    <Content Include="admin\learn-animal.aspx" />
+    <Content Include="admin\learn-bangla-animal.aspx" />
+    <Content Include="admin\learn-bangla-color.aspx" />
+    <Content Include="admin\learn-color.aspx" />
+    <Content Include="admin\learn-months-bangla.aspx" />
+    <Content Include="admin\learn-months-name.aspx" />
+    <Content Include="admin\learn-shape.aspx" />
+    <Content Include="admin\learn-week-bangla.aspx" />
+    <Content Include="admin\learn-week.aspx" />
     <Content Include="admin\number-list.aspx" />
     <Content Include="admin\question-list.aspx" />
     <Content Include="admin\rhymes-list.aspx" />
     <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
     <Content Include="app\home.aspx" />
+    <Content Include="app\quizes.aspx" />
+    <Content Include="app\rhymes.aspx" />
     <Content Include="Image\104734484943ball.jpg" />
     <Content Include="Image\1748253732641.jpg" />
     <Content Include="Image\247647775040a for apple.jpg" />
@@ -526,6 +543,20 @@
     <Compile Include="admin\add-alphabet.aspx.designer.cs">
       <DependentUpon>add-alphabet.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\add-bangla-consonent.aspx.cs">
+      <DependentUpon>add-bangla-consonent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-bangla-consonent.aspx.designer.cs">
+      <DependentUpon>add-bangla-consonent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\add-bangla-number.aspx.cs">
+      <DependentUpon>add-bangla-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-bangla-number.aspx.designer.cs">
+      <DependentUpon>add-bangla-number.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\add-level.aspx.cs">
       <DependentUpon>add-level.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -575,6 +606,97 @@
     <Compile Include="admin\alphabet-list.aspx.designer.cs">
       <DependentUpon>alphabet-list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\add-bangla-vowel.aspx.cs">
+      <DependentUpon>add-bangla-vowel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\add-bangla-vowel.aspx.designer.cs">
+      <DependentUpon>add-bangla-vowel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bangla-consonent-list.aspx.cs">
+      <DependentUpon>bangla-consonent-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bangla-consonent-list.aspx.designer.cs">
+      <DependentUpon>bangla-consonent-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bangla-number-list.aspx.cs">
+      <DependentUpon>bangla-number-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bangla-number-list.aspx.designer.cs">
+      <DependentUpon>bangla-number-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bangla-vowel-list.aspx.cs">
+      <DependentUpon>bangla-vowel-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bangla-vowel-list.aspx.designer.cs">
+      <DependentUpon>bangla-vowel-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-animal.aspx.cs">
+      <DependentUpon>learn-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-animal.aspx.designer.cs">
+      <DependentUpon>learn-animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-bangla-animal.aspx.cs">
+      <DependentUpon>learn-bangla-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-bangla-animal.aspx.designer.cs">
+      <DependentUpon>learn-bangla-animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-bangla-color.aspx.cs">
+      <DependentUpon>learn-bangla-color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-bangla-color.aspx.designer.cs">
+      <DependentUpon>learn-bangla-color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-color.aspx.cs">
+      <DependentUpon>learn-color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-color.aspx.designer.cs">
+      <DependentUpon>learn-color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-months-bangla.aspx.cs">
+      <DependentUpon>learn-months-bangla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-months-bangla.aspx.designer.cs">
+      <DependentUpon>learn-months-bangla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-months-name.aspx.cs">
+      <DependentUpon>learn-months-name.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-months-name.aspx.designer.cs">
+      <DependentUpon>learn-months-name.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-shape.aspx.cs">
+      <DependentUpon>learn-shape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-shape.aspx.designer.cs">
+      <DependentUpon>learn-shape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-week-bangla.aspx.cs">
+      <DependentUpon>learn-week-bangla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-week-bangla.aspx.designer.cs">
+      <DependentUpon>learn-week-bangla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\learn-week.aspx.cs">
+      <DependentUpon>learn-week.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\learn-week.aspx.designer.cs">
+      <DependentUpon>learn-week.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\number-list.aspx.cs">
       <DependentUpon>number-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -610,6 +732,20 @@
     <Compile Include="admin\update-question.aspx.designer.cs">
       <DependentUpon>update-question.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\quizes.aspx.cs">
+      <DependentUpon>quizes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\quizes.aspx.designer.cs">
+      <DependentUpon>quizes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\rhymes.aspx.cs">
+      <DependentUpon>rhymes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\rhymes.aspx.designer.cs">
+      <DependentUpon>rhymes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\Function.cs" />
     <Compile Include="app\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -618,10 +754,7 @@
     <Compile Include="app\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Gateway\AlphabetGateway.cs" />
     <Compile Include="DAL\Gateway\NumericGateway.cs" />
-    <Compile Include="DAL\Model\AlphabetModel.cs" />
-    <Compile Include="DAL\Model\NumericModel.cs" />
     <Compile Include="log-in.aspx.cs">
       <DependentUpon>log-in.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
