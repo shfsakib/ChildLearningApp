@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card-title">
-        <h3>Month Info Bangla</h3>
+        <h3>Bangla Month Info</h3>
     </div>
     <hr />
     <div class="row">
@@ -11,7 +11,13 @@
             <div class="row">
                 <div class="col-md-12">
                     Month Name:
-                    <asp:TextBox ID="txtAnswer" placeholder="জানুয়ারি,ফেব্রুয়ারি etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAnswer" placeholder="বৈশাখ,জৈষ্ঠ etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    Pronounce Audio (*.mp3,*.wav,*.aac):
+                    <asp:FileUpload ID="fileAudio" accept=".mp3,.wav,.aac" class="form-control" runat="server" />
                 </div>
             </div>
             <div class="row mt-2">

@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.Master" AutoEventWireup="true" CodeBehind="learn-animal.aspx.cs" Inherits="ChildLearningApp.admin.learn_animal" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="card-title">
+    <div class="card-title">
         <h3>Animal Info</h3>
     </div>
     <hr />
@@ -13,20 +14,27 @@
                     Animal Name:
                     <asp:TextBox ID="txtAnswer" placeholder="Cow,Goat etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
-            </div> 
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    Pronounce Audio (*.mp3,*.wav,*.aac):
+                    <asp:FileUpload ID="fileAudio" accept=".mp3,.wav,.aac" class="form-control" runat="server" />
+                </div>
+            </div>
             <div class="row mt-2">
                 <div class="col-md-12">
                     Picture of Animal:
                     <asp:FileUpload ID="filePic" accept=".png,.jpg,.jpeg" onchange="ImagePreview(this)" class="form-control" runat="server" />
                 </div>
             </div>
+
             <div class="row mt-2">
                 <div class="col-md-12">
                     <br />
                     <asp:Image ID="imgPic" ImageUrl="/MenuLink/image.png" Style="width: 150px; height: 150px; border: 2px solid #495057; border-radius: 5px;" runat="server" />
                 </div>
             </div>
-             
+
             <div class="row">
                 <div class="col-md-12">
                     <br />
@@ -46,11 +54,11 @@
                                 <asp:Label ID="Label1" runat="server" Text='<%#Eval("Answer")%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                         <asp:TemplateField HeaderText="Animal_Picture">
+                        <asp:TemplateField HeaderText="Animal_Picture">
                             <ItemTemplate>
                                 <asp:Image ID="imgLetter" Width="100px" Height="100px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
                             </ItemTemplate>
-                        </asp:TemplateField> 
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lnkRemove" class="btn btn-danger" OnClick="lnkRemove_OnClick" runat="server" ToolTip="Make Inactive"><i class="fas fa-trash-alt fa-lg"></i></asp:LinkButton>
@@ -73,6 +81,6 @@
                 reader.readAsDataURL(input.files[0]);
                 }
             }
-             
+
     </script>
 </asp:Content>

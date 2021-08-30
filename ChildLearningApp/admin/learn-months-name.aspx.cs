@@ -67,8 +67,22 @@ namespace ChildLearningApp.admin
                     function.ShowAlert(this, "Picture is required");
                     return;
                 }
+                string letterAudio = "";
+                //letter audio file code
+                if (fileAudio.HasFile)
+                {
+                    string val = random.Next(1111, 999999).ToString();
+                    string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
+                    fileAudio.PostedFile.SaveAs(imagePath);
+                    letterAudio = "/Audio/" + val + fileAudio.FileName;
+                }
+                else
+                {
+                    function.ShowAlert(this, "Audio is required");
+                    return;
+                }
                 string date = function.Date();
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type) VALUES(N'{txtAnswer.Text}','{pic}','Month')");
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Animal','{letterAudio}')");
                 if (ans)
                 {
                     Load();

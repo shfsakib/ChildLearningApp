@@ -14,7 +14,13 @@
                     <asp:TextBox ID="txtAnswer" placeholder="Triangle,Rectangular etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div> 
-            <div class="row mt-2">
+           <div class="row mt-2">
+                <div class="col-md-12">
+                    Pronounce Audio (*.mp3,*.wav,*.aac):
+                    <asp:FileUpload ID="fileAudio" accept=".mp3,.wav,.aac" class="form-control" runat="server" />
+                </div>
+            </div>
+             <div class="row mt-2">
                 <div class="col-md-12">
                     Picture of Shape:
                     <asp:FileUpload ID="filePic" accept=".png,.jpg,.jpeg" onchange="ImagePreview(this)" class="form-control" runat="server" />
