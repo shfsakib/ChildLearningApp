@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridColor, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Color' ORDER BY Answer ASC");
+            function.LoadGrid(gridColor, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Color' ORDER BY Answer DESC");
         }
         private bool IsAnswer()
         {
@@ -80,7 +80,7 @@ namespace ChildLearningApp.admin
                     return;
                 }
                 string date = function.Date();
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Animal','{letterAudio}')");
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES(N'{txtAnswer.Text}','{pic}','Bangla Color','{letterAudio}')");
                 if (ans)
                 {
                     Load();

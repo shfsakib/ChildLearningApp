@@ -229,7 +229,7 @@
                             <i class="far fa-calendar"></i>
                         </div>
                         <div class="nav_title">
-                            <span>ইংরেজী মাসের নাম</span>
+                            <span>বাংলা ১২ মাসের নাম</span>
                         </div>
                     </a>
                 </li>
@@ -245,6 +245,16 @@
                 </li>
                 <li>
                     <h6 class="text-white p-2 pl-3">Others</h6>
+                </li>
+                 <li class="">
+                    <a class="" href="/admin/calculation-info.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Calculation Question</span>
+                        </div>
+                    </a>
                 </li>
                 <li class="">
                     <a class="has-arrow" href="#" aria-expanded="false">

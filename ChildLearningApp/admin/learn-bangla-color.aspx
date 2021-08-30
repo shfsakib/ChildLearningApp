@@ -51,7 +51,11 @@
                                 <asp:Label ID="Label1" runat="server" Text='<%#Eval("Answer")%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                         <asp:TemplateField HeaderText="Color_Picture">
+                          <asp:TemplateField HeaderText="Pronounce">
+                            <ItemTemplate>
+                                <audio src='<%#Eval("Audio")%>' controls></audio>
+                            </ItemTemplate>
+                        </asp:TemplateField> <asp:TemplateField HeaderText="Color_Picture">
                             <ItemTemplate>
                                 <asp:Image ID="imgLetter" Width="100px" Height="100px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
                             </ItemTemplate>

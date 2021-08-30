@@ -109,6 +109,7 @@
     <Content Include="admin\bangla-consonent-list.aspx" />
     <Content Include="admin\bangla-number-list.aspx" />
     <Content Include="admin\bangla-vowel-list.aspx" />
+    <Content Include="admin\calculation-info.aspx" />
     <Content Include="admin\learn-animal.aspx" />
     <Content Include="admin\learn-bangla-animal.aspx" />
     <Content Include="admin\learn-bangla-color.aspx" />
@@ -633,6 +634,13 @@
     </Compile>
     <Compile Include="admin\bangla-vowel-list.aspx.designer.cs">
       <DependentUpon>bangla-vowel-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\calculation-info.aspx.cs">
+      <DependentUpon>calculation-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\calculation-info.aspx.designer.cs">
+      <DependentUpon>calculation-info.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\learn-animal.aspx.cs">
       <DependentUpon>learn-animal.aspx</DependentUpon>

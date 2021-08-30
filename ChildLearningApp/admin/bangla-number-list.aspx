@@ -19,7 +19,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Number_Audio">
                             <ItemTemplate>
-                                <asp:Label ID="lblaAudio" runat="server" Text='<%#Eval("LetterAudio")%>'></asp:Label>
+                                <audio src='<%#Eval("LetterAudio")%>' controls></audio>  
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Number_Picture">

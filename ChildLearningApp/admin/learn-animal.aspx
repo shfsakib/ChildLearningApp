@@ -59,6 +59,11 @@
                                 <asp:Image ID="imgLetter" Width="100px" Height="100px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Pronounce">
+                            <ItemTemplate>
+                                <audio src='<%#Eval("Audio")%>' controls></audio>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lnkRemove" class="btn btn-danger" OnClick="lnkRemove_OnClick" runat="server" ToolTip="Make Inactive"><i class="fas fa-trash-alt fa-lg"></i></asp:LinkButton>

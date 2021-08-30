@@ -20,7 +20,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Alphabet_Audio">
                             <ItemTemplate>
-                                <asp:Label ID="lblaAudio" runat="server" Text='<%#Eval("LetterAudio")%>'></asp:Label>
+                                <audio src='<%#Eval("LetterAudio")%>' controls></audio> 
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Alphabet_Picture">
@@ -34,8 +34,8 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Word_Audio">
-                            <ItemTemplate>
-                                <asp:Label ID="lblAudio" runat="server" Text='<%#Eval("WordAudio")%>'></asp:Label>
+                            <ItemTemplate> 
+                                <audio src='<%#Eval("WordAudio")%>' controls></audio> 
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Word_Picture">

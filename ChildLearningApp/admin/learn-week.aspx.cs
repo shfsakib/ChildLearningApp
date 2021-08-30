@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridWeek, $@"SELECT * FROM LearnInfo WHERE Type='Week' ORDER BY Answer ASC");
+            function.LoadGrid(gridWeek, $@"SELECT * FROM LearnInfo WHERE Type='Week' ORDER BY Answer DESC");
         }
         private bool IsAnswer()
         {
@@ -82,11 +82,11 @@ namespace ChildLearningApp.admin
                     return;
                 }
                 string date = function.Date();
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Animal','{letterAudio}')");
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Week','{letterAudio}')");
                 if (ans)
                 {
                     Load();
-                    function.AlertWithRedirect(this, "Week added successfully", "/admin/learn-Weeks.aspx");
+                    function.AlertWithRedirect(this, "Week added successfully", "/admin/learn-Week.aspx");
                 }
                 else
                 {

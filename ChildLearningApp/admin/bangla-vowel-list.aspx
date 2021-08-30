@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.Master" AutoEventWireup="true" CodeBehind="bangla-vowel-list.aspx.cs" Inherits="ChildLearningApp.admin.bangla_vowel_list" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,7 +20,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Vowel_Audio">
                             <ItemTemplate>
-                                <asp:Label ID="lblaAudio" runat="server" Text='<%#Eval("LetterAudio")%>'></asp:Label>
+                                <audio src='<%#Eval("LetterAudio")%>' controls></audio>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Vowel_Picture">
@@ -34,7 +35,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Word_Audio">
                             <ItemTemplate>
-                                <asp:Label ID="lblAudio" runat="server" Text='<%#Eval("WordAudio")%>'></asp:Label>
+                                <audio src='<%#Eval("WordAudio")%>' controls></audio>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Word_Picture">

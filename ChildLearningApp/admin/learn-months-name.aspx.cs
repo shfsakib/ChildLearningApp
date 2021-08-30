@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridMonth, $@"SELECT * FROM LearnInfo WHERE Type='Month' ORDER BY Answer ASC");
+            function.LoadGrid(gridMonth, $@"SELECT * FROM LearnInfo WHERE Type='Month' ORDER BY Answer DESC");
         }
         private bool IsAnswer()
         {
@@ -82,7 +82,7 @@ namespace ChildLearningApp.admin
                     return;
                 }
                 string date = function.Date();
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Animal','{letterAudio}')");
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Month','{letterAudio}')");
                 if (ans)
                 {
                     Load();
