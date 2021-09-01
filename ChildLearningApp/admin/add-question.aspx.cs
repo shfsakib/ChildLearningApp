@@ -33,7 +33,7 @@ namespace ChildLearningApp.admin
         private bool IsQuestion()
         {
             bool ans = false;
-            string x = function.IsExist($"SELECT Question FROM Questions WHERE Question='{txtQuestion.Text}'");
+            string x = function.IsExist($"SELECT Question FROM Questions WHERE Question=N'{txtQuestion.Text}'");
             if (x != "")
             {
                 ans = true;
