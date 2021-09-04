@@ -51,7 +51,6 @@
                         <asp:HiddenField ID="hiddenAns" runat="server" />
                         <asp:HiddenField ID="hiddenPoint" runat="server" />
                         <audio src="" id="audioQuiz" runat="server" autoplay></audio>
-
                     </div>
                 </asp:Panel>
             </div>

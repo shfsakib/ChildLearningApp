@@ -7,117 +7,144 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChildLearningApp.app {
+namespace ChildLearningApp.admin {
     
     
-    public partial class home {
+    public partial class add_find_question {
         
         /// <summary>
-        /// form1 control.
+        /// txtQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtQuestion;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// fileAudio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.FileUpload fileAudio;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// filePic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.FileUpload filePic;
         
         /// <summary>
-        /// Panel1 control.
+        /// imgPic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Image imgPic;
         
         /// <summary>
-        /// btnAlpha control.
+        /// fileOpt1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnAlpha;
+        protected global::System.Web.UI.WebControls.FileUpload fileOpt1;
         
         /// <summary>
-        /// btnNumeric control.
+        /// imgWord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnNumeric;
+        protected global::System.Web.UI.WebControls.Image imgWord;
         
         /// <summary>
-        /// btnRhymes control.
+        /// fileOpt2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnRhymes;
+        protected global::System.Web.UI.WebControls.FileUpload fileOpt2;
         
         /// <summary>
-        /// btnQuiz control.
+        /// imgOpt2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btnQuiz;
+        protected global::System.Web.UI.WebControls.Image imgOpt2;
         
         /// <summary>
-        /// btnMic control.
+        /// fileOpt3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnMic;
+        protected global::System.Web.UI.WebControls.FileUpload fileOpt3;
         
         /// <summary>
-        /// btnMute control.
+        /// imgOpt3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnMute;
+        protected global::System.Web.UI.WebControls.Image imgOpt3;
         
         /// <summary>
-        /// audioGrid control.
+        /// ddlType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAudio audioGrid;
+        protected global::System.Web.UI.WebControls.DropDownList ddlType;
         
         /// <summary>
-        /// audioBg control.
+        /// ddlQuestType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAudio audioBg;
+        protected global::System.Web.UI.WebControls.DropDownList ddlQuestType;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// ddlSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSearch;
+        
+        /// <summary>
+        /// gridFind control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridFind;
     }
 }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../MenuLink/vendors/font_awesome/css/all.min.css" />
     <link href="../MenuLink/app-file/app.css" rel="stylesheet" />
 </head>
-<body style="background: purple;">
+<body class="bg">
     <form id="form1" runat="server">
         <div class="row">
             <div class="col-12">

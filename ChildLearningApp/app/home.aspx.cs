@@ -48,18 +48,10 @@ namespace ChildLearningApp.app
             }
         }
 
-        protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
-        {
-            Panel1.Visible = false;
-            panelWord.Visible = true;
-            function.LoadGrid(gridAlpha, "SELECT * FROM ALPHABETINFO ORDER BY ALPHABET ASC");
-            audioBg.Src = "";
-
-        }
+      
         protected void lnkHome_OnClick(object sender, EventArgs e)
         {
-            Panel1.Visible = true;
-            panelWord.Visible = panelNumber.Visible = false;
+            Panel1.Visible = true; 
             audioGrid.Src = "";
             if (soundData == null)
             {
@@ -94,15 +86,7 @@ namespace ChildLearningApp.app
             btnMute.Visible = false;
             audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
         }
-        protected void btnNumeric_OnClick(object sender, ImageClickEventArgs e)
-        {
-            Panel1.Visible = false;
-            panelNumber.Visible = true;
-            function.LoadGrid(gridNum, "SELECT * FROM Numeric ORDER BY Number ASC");
-            audioBg.Src = "";
-
-
-        }
+        
         protected void btnSpeakWord_OnClick(object sender, EventArgs e)
         {
 
@@ -141,7 +125,16 @@ namespace ChildLearningApp.app
             audioBg.Src = "";
             Response.Redirect("/app/quizes.aspx");
             
-        } 
-       
+        }
+        protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+
+        }
+        protected void btnNumeric_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+
+        }
     }
 }

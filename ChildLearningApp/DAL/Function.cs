@@ -33,7 +33,7 @@ namespace ChildLearningApp.DAL
                 con = new SqlConnection(Connection);
             }
         }
-       
+
         public string Connection = new SqlConnectionStringBuilder
         {
             DataSource = ".\\local",
@@ -71,6 +71,15 @@ namespace ChildLearningApp.DAL
                 if (con.State != ConnectionState.Closed)
                     con.Close();
             }
+        }
+        public List<string> ListData(string sql)        {            List<string> list = new List<string>();
+            con = new SqlConnection(Connection);            try            {
+                if (con.State != ConnectionState.Open) con.Open();                SqlCommand cmd = new SqlCommand(sql, con);                SqlDataReader rd = cmd.ExecuteReader(); list.Clear();
+                //List.Add("Select");
+                while (rd.Read())                {                    list.Add(rd[0].ToString());                }                rd.Close();            }            catch (Exception ex)            {
+                //ignore
+            }
+            return list;
         }
         public void BindCheckBoxList(CheckBoxList ob, string root, string query)
         {

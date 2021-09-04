@@ -55,78 +55,7 @@
                     </div>
                     <%--<iframe width="560" height="315" src="https://www.youtube.com/embed/yCjJyiqpAuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--%>
                 </asp:Panel>
-
-                <asp:Panel ID="panelWord" runat="server" Visible="False">
-                    <div class="row">
-                        <div class="col-12" style="padding: 15px; margin-left: 15px;">
-                            <asp:LinkButton ID="lnkHome" class="btn btn-primary" OnClick="lnkHome_OnClick" runat="server"><i class="fas fa-home fa-lg"></i></asp:LinkButton>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
-                                <asp:GridView ID="gridAlpha" Width="100%" class="table table-hover table-bordered" Style="background: transparent; color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Alphabet Found" runat="server">
-                                    <Columns>
-                                        <asp:TemplateField HeaderText="Alphabet">
-                                            <ItemTemplate>
-                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />                                               
-                                                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("AlphaId")%>' />
-                                                <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Alphabet")%>'></asp:Label>
-                                                <div class="row">
-                                                    <div class="col-12 text-center">
-                                                        <asp:Image ID="Image11" Width="250px" Height="200px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
-                                                    </div>
-                                                    <div class="col-12 text-center">
-                                                        <asp:Label ID="lblWord" Style="font-size: 24px; font-weight: bold; top: 5px; position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
-                                                        <span>
-                                                            <asp:LinkButton runat="server" class="btn btn-success" Style="border-radius: 50%;" ID="btnSpeakWord" OnClick="btnSpeakWord_OnClick" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
-                                                    </div>
-                                                </div>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-
-                                    </Columns>
-                                </asp:GridView>
-                            </div>
-                        </div>
-                    </div>
-
-                </asp:Panel>
-                <asp:Panel ID="panelNumber" runat="server" Visible="False">
-                    <div class="row">
-                        <div class="col-12" style="padding: 15px; margin-left: 15px;">
-                            <asp:LinkButton ID="lnkHomeNum" class="btn btn-primary" OnClick="lnkHome_OnClick" runat="server"><i class="fas fa-home fa-lg"></i></asp:LinkButton>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="table-responsive" style="border: none; width: 100%; overflow-x: hidden;">
-                                <asp:GridView ID="gridNum" Width="100%" class="table table-hover table-bordered" Style="background: transparent; color: white!important" AutoGenerateColumns="False" ShowHeader="False" ShowHeaderWhenEmpty="True" EmptyDataText="No Number Found" runat="server">
-                                    <Columns>
-                                        <asp:TemplateField HeaderText="Alphabet">
-                                            <ItemTemplate>
-                                                <asp:HiddenField ID="audioHidden" runat="server" Value='<%#Eval("Audio")%>' />
-                                                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("NumId")%>' />
-                                                <asp:Label ID="Label1" runat="server" Style="font-size: 50px; font-weight: Bold;" Text='<%#Eval("Number")%>'></asp:Label>
-                                                <div class="row">
-                                                    <div class="col-12 text-center">
-                                                        <asp:Image ID="Image11" Width="250px" Height="200px" ImageUrl='<%#Eval("Picture")%>' runat="server" />
-                                                    </div>
-                                                    <div class="col-12 text-center">
-                                                        <asp:Label ID="lblNum" Style="font-size: 24px; font-weight: bold; top: 5px; position: relative" runat="server" Text='<%#Eval("Word")%>'></asp:Label>
-                                                        <span>
-                                                            <asp:LinkButton runat="server" class="btn btn-success" Style="border-radius: 50%;" OnClick="btnSpeak_OnClick" ID="btnSpeak" title="Speak"><i class="fas fa-volume-up"></i></asp:LinkButton></span>
-                                                    </div>
-                                                </div>
-                                            </ItemTemplate>
-                                        </asp:TemplateField>
-
-                                    </Columns>
-                                </asp:GridView>
-                            </div>
-                        </div>
-                    </div>
-                </asp:Panel>
+                 
                 <audio src="" id="audioGrid" runat="server" autoplay></audio>
                 <audio src="" id="audioBg" runat="server" autoplay loop="loop"></audio>
             </ContentTemplate>

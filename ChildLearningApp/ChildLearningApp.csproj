@@ -99,6 +99,7 @@
     <Content Include="admin\add-alphabet.aspx" />
     <Content Include="admin\add-bangla-consonent.aspx" />
     <Content Include="admin\add-bangla-number.aspx" />
+    <Content Include="admin\find-question.aspx" />
     <Content Include="admin\add-level.aspx" />
     <Content Include="admin\add-number.aspx" />
     <Content Include="admin\add-question.aspx" />
@@ -119,14 +120,56 @@
     <Content Include="admin\learn-shape.aspx" />
     <Content Include="admin\learn-week-bangla.aspx" />
     <Content Include="admin\learn-week.aspx" />
+    <Content Include="admin\matching-character-info.aspx" />
     <Content Include="admin\number-list.aspx" />
     <Content Include="admin\question-list.aspx" />
     <Content Include="admin\rhymes-list.aspx" />
     <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
     <Content Include="app\home.aspx" />
+    <Content Include="app\learn-color.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
+    <Content Include="Audio\11152951779COD Loud.mp3" />
+    <Content Include="Audio\135315COD Loud.mp3" />
+    <Content Include="Audio\136672COD Tune.mp3" />
+    <Content Include="Audio\148652COD Loud.mp3" />
+    <Content Include="Audio\152448135315COD Loud.mp3" />
+    <Content Include="Audio\16152765448CODLoud.mp3" />
+    <Content Include="Audio\204186COD Loud.mp3" />
+    <Content Include="Audio\20751COD Loud.mp3" />
+    <Content Include="Audio\289481COD Loud.mp3" />
+    <Content Include="Audio\293449COD Loud.mp3" />
+    <Content Include="Audio\298166COD Tune.mp3" />
+    <Content Include="Audio\313147COD Loud.mp3" />
+    <Content Include="Audio\344833COD Loud.mp3" />
+    <Content Include="Audio\373276Call of Duty Mobile - Season 6 Theme Music Behind the Scenes %28mp3cut.net%29.mp3" />
+    <Content Include="Audio\398737COD Loud.mp3" />
+    <Content Include="Audio\4245351779COD Loud.mp3" />
+    <Content Include="Audio\501474COD Loud.mp3" />
+    <Content Include="Audio\51775865448CODLoud.mp3" />
+    <Content Include="Audio\51779COD Loud.mp3" />
+    <Content Include="Audio\524509COD Loud.mp3" />
+    <Content Include="Audio\562357COD Loud.mp3" />
+    <Content Include="Audio\56878320751COD Loud.mp3" />
+    <Content Include="Audio\62605397908065448CODLoud.mp3" />
+    <Content Include="Audio\641604COD Loud.mp3" />
+    <Content Include="Audio\646051COD Loud.mp3" />
+    <Content Include="Audio\649211COD Loud.mp3" />
+    <Content Include="Audio\65448COD Loud.mp3" />
+    <Content Include="Audio\717730COD Loud.mp3" />
+    <Content Include="Audio\758082Call of Duty Mobile - Season 6 Theme Music Behind the Scenes %28mp3cut.net%29.mp3" />
+    <Content Include="Audio\80537520751COD Loud.mp3" />
+    <Content Include="Audio\831809COD Tune.mp3" />
+    <Content Include="Audio\8629065448COD Loud.mp3" />
+    <Content Include="Audio\90126620751COD Loud.mp3" />
+    <Content Include="Audio\903122COD Loud.mp3" />
+    <Content Include="Audio\939144COD Loud.mp3" />
+    <Content Include="Audio\955885COD Loud.mp3" />
+    <Content Include="Audio\972209COD Loud.mp3" />
+    <Content Include="Audio\97908065448CODLoud.mp3" />
+    <Content Include="Audio\212332red.mp3" />
+    <Content Include="Audio\blue.mp3" />
     <Content Include="Image\104734484943ball.jpg" />
     <Content Include="Image\1748253732641.jpg" />
     <Content Include="Image\247647775040a for apple.jpg" />
@@ -248,6 +291,7 @@
     <Content Include="MenuLink\js\jquery-3.4.1.min.js" />
     <Content Include="MenuLink\js\metisMenu.js" />
     <Content Include="MenuLink\js\popper.min.js" />
+    <Content Include="MenuLink\leftarrow.png" />
     <Content Include="MenuLink\Login\css\main.css" />
     <Content Include="MenuLink\Login\css\util.css" />
     <Content Include="MenuLink\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -294,6 +338,7 @@
     <Content Include="MenuLink\Login\vendor\select2\select2.min.css" />
     <Content Include="MenuLink\Login\vendor\select2\select2.min.js" />
     <Content Include="MenuLink\quiz back.jpg" />
+    <Content Include="MenuLink\rightarrow.png" />
     <Content Include="MenuLink\user.png" />
     <Content Include="MenuLink\vendors\am_chart\amchart-init.js" />
     <Content Include="MenuLink\vendors\am_chart\amcharts.js" />
@@ -516,6 +561,7 @@
     <Content Include="MenuLink\Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="MenuLink\Login\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="MenuLink\Login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="app\app.Master" />
     <None Include="Properties\PublishProfiles\KidsLearning.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -557,6 +603,13 @@
     </Compile>
     <Compile Include="admin\add-bangla-number.aspx.designer.cs">
       <DependentUpon>add-bangla-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\find-question.aspx.cs">
+      <DependentUpon>find-question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\find-question.aspx.designer.cs">
+      <DependentUpon>find-question.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\add-level.aspx.cs">
       <DependentUpon>add-level.aspx</DependentUpon>
@@ -705,6 +758,13 @@
     <Compile Include="admin\learn-week.aspx.designer.cs">
       <DependentUpon>learn-week.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\matching-character-info.aspx.cs">
+      <DependentUpon>matching-character-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\matching-character-info.aspx.designer.cs">
+      <DependentUpon>matching-character-info.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\number-list.aspx.cs">
       <DependentUpon>number-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -740,6 +800,20 @@
     <Compile Include="admin\update-question.aspx.designer.cs">
       <DependentUpon>update-question.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\app.Master.cs">
+      <DependentUpon>app.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\app.Master.designer.cs">
+      <DependentUpon>app.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\learn-color.aspx.cs">
+      <DependentUpon>learn-color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\learn-color.aspx.designer.cs">
+      <DependentUpon>learn-color.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -773,9 +847,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Audio\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

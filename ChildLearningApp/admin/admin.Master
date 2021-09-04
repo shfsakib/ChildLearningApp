@@ -257,6 +257,16 @@
                     </a>
                 </li>
                 <li class="">
+                    <a class="" href="/admin/find-question.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fab fa-acquisitions-incorporated"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Find Question</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="">
                     <a class="has-arrow" href="#" aria-expanded="false">
                         <div class="nav_icon_small">
                             <i class="fas fa-book"></i>
