@@ -21,16 +21,16 @@ namespace ChildLearningApp.app
             if (!IsPostBack)
             {
                 Load();
+                lblSrc.Text = function.IsExist($@"SELECT TOP 1 Audio FROM LearnInfo WHERE TYPE='Color' ORDER BY LEarnId ASC");
             }
         }
 
         private void Load()
         {
-            audioLearn.Src = "";
             lblColorName.Text =
-                function.IsExist($@"SELECT TOP 1 Answer FROM LearnInfo WHERE TYPE='Color' ORDER BY NEWID() ");
+                function.IsExist($@"SELECT TOP 1 Answer FROM LearnInfo WHERE TYPE='Color' ORDER BY LEarnId ASC");
             imgColor.ImageUrl = function.IsExist($@"SELECT Picture FROM LearnInfo WHERE TYPE='Color' AND Answer='{lblColorName.Text}'");
-
+            function.LoadDataList(colorData, $@"SELECT LearnId,Picture FROM LearnInfo WHERE TYPE='Color' ORDER BY LEARNID ASC");
         }
 
         protected void lnkMic_OnClick(object sender, EventArgs e)
@@ -44,6 +44,17 @@ namespace ChildLearningApp.app
             lblColorName.Text =
                  function.IsExist($@"SELECT TOP 1 Answer FROM LearnInfo WHERE TYPE='Color' ORDER BY NEWID() ");
             imgColor.ImageUrl = function.IsExist($@"SELECT Picture FROM LearnInfo WHERE TYPE='Color' AND Answer='{lblColorName.Text}'");
+        }
+
+        protected void ImageButton1_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioLearn.Src = "";
+            ImageButton image = (ImageButton)sender;
+            image.Focus();
+            HiddenField learnId = (HiddenField)image.Parent.FindControl("HiddenField1");
+            audioLearn.Src = function.IsExist($@"SELECT Audio FROM LearnInfo WHERE TYPE='Color' AND LearnId='{learnId.Value}'");
+            lblColorName.Text= function.IsExist($@"SELECT Answer FROM LearnInfo WHERE TYPE='Color' AND LearnId='{learnId.Value}'");
+            imgColor.ImageUrl= function.IsExist($@"SELECT Picture FROM LearnInfo WHERE TYPE='Color' AND LearnId='{learnId.Value}'");
 
         }
     }

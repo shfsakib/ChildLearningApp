@@ -4,16 +4,34 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="col-12">
-        <asp:Image ID="imgColor" Style="width: 100%; height: 300px; border: 2px solid;" runat="server" />
+        <asp:Image ID="imgColor" Style="width: 100%; height: 400px; border: 2px solid;" runat="server" />
     </div>
-    <div class="col-12 d-flex mt-3">
-        <h1 style="color: white;">
+    <asp:Label ID="lblSrc" Style="display: none;" runat="server" Text="Label"></asp:Label>
+    <div class="col-12 d-flex mt-3 text-center">
+        <h1 style="color: white; margin: 0 auto;">
             <asp:Label ID="lblColorName" runat="server" Text="Color"></asp:Label>
         </h1>
-        <asp:LinkButton ID="lnkMic" CssClass="btn btn-success pt-3 ml-3" OnClick="lnkMic_OnClick" runat="server"><i class="fas fa-volume-up fa-lg"></i></asp:LinkButton>
-        <audio src="" id="audioLearn" runat="server" autoplay="autoplay"></audio>
+        <asp:LinkButton ID="lnkMic" CssClass="btn" Style="color: white !important;" OnClick="lnkMic_OnClick" runat="server"><i class="fas fa-volume-up fa-lg mt-3"></i></asp:LinkButton>
+        <audio src="/Audio/212332red.mp3" id="audioLearn" runat="server" autoplay="autoplay"></audio>
     </div>
-    <div class="col-12 mt-4">
-        <asp:LinkButton ID="lnkNext" OnClick="lnkNext_OnClick" CssClass="btn btn-primary btn-block" runat="server">Next</asp:LinkButton>
-    </div>
+    <div class="col-12 mt-4" style="overflow-x: auto; overflow-y: hidden;">
+        <asp:DataList ID="colorData" RepeatDirection="Horizontal" runat="server">
+            <ItemTemplate>
+                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("LearnId") %>'/>
+                <asp:ImageButton ID="ImageButton1" Style="height: 75px; width: 75px; margin: 5px;" OnClick="ImageButton1_OnClick" ImageUrl='<%#Eval("Picture")%>' runat="server" />
+            </ItemTemplate>
+        </asp:DataList>
+    </div> 
+   <%-- <audio id="ntaudio" run style="display: none">
+        <source src="/Audio/212332red.mp3" type="audio/mp3" />
+    </audio>--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#ContentPlaceHolder1_audioLearn')[0].play();
+            }, 300);
+        });
+
+    </script>
 </asp:Content>
