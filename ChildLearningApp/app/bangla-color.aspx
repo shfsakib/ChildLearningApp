@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/app/app.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="learn-color.aspx.cs" Inherits="ChildLearningApp.app.learn_color" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/app/app.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="bangla-color.aspx.cs" Inherits="ChildLearningApp.app.bangla_color" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

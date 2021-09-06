@@ -126,8 +126,13 @@
     <Content Include="admin\rhymes-list.aspx" />
     <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
+    <Content Include="app\bangla-animal.aspx" />
+    <Content Include="app\bangla-color.aspx" />
+    <Content Include="app\bangla-months.aspx" />
     <Content Include="app\home.aspx" />
+    <Content Include="app\learn-animal.aspx" />
     <Content Include="app\learn-color.aspx" />
+    <Content Include="app\learn-month.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
     <Content Include="Audio\11152951779COD Loud.mp3" />
@@ -807,12 +812,47 @@
     <Compile Include="app\app.Master.designer.cs">
       <DependentUpon>app.Master</DependentUpon>
     </Compile>
+    <Compile Include="app\bangla-animal.aspx.cs">
+      <DependentUpon>bangla-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-animal.aspx.designer.cs">
+      <DependentUpon>bangla-animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-color.aspx.cs">
+      <DependentUpon>bangla-color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-color.aspx.designer.cs">
+      <DependentUpon>bangla-color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-months.aspx.cs">
+      <DependentUpon>bangla-months.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-months.aspx.designer.cs">
+      <DependentUpon>bangla-months.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\learn-animal.aspx.cs">
+      <DependentUpon>learn-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\learn-animal.aspx.designer.cs">
+      <DependentUpon>learn-animal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\learn-color.aspx.cs">
       <DependentUpon>learn-color.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="app\learn-color.aspx.designer.cs">
       <DependentUpon>learn-color.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\learn-month.aspx.cs">
+      <DependentUpon>learn-month.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\learn-month.aspx.designer.cs">
+      <DependentUpon>learn-month.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>

@@ -21,7 +21,7 @@ namespace ChildLearningApp.app
             if (!IsPostBack)
             {
                 Load();
-                lblSrc.Text = function.IsExist($@"SELECT TOP 1 Audio FROM LearnInfo WHERE TYPE='Color' ORDER BY LEarnId ASC");
+                audioLearn.Src = function.IsExist($@"SELECT TOP 1 Audio FROM LearnInfo WHERE TYPE='Color' ORDER BY LEarnId ASC");
             }
         }
 
@@ -36,14 +36,6 @@ namespace ChildLearningApp.app
         protected void lnkMic_OnClick(object sender, EventArgs e)
         {
             audioLearn.Src = function.IsExist($@"SELECT Audio FROM LearnInfo WHERE TYPE='Color' AND Answer='{lblColorName.Text}'");
-        }
-
-        protected void lnkNext_OnClick(object sender, EventArgs e)
-        {
-            audioLearn.Src = "";
-            lblColorName.Text =
-                 function.IsExist($@"SELECT TOP 1 Answer FROM LearnInfo WHERE TYPE='Color' ORDER BY NEWID() ");
-            imgColor.ImageUrl = function.IsExist($@"SELECT Picture FROM LearnInfo WHERE TYPE='Color' AND Answer='{lblColorName.Text}'");
         }
 
         protected void ImageButton1_OnClick(object sender, ImageClickEventArgs e)

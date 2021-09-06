@@ -10,7 +10,7 @@
 namespace ChildLearningApp.app {
     
     
-    public partial class learn_color {
+    public partial class bangla_color {
         
         /// <summary>
         /// imgColor control.

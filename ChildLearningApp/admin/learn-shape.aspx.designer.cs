@@ -40,6 +40,15 @@ namespace ChildLearningApp.admin {
         protected global::System.Web.UI.WebControls.FileUpload filePic;
         
         /// <summary>
+        /// ddlType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlType;
+        
+        /// <summary>
         /// imgPic control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace ChildLearningApp.admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// ddlSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSearch;
         
         /// <summary>
         /// gridShape control.

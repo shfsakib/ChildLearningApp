@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type='Shape' ORDER BY Answer DESC");
+            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type='{ddlSearch.SelectedValue}' ORDER BY Answer DESC");
         }
         private bool IsAnswer()
         {
@@ -81,8 +81,12 @@ namespace ChildLearningApp.admin
                     function.ShowAlert(this, "Audio is required");
                     return;
                 }
-                string date = function.Date();
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','Shape','{letterAudio}')");
+                string shape = "Shape";
+                if (ddlType.SelectedValue== "Bangla")
+                {
+                    shape = "Bangla Shape";
+                } 
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','{shape}','{letterAudio}')");
                 if (ans)
                 {
                     Load();
