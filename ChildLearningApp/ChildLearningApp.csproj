@@ -129,10 +129,14 @@
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
     <Content Include="app\bangla-months.aspx" />
+    <Content Include="app\bangla-shape.aspx" />
+    <Content Include="app\bangla-week.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="app\learn-animal.aspx" />
     <Content Include="app\learn-color.aspx" />
     <Content Include="app\learn-month.aspx" />
+    <Content Include="app\learn-shape.aspx" />
+    <Content Include="app\learn-week.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
     <Content Include="Audio\11152951779COD Loud.mp3" />
@@ -833,6 +837,20 @@
     <Compile Include="app\bangla-months.aspx.designer.cs">
       <DependentUpon>bangla-months.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\bangla-shape.aspx.cs">
+      <DependentUpon>bangla-shape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-shape.aspx.designer.cs">
+      <DependentUpon>bangla-shape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-week.aspx.cs">
+      <DependentUpon>bangla-week.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-week.aspx.designer.cs">
+      <DependentUpon>bangla-week.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\learn-animal.aspx.cs">
       <DependentUpon>learn-animal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -853,6 +871,20 @@
     </Compile>
     <Compile Include="app\learn-month.aspx.designer.cs">
       <DependentUpon>learn-month.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\learn-shape.aspx.cs">
+      <DependentUpon>learn-shape.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\learn-shape.aspx.designer.cs">
+      <DependentUpon>learn-shape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\learn-week.aspx.cs">
+      <DependentUpon>learn-week.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\learn-week.aspx.designer.cs">
+      <DependentUpon>learn-week.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>

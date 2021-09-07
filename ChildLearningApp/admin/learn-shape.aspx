@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-md-12">
                     Shape Name:
-                    <asp:TextBox ID="txtAnswer" placeholder="Triangle,Rectangular etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAnswer" placeholder="Triangle,ত্রিভুজ etc" autocomplete="off" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
             <div class="row mt-2">
@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-5 mt-3">
-            <asp:DropDownList ID="ddlSearch" CssClass="form-control" runat="server">
+            <asp:DropDownList ID="ddlSearch" AutoPostBack="True" OnSelectedIndexChanged="ddlSearch_OnSelectedIndexChanged" CssClass="form-control" runat="server">
                 <asp:ListItem>English</asp:ListItem>
                 <asp:ListItem>Bangla</asp:ListItem>
             </asp:DropDownList>

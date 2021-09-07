@@ -26,7 +26,12 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type='{ddlSearch.SelectedValue}' ORDER BY Answer DESC");
+            string shape = "Shape";
+            if (ddlSearch.SelectedValue == "Bangla")
+            {
+                shape = "Bangla Shape";
+            }
+            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type=N'{shape}' ORDER BY Answer DESC");
         }
         private bool IsAnswer()
         {
@@ -86,7 +91,7 @@ namespace ChildLearningApp.admin
                 {
                     shape = "Bangla Shape";
                 } 
-                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES('{txtAnswer.Text}','{pic}','{shape}','{letterAudio}')");
+                bool ans = function.Execute($@"INSERT INTO LearnInfo(Answer,Picture,Type,Audio) VALUES(N'{txtAnswer.Text}',N'{pic}','{shape}',N'{letterAudio}')");
                 if (ans)
                 {
                     Load();
@@ -103,7 +108,7 @@ namespace ChildLearningApp.admin
         {
             LinkButton linkButton = (LinkButton)sender;
             HiddenField id = (HiddenField)linkButton.Parent.FindControl("HiddenField1");
-            bool ans = function.Execute($"DELETE FROM LearnInfo WHERE LearnId='{id.Value}'");
+            bool ans = function.Execute($"DELETE FROM LearnInfo WHERE LearnId=N'{id.Value}'");
             if (ans)
             {
                 Load();
@@ -112,6 +117,11 @@ namespace ChildLearningApp.admin
             {
                 function.ShowAlert(this, "Failed to remove shape");
             }
+        }
+
+        protected void ddlSearch_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load();
         }
     }
 }
