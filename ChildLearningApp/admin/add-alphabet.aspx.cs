@@ -23,16 +23,16 @@ namespace ChildLearningApp.admin
             }
         }
 
-        private bool IsLetter()
-        {
-            bool ans = false;
-            string x = function.IsExist($"SELECT Letter FROM LetterInfo WHERE Letter=N'{txtalpha.Text}'");
-            if (x != "")
-            {
-                ans = true;
-            }
-            return ans;
-        }
+        //private bool IsLetter()
+        //{
+        //    bool ans = false;
+        //    string x = function.IsExist($"SELECT Letter FROM LetterInfo WHERE Letter=N'{txtalpha.Text}'");
+        //    if (x != "")
+        //    {
+        //        ans = true;
+        //    }
+        //    return ans;
+        //}
         private bool IsWord()
         {
             bool ans = false;
@@ -66,11 +66,11 @@ namespace ChildLearningApp.admin
             {
                 function.ShowAlert(this, "Word is required");
             }
-            else if (IsLetter())
-            {
-                function.ShowAlert(this, "Alphabet already exist");
+            //else if (IsLetter())
+            //{
+            //    function.ShowAlert(this, "Alphabet already exist");
 
-            }
+            //}
             else if (IsWord())
             {
                 function.ShowAlert(this, "Word already exist");

@@ -126,6 +126,7 @@
     <Content Include="admin\rhymes-list.aspx" />
     <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
+    <Content Include="app\alphabet-list.aspx" />
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
     <Content Include="app\bangla-months.aspx" />
@@ -808,6 +809,13 @@
     </Compile>
     <Compile Include="admin\update-question.aspx.designer.cs">
       <DependentUpon>update-question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\alphabet-list.aspx.cs">
+      <DependentUpon>alphabet-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\alphabet-list.aspx.designer.cs">
+      <DependentUpon>alphabet-list.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\app.Master.cs">
       <DependentUpon>app.Master</DependentUpon>
