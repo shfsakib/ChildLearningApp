@@ -129,8 +129,10 @@
     <Content Include="app\alphabet-list.aspx" />
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
+    <Content Include="app\bangla-consonent.aspx" />
     <Content Include="app\bangla-months.aspx" />
     <Content Include="app\bangla-shape.aspx" />
+    <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="app\learn-animal.aspx" />
@@ -838,6 +840,13 @@
     <Compile Include="app\bangla-color.aspx.designer.cs">
       <DependentUpon>bangla-color.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\bangla-consonent.aspx.cs">
+      <DependentUpon>bangla-consonent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-consonent.aspx.designer.cs">
+      <DependentUpon>bangla-consonent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\bangla-months.aspx.cs">
       <DependentUpon>bangla-months.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -851,6 +860,13 @@
     </Compile>
     <Compile Include="app\bangla-shape.aspx.designer.cs">
       <DependentUpon>bangla-shape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-vowel.aspx.cs">
+      <DependentUpon>bangla-vowel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-vowel.aspx.designer.cs">
+      <DependentUpon>bangla-vowel.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\bangla-week.aspx.cs">
       <DependentUpon>bangla-week.aspx</DependentUpon>

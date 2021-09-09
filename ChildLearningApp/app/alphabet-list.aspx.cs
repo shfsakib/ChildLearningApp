@@ -28,7 +28,7 @@ namespace ChildLearningApp.app
 
         private void LoadData()
         {
-            function.LoadDataList(alphabetData, $@"SELECT DISTINCT LETTER FROM LetterInfo ORDER BY Letter ASC");
+            function.LoadDataList(alphabetData, $@"SELECT DISTINCT LETTER FROM LetterInfo WHERE LetterType=N'Alphabet' ORDER BY Letter ASC");
             imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType='Alphabet' ORDER BY Word ASC");
             lblLetter.Text = function.IsExist($@"SELECT TOP 1 Letter FROM LetterInfo WHERE LetterType='Alphabet' ORDER BY LetterId ASC");
             function.LoadDataList(wordData, $@"SELECT Word,WordPicture FROM LetterInfo WHERE Letter='{lblLetter.Text}' ORDER BY Word ASC");

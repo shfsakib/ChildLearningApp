@@ -54,11 +54,6 @@ namespace ChildLearningApp.admin
             {
                 function.ShowAlert(this, "Word is required");
             }
-            else if (IsLetter())
-            {
-                function.ShowAlert(this, "Letter already exist");
-
-            }
             else if (IsWord())
             {
                 function.ShowAlert(this, "Word already exist");
