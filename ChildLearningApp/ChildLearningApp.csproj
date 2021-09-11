@@ -131,6 +131,7 @@
     <Content Include="app\bangla-color.aspx" />
     <Content Include="app\bangla-consonent.aspx" />
     <Content Include="app\bangla-months.aspx" />
+    <Content Include="app\bangla-number-list.aspx" />
     <Content Include="app\bangla-shape.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
@@ -140,6 +141,7 @@
     <Content Include="app\learn-month.aspx" />
     <Content Include="app\learn-shape.aspx" />
     <Content Include="app\learn-week.aspx" />
+    <Content Include="app\number-list.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
     <Content Include="Audio\11152951779COD Loud.mp3" />
@@ -854,6 +856,13 @@
     <Compile Include="app\bangla-months.aspx.designer.cs">
       <DependentUpon>bangla-months.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\bangla-number-list.aspx.cs">
+      <DependentUpon>bangla-number-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-number-list.aspx.designer.cs">
+      <DependentUpon>bangla-number-list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\bangla-shape.aspx.cs">
       <DependentUpon>bangla-shape.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -909,6 +918,13 @@
     </Compile>
     <Compile Include="app\learn-week.aspx.designer.cs">
       <DependentUpon>learn-week.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\number-list.aspx.cs">
+      <DependentUpon>number-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\number-list.aspx.designer.cs">
+      <DependentUpon>number-list.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>
