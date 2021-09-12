@@ -126,13 +126,16 @@
     <Content Include="admin\rhymes-list.aspx" />
     <Content Include="admin\update-password.aspx" />
     <Content Include="admin\update-question.aspx" />
+    <Content Include="app\addition.aspx" />
     <Content Include="app\alphabet-list.aspx" />
+    <Content Include="app\bangla-addition.aspx" />
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
     <Content Include="app\bangla-consonent.aspx" />
     <Content Include="app\bangla-months.aspx" />
     <Content Include="app\bangla-number-list.aspx" />
     <Content Include="app\bangla-shape.aspx" />
+    <Content Include="app\bangla-substration.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
     <Content Include="app\home.aspx" />
@@ -144,6 +147,7 @@
     <Content Include="app\number-list.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
+    <Content Include="app\substraction.aspx" />
     <Content Include="Audio\11152951779COD Loud.mp3" />
     <Content Include="Audio\135315COD Loud.mp3" />
     <Content Include="Audio\136672COD Tune.mp3" />
@@ -814,6 +818,13 @@
     <Compile Include="admin\update-question.aspx.designer.cs">
       <DependentUpon>update-question.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\addition.aspx.cs">
+      <DependentUpon>addition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\addition.aspx.designer.cs">
+      <DependentUpon>addition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\alphabet-list.aspx.cs">
       <DependentUpon>alphabet-list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -827,6 +838,13 @@
     </Compile>
     <Compile Include="app\app.Master.designer.cs">
       <DependentUpon>app.Master</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-addition.aspx.cs">
+      <DependentUpon>bangla-addition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-addition.aspx.designer.cs">
+      <DependentUpon>bangla-addition.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\bangla-animal.aspx.cs">
       <DependentUpon>bangla-animal.aspx</DependentUpon>
@@ -869,6 +887,13 @@
     </Compile>
     <Compile Include="app\bangla-shape.aspx.designer.cs">
       <DependentUpon>bangla-shape.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-substration.aspx.cs">
+      <DependentUpon>bangla-substration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-substration.aspx.designer.cs">
+      <DependentUpon>bangla-substration.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\bangla-vowel.aspx.cs">
       <DependentUpon>bangla-vowel.aspx</DependentUpon>
@@ -939,6 +964,13 @@
     </Compile>
     <Compile Include="app\rhymes.aspx.designer.cs">
       <DependentUpon>rhymes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\substraction.aspx.cs">
+      <DependentUpon>substraction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\substraction.aspx.designer.cs">
+      <DependentUpon>substraction.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\Function.cs" />
     <Compile Include="app\home.aspx.cs">

@@ -99,7 +99,7 @@ namespace ChildLearningApp.admin
                     function.ShowAlert(this, "Picture 2 is required");
                     return;
                 }
-                bool ans = function.Execute($@"INSERT INTO Calculation(Question,Picture1,Picture2,Option1,Option2,Type,CalType,Answer,Intime) VALUES(N'{txtQuestion.Text}',N'{pic1}',N'{pic2}',N'{txtOptA.Text}',N'{txtOptB.Text}',N'{ddlType.SelectedValue}',N'{ddlCalType.SelectedValue}','{txtAns.Text}','{function.Date()}')");
+                bool ans = function.Execute($@"INSERT INTO Calculation(Question,Picture1,Picture2,Option1,Option2,Type,CalType,Answer,Intime) VALUES(N'{txtQuestion.Text}',N'{pic1}',N'{pic2}',N'{txtOptA.Text}',N'{txtOptB.Text}',N'{ddlType.SelectedValue}',N'{ddlCalType.SelectedValue}',N'{txtAns.Text}','{function.Date()}')");
                 if (ans)
                 {
                     function.AlertWithRedirect(this, "Calculation added successfully", "/admin/calculation-info.aspx");
