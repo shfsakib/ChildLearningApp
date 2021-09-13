@@ -138,6 +138,10 @@
     <Content Include="app\bangla-substration.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
+    <Content Include="app\find-animal.aspx" />
+    <Content Include="app\find-bangla-animal.aspx" />
+    <Content Include="app\find-bangla-number.aspx" />
+    <Content Include="app\find-number.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="app\learn-animal.aspx" />
     <Content Include="app\learn-color.aspx" />
@@ -188,6 +192,7 @@
     <Content Include="Audio\97908065448CODLoud.mp3" />
     <Content Include="Audio\212332red.mp3" />
     <Content Include="Audio\blue.mp3" />
+    <Content Include="Audio\findcow.mp3" />
     <Content Include="Image\104734484943ball.jpg" />
     <Content Include="Image\1748253732641.jpg" />
     <Content Include="Image\247647775040a for apple.jpg" />
@@ -198,6 +203,8 @@
     <Content Include="Image\8576171.jpg" />
     <Content Include="Image\9212609892722.jpg" />
     <Content Include="Image\9892722.jpg" />
+    <Content Include="Image\findcow.mp3" />
+    <Content Include="Image\goru.mp3" />
     <Content Include="Image\quiz back.jpg" />
     <Content Include="log-in.aspx" />
     <Content Include="MenuLink\app-file\alpha.png" />
@@ -908,6 +915,34 @@
     </Compile>
     <Compile Include="app\bangla-week.aspx.designer.cs">
       <DependentUpon>bangla-week.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\find-animal.aspx.cs">
+      <DependentUpon>find-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\find-animal.aspx.designer.cs">
+      <DependentUpon>find-animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\find-bangla-animal.aspx.cs">
+      <DependentUpon>find-bangla-animal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\find-bangla-animal.aspx.designer.cs">
+      <DependentUpon>find-bangla-animal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\find-bangla-number.aspx.cs">
+      <DependentUpon>find-bangla-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\find-bangla-number.aspx.designer.cs">
+      <DependentUpon>find-bangla-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\find-number.aspx.cs">
+      <DependentUpon>find-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\find-number.aspx.designer.cs">
+      <DependentUpon>find-number.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\learn-animal.aspx.cs">
       <DependentUpon>learn-animal.aspx</DependentUpon>

@@ -118,9 +118,9 @@ namespace ChildLearningApp.admin
                 if (fileAudio.HasFile)
                 {
                     string val = random.Next(1111, 999999).ToString();
-                    string imagePath = Server.MapPath("/Image/") + val + fileAudio.FileName;
+                    string imagePath = Server.MapPath("/Audio/") + val + fileAudio.FileName;
                     fileAudio.PostedFile.SaveAs(imagePath);
-                    audio = "/Image/" + val + fileAudio.FileName;
+                    audio = "/Audio/" + val + fileAudio.FileName;
                 }
                 else
                 {
