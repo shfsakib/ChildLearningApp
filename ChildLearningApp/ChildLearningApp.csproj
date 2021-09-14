@@ -128,6 +128,7 @@
     <Content Include="admin\update-question.aspx" />
     <Content Include="app\addition.aspx" />
     <Content Include="app\alphabet-list.aspx" />
+    <Content Include="app\alphabet-matcher.aspx" />
     <Content Include="app\bangla-addition.aspx" />
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
@@ -138,6 +139,7 @@
     <Content Include="app\bangla-substration.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
+    <Content Include="app\drawing-board.aspx" />
     <Content Include="app\find-animal.aspx" />
     <Content Include="app\find-bangla-animal.aspx" />
     <Content Include="app\find-bangla-number.aspx" />
@@ -149,6 +151,7 @@
     <Content Include="app\learn-shape.aspx" />
     <Content Include="app\learn-week.aspx" />
     <Content Include="app\number-list.aspx" />
+    <Content Include="app\number-matcher.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
     <Content Include="app\substraction.aspx" />
@@ -217,6 +220,9 @@
     <Content Include="MenuLink\app-file\rhymes.png" />
     <Content Include="MenuLink\app-file\success.gif" />
     <Content Include="MenuLink\app-file\win.mp3" />
+    <Content Include="MenuLink\canvas\OCR.js" />
+    <Content Include="MenuLink\canvas\sketch.css" />
+    <Content Include="MenuLink\canvas\sketch.js" />
     <Content Include="MenuLink\child.png" />
     <Content Include="MenuLink\child_bg.jpg" />
     <Content Include="MenuLink\css\bootstrap.min.css" />
@@ -839,6 +845,13 @@
     <Compile Include="app\alphabet-list.aspx.designer.cs">
       <DependentUpon>alphabet-list.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\alphabet-matcher.aspx.cs">
+      <DependentUpon>alphabet-matcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\alphabet-matcher.aspx.designer.cs">
+      <DependentUpon>alphabet-matcher.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\app.Master.cs">
       <DependentUpon>app.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -916,6 +929,13 @@
     <Compile Include="app\bangla-week.aspx.designer.cs">
       <DependentUpon>bangla-week.aspx</DependentUpon>
     </Compile>
+    <Compile Include="app\drawing-board.aspx.cs">
+      <DependentUpon>drawing-board.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\drawing-board.aspx.designer.cs">
+      <DependentUpon>drawing-board.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\find-animal.aspx.cs">
       <DependentUpon>find-animal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -985,6 +1005,13 @@
     </Compile>
     <Compile Include="app\number-list.aspx.designer.cs">
       <DependentUpon>number-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\number-matcher.aspx.cs">
+      <DependentUpon>number-matcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\number-matcher.aspx.designer.cs">
+      <DependentUpon>number-matcher.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>

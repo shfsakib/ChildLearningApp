@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="col-12">
+    <div class="btn-dark text-center p-3 mb-3">
+        <h3>বিয়োগ</h3>
+    </div> 
+    <div class="col-12">
         <asp:image id="img1" style="width: 100%; height: 250px; border: 2px solid; background: white;" runat="server" />
     </div>
     <div class="col-12">

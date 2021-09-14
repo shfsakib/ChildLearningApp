@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="btn-dark text-center p-3 mb-3">
+        <h3>Animal</h3>
+    </div>
     <asp:hiddenfield id="findId" runat="server"></asp:hiddenfield>
     <asp:hiddenfield id="AnswerId" runat="server"></asp:hiddenfield>
 

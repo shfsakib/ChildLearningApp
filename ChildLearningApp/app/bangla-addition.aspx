@@ -1,29 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/app/app.Master" AutoEventWireup="true" CodeBehind="bangla-addition.aspx.cs" Inherits="ChildLearningApp.app.bangla_addition" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-12">
-        <asp:image id="img1" style="width: 100%; height: 250px; border: 2px solid; background: white;" runat="server" />
+    <div class="btn-dark text-center p-3 mb-3">
+        <h3>যোগ</h3>
     </div>
     <div class="col-12">
-        <asp:image id="img2" style="width: 100%; height: 250px; border: 2px solid; background: white;" runat="server" />
+        <asp:Image ID="img1" Style="width: 100%; height: 250px; border: 2px solid; background: white;" runat="server" />
+    </div>
+    <div class="col-12">
+        <asp:Image ID="img2" Style="width: 100%; height: 250px; border: 2px solid; background: white;" runat="server" />
     </div>
     <div class="col-12 text-center pt-2">
-        <asp:label id="lblQuestion" runat="server" style="font-size: 50px; font-weight: 600; color: white;" text=""></asp:label>
+        <asp:Label ID="lblQuestion" runat="server" Style="font-size: 50px; font-weight: 600; color: white;" Text=""></asp:Label>
     </div>
     <div class="col-12 pt-3 pb-3">
         <div class="row">
             <div class="col-6">
-                <asp:linkbutton id="opt1" cssclass="btn btn-primary btn-block" OnClick="opt1_OnClick" style="font-size: 30px;" runat="server"></asp:linkbutton>
+                <asp:LinkButton ID="opt1" CssClass="btn btn-primary btn-block" OnClick="opt1_OnClick" Style="font-size: 30px;" runat="server"></asp:LinkButton>
             </div>
             <div class="col-6">
-                <asp:linkbutton id="opt2" cssclass="btn btn-success  btn-block" OnClick="opt2_OnClick" style="font-size: 30px;" runat="server"></asp:linkbutton>
+                <asp:LinkButton ID="opt2" CssClass="btn btn-success  btn-block" OnClick="opt2_OnClick" Style="font-size: 30px;" runat="server"></asp:LinkButton>
             </div>
         </div>
     </div>
 
     <audio src="" id="audioQuiz" runat="server" autoplay></audio>
-    <asp:hiddenfield id="hiddenAns" runat="server"></asp:hiddenfield>
+    <asp:HiddenField ID="hiddenAns" runat="server"></asp:HiddenField>
     <div class="alertModalBg" id="alertModalBg" runat="server" visible="False">
         <div class="successAlertModal">
             <div class="col-12 text-center pt-3">
@@ -33,7 +37,7 @@
                 <h3 class="alertMessage" id="alertMsg" runat="server"></h3>
             </div>
             <div class="col-12 text-center p-3">
-                <asp:linkbutton id="lnkOk" cssclass="btn btn-primary" OnClick="lnkOk_OnClick" runat="server">Ok</asp:linkbutton>
+                <asp:LinkButton ID="lnkOk" CssClass="btn btn-primary" OnClick="lnkOk_OnClick" runat="server">Ok</asp:LinkButton>
             </div>
         </div>
     </div>

@@ -2,7 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="col-12" style="overflow-x: auto; overflow-y: hidden;">
+   <div class="btn-dark text-center p-3 mb-3">
+        <h3>Number</h3>
+    </div>
+     <div class="col-12" style="overflow-x: auto; overflow-y: hidden;">
         <asp:datalist id="alphabetData" repeatdirection="Horizontal" runat="server">
             <ItemTemplate>
                <asp:HiddenField ID="HiddenField2" runat="server" Value='<%#Eval("Letter") %>'/>

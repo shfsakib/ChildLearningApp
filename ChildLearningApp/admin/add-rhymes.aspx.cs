@@ -82,7 +82,7 @@ namespace ChildLearningApp.admin
                 if (con.State != ConnectionState.Open)
                     con.Open();
                 transaction = con.BeginTransaction();
-                cmd = new SqlCommand("INSERT INTO Rhymes(RhymeName,Link,Intime) VALUES(@RhymeName,@Link,@Intime)", con);
+                cmd = new SqlCommand($@"INSERT INTO Rhymes(RhymeName,Link,Intime,Type) VALUES(@RhymeName,@Link,@Intime,'{ddlType.SelectedValue}')", con);
                 cmd.Parameters.AddWithValue("@RhymeName", txtName.Text);
                 cmd.Parameters.AddWithValue("@Link", link);
                 cmd.Parameters.AddWithValue("@Intime", function.Date());

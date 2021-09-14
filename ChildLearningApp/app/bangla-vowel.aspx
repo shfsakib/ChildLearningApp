@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="btn-dark text-center p-3 mb-3">
+        <h3>স্বরবর্ণ</h3>
+    </div>
     <div class="col-12" style="overflow-x: auto; overflow-y: hidden;">
         <asp:datalist id="alphabetData" repeatdirection="Horizontal" runat="server">
             <ItemTemplate>
