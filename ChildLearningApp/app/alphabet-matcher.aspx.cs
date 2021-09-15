@@ -26,13 +26,53 @@ namespace ChildLearningApp.app
 
         private void Load()
         {
-            lblAlpha.Text = function.IsExist($@"SELECT TOP 1 Answer FROM CharacterMatcher WHERE Type='Alphabet' ORDER BY MatchId");
-            imgLetter.ImageUrl= function.IsExist($@"SELECT TOP 1 Picture FROM CharacterMatcher WHERE Answer='{lblAlpha.Text}' AND Type='Alphabet'");
+            matchId.Value = function.IsExist($@"SELECT TOP 1 MatchId FROM CharacterMatcher WHERE Type='Alphabet' ORDER BY MatchId");
+            lblAlpha.Text = function.IsExist($@"SELECT TOP 1 Answer FROM CharacterMatcher WHERE Type='Alphabet' AND MatchId='{matchId.Value}' ORDER BY MatchId");
+            imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 Picture FROM CharacterMatcher WHERE Answer='{lblAlpha.Text}' AND Type='Alphabet'  AND MatchId='{matchId.Value}'");
         }
 
         protected void match_OnClick(object sender, EventArgs e)
         {
-              
+            Next();
+        }
+
+        private void Next()
+        {
+            string match = function.IsExist($@"SELECT TOP 1 MatchId FROM CharacterMatcher WHERE Type='Alphabet' AND MatchId>'{matchId.Value}' ORDER BY MatchId ASC");
+            if (match != "")
+            {
+                matchId.Value = match;
+                lblAlpha.Text = function.IsExist($@"SELECT TOP 1 Answer FROM CharacterMatcher WHERE Type='Alphabet' AND MatchId='{matchId.Value}' ORDER BY MatchId");
+                imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 Picture FROM CharacterMatcher WHERE Answer='{lblAlpha.Text}' AND Type='Alphabet'  AND MatchId='{matchId.Value}'");
+
+            }
+            else
+            {
+                Load();
+            }
+        }
+        private void Prev()
+        {
+            string match = function.IsExist($@"SELECT TOP 1 MatchId FROM CharacterMatcher WHERE Type='Alphabet' AND MatchId<'{matchId.Value}' ORDER BY MatchId DESC");
+            if (match != "")
+            {
+                matchId.Value = match;
+                lblAlpha.Text = function.IsExist($@"SELECT TOP 1 Answer FROM CharacterMatcher WHERE Type='Alphabet' AND MatchId='{matchId.Value}' ORDER BY MatchId DESC");
+                imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 Picture FROM CharacterMatcher WHERE Answer='{lblAlpha.Text}' AND Type='Alphabet'  AND MatchId='{matchId.Value}'");
+            }
+            else
+            {
+                Load();
+            }
+        }
+        protected void lnkNext_OnClick(object sender, EventArgs e)
+        {
+            Next();
+        }
+
+        protected void lnkPrev_OnClick(object sender, EventArgs e)
+        {
+            Prev();
         }
     }
 }

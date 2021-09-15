@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rhymes.aspx.cs" Inherits="ChildLearningApp.app.rhymes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bangla-rhymes.aspx.cs" Inherits="ChildLearningApp.app.bangla_rhymes" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Rhymes</title>
+    <title>Bangla Rhymes</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

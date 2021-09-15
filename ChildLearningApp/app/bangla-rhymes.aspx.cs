@@ -9,11 +9,11 @@ using ChildLearningApp.DAL;
 
 namespace ChildLearningApp.app
 {
-    public partial class rhymes : System.Web.UI.Page
+    public partial class bangla_rhymes : System.Web.UI.Page
     {
         private Function func;
 
-        public rhymes()
+        public bangla_rhymes()
         {
             func = Function.GetInstance();
         }
@@ -21,14 +21,8 @@ namespace ChildLearningApp.app
         {
             if (!IsPostBack)
             {
-                func.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes WHERE Type='English' ORDER BY RhymeName ASC");
+                func.LoadGrid(gridRhyemes, "SELECT * FROM Rhymes WHERE Type='Bangla' ORDER BY RhymeName ASC");
             }
-        }
-
-        protected void lnkBack_OnClick(object sender, EventArgs e)
-        {
-            panelRhymes.Visible = true;
-            panelVideo.Visible = false;
         }
 
         protected void btnRhyme_OnServerClick(object sender, EventArgs e)
@@ -38,6 +32,12 @@ namespace ChildLearningApp.app
             videoFrame.Src = link.Value;
             panelVideo.Visible = true;
             panelRhymes.Visible = false;
+        }
+
+        protected void lnkBack_OnClick(object sender, EventArgs e)
+        {
+            panelRhymes.Visible = true;
+            panelVideo.Visible = false;
         }
     }
 }

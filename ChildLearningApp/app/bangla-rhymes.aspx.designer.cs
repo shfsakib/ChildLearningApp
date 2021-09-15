@@ -10,60 +10,60 @@
 namespace ChildLearningApp.app {
     
     
-    public partial class alphabet_matcher {
+    public partial class bangla_rhymes {
         
         /// <summary>
-        /// matchId control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField matchId;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblAlpha control.
+        /// panelRhymes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlpha;
+        protected global::System.Web.UI.WebControls.Panel panelRhymes;
         
         /// <summary>
-        /// imgLetter control.
+        /// gridRhyemes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgLetter;
+        protected global::System.Web.UI.WebControls.GridView gridRhyemes;
         
         /// <summary>
-        /// match control.
+        /// panelVideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button match;
+        protected global::System.Web.UI.WebControls.Panel panelVideo;
         
         /// <summary>
-        /// lnkPrev control.
+        /// lnkBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkPrev;
+        protected global::System.Web.UI.WebControls.LinkButton lnkBack;
         
         /// <summary>
-        /// lnkNext control.
+        /// videoFrame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkNext;
+        protected global::System.Web.UI.HtmlControls.HtmlIframe videoFrame;
     }
 }

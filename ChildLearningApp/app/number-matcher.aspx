@@ -2,21 +2,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <asp:HiddenField ID="matchId" runat="server" />
     <asp:Label ID="lblAlpha" Style="display: none;" runat="server" Text="A"></asp:Label>
     <%--<label id="lblAlpha" class="lblAlpha">Apple</label>--%>
     <h3 class="loadText" id="loadText" style="display: none; color: white; margin: 0 auto; padding: 0 15px;">Analyzing...</h3>
     <div class="col-md-12 pt-3" style="padding-left: 12px!important;">
         <canvas id="sig-canvas" style="background: #016931; border: 4px solid #AE7F38; color: white !important; z-index: 3;">Get a better browser, bro.
         </canvas>
-        <asp:Image ID="imgLetter" Style="z-index: 2; width: 100%; height: 400px; position: absolute; top: 20px;pointer-events: none;opacity: 0.5;" runat="server" />
+        <asp:Image ID="imgLetter" Style="z-index: 2; width: 92%; height: 400px; position: absolute; top: 20px;pointer-events: none;opacity: 0.2;" runat="server" />
     </div>
     <div class="col-md-12">
         <a class="btn btn-primary text-white btn-block" style="font-size: 20px;" id="sig-submitBtn">Submit</a>
         <button class="btn btn-danger btn-block" style="font-size: 20px;" id="sig-clearBtn">Clear</button>
 
-        <asp:Button ID="match" runat="server" OnClick="match_OnClick" Style="opacity: 0;" Text="Match" />
+        <asp:Button ID="match" runat="server" OnClick="match_OnClick" Style="opacity: 0;pointer-events: none;position: absolute;" Text="Match" />
 
+    </div>
+     <div class="col-12 pt-3 pb-3">
+        <div class="row">
+            <div class="col-6">
+                <asp:LinkButton ID="lnkPrev" OnClick="lnkPrev_OnClick" CssClass="btn btn-success btn-block" style="font-size: 20px;" runat="server">Prev</asp:LinkButton>
+            </div>
+             <div class="col-6">
+                <asp:LinkButton ID="lnkNext" OnClick="lnkNext_OnClick" CssClass="btn btn-primary btn-block" style="font-size: 20px;"  runat="server">Next</asp:LinkButton>
+            </div>
+        </div>
     </div>
     <div class="col-md-12">
         <img id="sig-image" src="" style="display: none;" alt="Your signature will go here!" />

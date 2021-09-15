@@ -135,6 +135,7 @@
     <Content Include="app\bangla-consonent.aspx" />
     <Content Include="app\bangla-months.aspx" />
     <Content Include="app\bangla-number-list.aspx" />
+    <Content Include="app\bangla-rhymes.aspx" />
     <Content Include="app\bangla-shape.aspx" />
     <Content Include="app\bangla-substration.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
@@ -198,6 +199,7 @@
     <Content Include="Audio\findcow.mp3" />
     <Content Include="Image\104734484943ball.jpg" />
     <Content Include="Image\1748253732641.jpg" />
+    <Content Include="Image\2.png" />
     <Content Include="Image\247647775040a for apple.jpg" />
     <Content Include="Image\3732641.jpg" />
     <Content Include="Image\46191775040a for apple.jpg" />
@@ -206,6 +208,7 @@
     <Content Include="Image\8576171.jpg" />
     <Content Include="Image\9212609892722.jpg" />
     <Content Include="Image\9892722.jpg" />
+    <Content Include="Image\B.png" />
     <Content Include="Image\findcow.mp3" />
     <Content Include="Image\goru.mp3" />
     <Content Include="Image\quiz back.jpg" />
@@ -900,6 +903,13 @@
     </Compile>
     <Compile Include="app\bangla-number-list.aspx.designer.cs">
       <DependentUpon>bangla-number-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\bangla-rhymes.aspx.cs">
+      <DependentUpon>bangla-rhymes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\bangla-rhymes.aspx.designer.cs">
+      <DependentUpon>bangla-rhymes.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\bangla-shape.aspx.cs">
       <DependentUpon>bangla-shape.aspx</DependentUpon>

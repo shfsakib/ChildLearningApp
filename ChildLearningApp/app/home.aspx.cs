@@ -15,13 +15,14 @@ namespace ChildLearningApp.app
         private Function function;
         HttpCookie sound = new HttpCookie("Sound");
         HttpCookie quiz = new HttpCookie("QuizLevel");
+        HttpCookie lang = new HttpCookie("lang");
 
         Random random = new Random();
         HttpCookie soundData = HttpContext.Current.Request.Cookies["Sound"];
-        
+        HttpCookie langData = HttpContext.Current.Request.Cookies["lang"];
+
         public home()
         {
-
             function = Function.GetInstance();
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -45,13 +46,19 @@ namespace ChildLearningApp.app
                 {
                     audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
                 }
+                if (langData == null)
+                {
+                    lang["type"] = "Eng";
+                    lang.Expires = DateTime.Now.AddYears(300);
+                    Response.Cookies.Add(lang);
+                }
             }
         }
 
-      
+
         protected void lnkHome_OnClick(object sender, EventArgs e)
         {
-            Panel1.Visible = true; 
+            Panel1.Visible = true;
             audioGrid.Src = "";
             if (soundData == null)
             {
@@ -86,7 +93,7 @@ namespace ChildLearningApp.app
             btnMute.Visible = false;
             audioBg.Src = "../MenuLink/app-file/bg-music.mp3";
         }
-        
+
         protected void btnSpeakWord_OnClick(object sender, EventArgs e)
         {
 
@@ -124,7 +131,7 @@ namespace ChildLearningApp.app
         {
             audioBg.Src = "";
             Response.Redirect("/app/quizes.aspx");
-            
+
         }
         protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
         {
@@ -135,6 +142,23 @@ namespace ChildLearningApp.app
         {
             audioBg.Src = "";
 
+        }
+
+
+        protected void btnLang_OnClick(object sender, EventArgs e)
+        {
+            lang["type"] = "Bn";
+            lang.Expires = DateTime.Now.AddYears(300);
+            Response.Cookies.Add(lang);
+            Response.Redirect(Request.RawUrl);
+        }
+
+        protected void btnBn_OnClick(object sender, EventArgs e)
+        {
+            lang["type"] = "Eng";
+            lang.Expires = DateTime.Now.AddYears(300);
+            Response.Cookies.Add(lang);
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
