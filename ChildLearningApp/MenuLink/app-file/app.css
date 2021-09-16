@@ -5,7 +5,7 @@
 }
 
 .bg {
-    background: blueviolet!important;
+    background: blueviolet !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: calc(100vh) !important;
@@ -16,87 +16,32 @@
 
 .button-pad {
     padding: 20px 5px !important;
+    text-align: center;
 }
 
 .pad-0 {
     padding: 0 !important;
 }
 
-.button-size-alpha {
+.button-size {
     height: 150px;
     width: 100%;
     cursor: pointer;
     position: relative;
     padding: 10px;
-    border-radius: 40px;
+    border-radius: 25px;
     line-height: 2.5rem;
-    outline: none!important;
+    outline: none !important;
     font-size: 2rem;
     font-weight: 600;
     border: 1px solid #495057;
-    background-image: linear-gradient(-180deg, orangered 0%, orange 100%);
-    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem orange inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 orangered inset;
+    /*background-image: linear-gradient(-180deg, orangered 0%, orange 100%);*/
+    /*box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem orange inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 orangered inset;*/
     /*border: 2px solid #ededfb;
     border-radius: 20px;
     padding: 10px;*/
 }
 
-.button-size-num {
-    height: 150px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    padding: 10px;
-    border-radius: 40px;
-    line-height: 2.5rem;
-    font-size: 2rem;
-    font-weight: 600;
-    outline: none!important;
-    border: 1px solid #495057;
-    background-image: linear-gradient(-180deg, palevioletred 0%, plum 100%);
-    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem plum inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 palevioletred inset;
-    /*border: 2px solid #ededfb;
-    border-radius: 20px;
-    padding: 10px;*/
-}
-
-.button-size-rhyme {
-    height: 150px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    padding: 10px;
-    border-radius: 40px;
-    line-height: 2.5rem;
-    font-size: 2rem;
-    outline: none!important;
-    font-weight: 600;
-    border: 1px solid #495057;
-    background-image: linear-gradient(-180deg, red 0%, tomato 100%);
-    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem tomato inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 red inset;
-    /*border: 2px solid #ededfb;
-    border-radius: 20px;
-    padding: 10px;*/
-}
-
-.button-size-quiz {
-    height: 150px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    padding: 10px;
-    border-radius: 40px;
-    line-height: 2.5rem;
-    font-size: 2rem;
-    outline: none!important;
-    font-weight: 600;
-    border: 1px solid #495057;
-    background-image: linear-gradient(-180deg, violet 0%, blueviolet 100%);
-    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem blueviolet inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 violet inset;
-    /*border: 2px solid #ededfb;
-    border-radius: 20px;
-    padding: 10px;*/
-}
 
 .button-mic {
     height: 45px;
@@ -110,7 +55,7 @@
     line-height: 2.5rem;
     color: white;
     font-size: 25px;
-    outline: none!important;
+    outline: none !important;
     font-weight: 600;
     border: 1px solid #495057;
     background-image: linear-gradient(-180deg, #04ff00 0%, #0dc20a 100%);
@@ -131,7 +76,7 @@
     width: 45px;
     cursor: pointer;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 20px;
     padding: 1px 7px;
     border-radius: 50%;
@@ -167,4 +112,43 @@
     border: 1px solid #495057;
     background-image: linear-gradient(-180deg, #04ff00 0%, #0dc20a 100%);
     box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem #0dc20a inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 #04ff00 inset;
+}
+
+.bg-orange {
+    background-image: linear-gradient(-180deg, orangered 0%, orange 100%) !important;
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem orange inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 orangered inset !important;
+}
+
+.bg-pink {
+    background-image: linear-gradient(-180deg, palevioletred 0%, plum 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem plum inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 palevioletred inset;
+}
+
+.bg-violet {
+    background-image: linear-gradient(-180deg, violet 0%, blueviolet 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem blueviolet inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 violet inset;
+}
+
+.bg-red {
+    background-image: linear-gradient(-180deg, red 0%, tomato 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem tomato inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 red inset;
+}
+
+.bg-lime {
+    background-image: linear-gradient(-180deg, #04ff00 0%, #0dc20a 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem #0dc20a inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 #04ff00 inset;
+}
+
+.bg-green {
+    background-image: linear-gradient(-180deg, #075e17 0%, #126321 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem #126321 inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 #075e17 inset;
+}
+
+.bg-blue {
+    background-image: linear-gradient(-180deg, blue 0%, darkblue 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem darkblue inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 darkblue inset;
+}
+.bg-yellow {
+    background-image: linear-gradient(-180deg, yellow 0%, darkorange 100%);
+    box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50), 0 -0.25rem 1.5rem darkorange inset, 0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset, 0 0.25rem 0.5rem 0 darkorange inset;
 }

@@ -37,27 +37,106 @@
                                     <% } %>
                                 </div>
                             </div>
+                            <% if (langCookie["type"] == "Eng")
+                                { %>
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnAlpha" OnClick="btnAlpha_OnClick" ImageUrl="../MenuLink/app-file/alpha.png" class="button-size-quiz" runat="server" />
+                                    <asp:ImageButton ID="btnAlpha" OnClick="btnAlpha_OnClick" ImageUrl="../MenuLink/app-file/alpha.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Alphabet</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnNumeric" OnClick="btnNumeric_OnClick" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size-alpha" runat="server" />
+                                    <asp:ImageButton ID="btnNumeric" OnClick="btnNumeric_OnClick" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Numbers</h4>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnRhymes" OnClick="btnRhymes_OnClick" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size-rhyme" runat="server" />
+                                    <asp:ImageButton ID="imgAddtion" OnClick="imgAddtion_OnClick" ImageUrl="../MenuLink/app-file/addition.png" class="button-size bg-pink" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Addition</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnQuiz" OnClick="btnQuiz_OnClick" ImageUrl="../MenuLink/app-file/quiz.png" class="button-size-num" runat="server" />
+                                    <asp:ImageButton ID="imgSubstration" OnClick="imgSubstration_OnClick" ImageUrl="../MenuLink/app-file/substract.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Substraction</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgColor" OnClick="imgColor_OnClick" ImageUrl="../MenuLink/app-file/color.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Colors</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgAnimal" OnClick="imgAnimal_OnClick" ImageUrl="../MenuLink/app-file/animal.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Animal</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgMonth" OnClick="imgMonth_OnClick" ImageUrl="../MenuLink/app-file/month.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Months</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgWeek" OnClick="imgWeek_OnClick" ImageUrl="../MenuLink/app-file/week.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Weeks</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgShape" OnClick="imgShape_OnClick" ImageUrl="../MenuLink/app-file/shapes.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Shapes</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgFindAnimal" OnClick="imgFindAnimal_OnClick" ImageUrl="../MenuLink/app-file/findAnimal.png" class="button-size bg-violet" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Find Animal</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgFindNum" OnClick="imgFindNum_OnClick" ImageUrl="../MenuLink/app-file/number.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Find Number</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="DrawBoard" OnClick="DrawBoard_OnClick" ImageUrl="../MenuLink/app-file/drawing.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Drawing Board</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgAlphaMatcher" OnClick="imgAlphaMatcher_OnClick" ImageUrl="../MenuLink/app-file/alphaMatcher.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Draw Alphabet</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgNumberMatcher" OnClick="imgNumberMatcher_OnClick" ImageUrl="../MenuLink/app-file/findNumber.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Draw Number</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row" style="padding-bottom: 50px !important;">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="btnRhymes" OnClick="btnRhymes_OnClick" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Rhymes</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="btnQuiz" OnClick="btnQuiz_OnClick" ImageUrl="../MenuLink/app-file/quiz.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Quiz</h4>
                                 </div>
                                 <div class="col-1"></div>
 
                             </div>
+                            <% } %>
                         </div>
                         <a href="#" class="button-mic" id="btnMic" runat="server" onserverclick="btnMic_OnServerClick"><i class="fas fa-volume-up"></i></a>
                         <a href="#" class="button-mute" id="btnMute" runat="server" onserverclick="btnMute_OnServerClick" visible="False"><i class="fas fa-volume-mute"></i></a>
@@ -79,6 +158,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script>
+        $(document).ready(function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                //
+            } else {
+                alert('You are not allowed to open this app in browser');
+                location.href = 'http://google.it';
+            }
+        });
+        function pageLoad() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                //
+            } else {
+                alert('You are not allowed to open this app in browser');
+                location.href = 'http://google.it';
+            }
+        }
+    </script>
 </body>
 </html>

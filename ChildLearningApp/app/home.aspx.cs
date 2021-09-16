@@ -136,12 +136,13 @@ namespace ChildLearningApp.app
         protected void btnAlpha_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
+            Response.Redirect("/app/alphabet-list.aspx");
 
         }
         protected void btnNumeric_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-
+            Response.Redirect("/app/number-list.aspx");
         }
 
 
@@ -159,6 +160,78 @@ namespace ChildLearningApp.app
             lang.Expires = DateTime.Now.AddYears(300);
             Response.Cookies.Add(lang);
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void imgAddtion_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/addition.aspx");
+        }
+
+        protected void imgSubstration_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/substraction.aspx");
+        }
+
+        protected void imgColor_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/learn-color.aspx");
+        }
+
+        protected void imgAnimal_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/learn-animal.aspx");
+        }
+
+        protected void imgMonth_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/learn-month.aspx");
+        }
+
+        protected void imgWeek_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/learn-week.aspx");
+        }
+
+        protected void imgShape_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/learn-shape.aspx");
+        }
+
+        protected void imgFindAnimal_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/find-animal.aspx");
+        }
+
+        protected void imgFindNum_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/find-number.aspx");
+        }
+
+        protected void DrawBoard_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/drawing-board.aspx");
+        }
+
+        protected void imgAlphaMatcher_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/alphabet-matcher.aspx");
+        }
+
+        protected void imgNumberMatcher_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/number-matcher.aspx");
         }
     }
 }
