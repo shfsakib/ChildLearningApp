@@ -218,6 +218,15 @@
     <Content Include="MenuLink\app-file\alphaMatcher.png" />
     <Content Include="MenuLink\app-file\animal.png" />
     <Content Include="MenuLink\app-file\app.css" />
+    <Content Include="MenuLink\app-file\bangla consonent.png" />
+    <Content Include="MenuLink\app-file\bangla vowel.png" />
+    <Content Include="MenuLink\app-file\bangla-add.png" />
+    <Content Include="MenuLink\app-file\bangla-number.png" />
+    <Content Include="MenuLink\app-file\banglaMonth.png" />
+    <Content Include="MenuLink\app-file\banglanumber.png" />
+    <Content Include="MenuLink\app-file\banglasubstract.png" />
+    <Content Include="MenuLink\app-file\banglaweek.png" />
+    <Content Include="MenuLink\app-file\bangla_rhymes-btn.png" />
     <Content Include="MenuLink\app-file\bg-music.mp3" />
     <Content Include="MenuLink\app-file\color.png" />
     <Content Include="MenuLink\app-file\drawing.png" />

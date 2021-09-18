@@ -136,6 +136,100 @@
                                 <div class="col-1"></div>
 
                             </div>
+                            <% }
+                                else if (langCookie["type"] == "Bn")
+                                { %>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaVowel" OnClick="imgBanglaVowel_OnClick" ImageUrl="../MenuLink/app-file/bangla vowel.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">স্বরবর্ণ</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="ImageButton2" OnClick="ImageButton2_OnClick" ImageUrl="../MenuLink/app-file/bangla consonent.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">ব্যঞ্জনবর্ণ</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaNumber" OnClick="imgBanglaNumber_OnClick" ImageUrl="../MenuLink/app-file/banglanumber.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">অংক</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaAddition" OnClick="imgBanglaAddition_OnClick" ImageUrl="../MenuLink/app-file/bangla-add.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">যোগ</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaSubstraction" OnClick="imgBanglaSubstraction_OnClick" ImageUrl="../MenuLink/app-file/banglasubstract.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">বিয়োগ</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaColor" OnClick="imgBanglaColor_OnClick" ImageUrl="../MenuLink/app-file/color.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">রঙের নাম
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaAnimal" OnClick="imgBanglaAnimal_OnClick" ImageUrl="../MenuLink/app-file/animal.png" class="button-size bg-violet" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">প্রাণীর নাম</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaMonth" OnClick="imgBanglaMonth_OnClick" ImageUrl="../MenuLink/app-file/banglaMonth.png" class="button-size bg-pink" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">মাসের নাম
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaWeek" OnClick="imgBanglaWeek_OnClick" ImageUrl="../MenuLink/app-file/banglaweek.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">সপ্তাহের নাম</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaShape" OnClick="imgBanglaShape_OnClick" ImageUrl="../MenuLink/app-file/shapes.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">আকৃতি
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaAnimalFind" OnClick="imgBanglaAnimalFind_OnClick" ImageUrl="../MenuLink/app-file/findAnimal.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">প্রাণী খুঁজা
+                                    </h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaNumberFind" OnClick="imgBanglaNumberFind_OnClick" ImageUrl="../MenuLink/app-file/bangla-number.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">অংক খুঁজা
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaDraw" OnClick="imgBanglaDraw_OnClick" ImageUrl="../MenuLink/app-file/drawing.png" class="button-size bg-violet" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">আঁকা
+                                    </h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaRhymes" OnClick="imgBanglaRhymes_OnClick" ImageUrl="../MenuLink/app-file/bangla_rhymes-btn.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">ছড়া
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
                             <% } %>
                         </div>
                         <a href="#" class="button-mic" id="btnMic" runat="server" onserverclick="btnMic_OnServerClick"><i class="fas fa-volume-up"></i></a>

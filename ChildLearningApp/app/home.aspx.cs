@@ -233,5 +233,89 @@ namespace ChildLearningApp.app
             audioBg.Src = "";
             Response.Redirect("/app/number-matcher.aspx");
         }
+
+        protected void imgBanglaVowel_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-vowel.aspx");
+        }
+
+        protected void ImageButton2_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-consonent.aspx");
+        }
+
+        protected void imgBanglaNumber_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-number-list.aspx");
+        }
+
+        protected void imgBanglaAddition_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-addition.aspx");
+        }
+
+        protected void imgBanglaSubstraction_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-substration.aspx");
+        }
+
+        protected void imgBanglaColor_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-color.aspx");
+        }
+
+        protected void imgBanglaAnimal_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-animal.aspx");
+        }
+
+        protected void imgBanglaMonth_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-months.aspx");
+        }
+
+        protected void imgBanglaWeek_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-week.aspx");
+        }
+
+        protected void imgBanglaShape_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-shape.aspx");
+        }
+
+        protected void imgBanglaAnimalFind_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/find-bangla-animal.aspx");
+        }
+
+        protected void imgBanglaNumberFind_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/find-bangla-number.aspx");
+        }
+
+        protected void imgBanglaDraw_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/drawing-board.aspx");
+        }
+
+        protected void imgBanglaRhymes_OnClick(object sender, ImageClickEventArgs e)
+        {
+            audioBg.Src = "";
+            Response.Redirect("/app/bangla-rhymes.aspx");
+        } 
     }
 }

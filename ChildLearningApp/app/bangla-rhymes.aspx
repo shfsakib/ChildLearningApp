@@ -17,15 +17,16 @@
 <body class="bg">
     <form id="form1" runat="server">
         <div class="row">
-            <div class="btn-dark text-center p-3 mb-3">
-                <h3>Rhymes</h3>
-            </div>
+
             <div class="col-12">
                 <asp:Panel ID="panelRhymes" runat="server">
                     <div class="row">
                         <div class="col-12 text-left p-3 pl-4">
                             <a class="btn btn-primary" href="/app/home.aspx"><i class="fas fa-caret-left"></i></a>
                         </div>
+                    </div>
+                    <div class="btn-dark col-12 text-center p-3 mb-3">
+                        <h3>ছড়া</h3>
                     </div>
                     <div class="row">
                         <div class="col-12">
