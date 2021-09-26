@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="col-5 button-pad">
                                     <asp:ImageButton ID="imgSubstration" OnClick="imgSubstration_OnClick" ImageUrl="../MenuLink/app-file/substract.png" class="button-size bg-green" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Substraction</h4>
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Subtraction</h4>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
