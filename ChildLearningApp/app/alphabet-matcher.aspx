@@ -88,15 +88,18 @@
     <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
 
     <script>
+        //canvas intialization
         const canvas = document.getElementById("sig-canvas");
         let ctx = canvas.getContext("2d");
         let drawColor = "#eaff00";
         let drawWidth = "2";
         ctx.strokeStyle = drawColor;
         ctx.lineWidth = drawWidth;
-
+        //Canvas Dimension
         canvas.width = window.innerWidth - 30;
         canvas.height = 400;
+
+        //OCR CODE Start
         (function () {
             window.requestAnimFrame = (function (callback) {
                 return window.requestAnimationFrame ||
@@ -129,9 +132,9 @@
             }, false);
 
             // Add touch event support for mobile
-            canvas.addEventListener("touchstart", function (e) {
+            //canvas.addEventListener("touchstart", function (e) {
 
-            }, false);
+            //}, false);
 
             canvas.addEventListener("touchmove", function (e) {
                 var touch = e.touches[0];
@@ -223,12 +226,14 @@
 
                 loadText.style.display = 'block';
                 var dataUrl = canvas.toDataURL();
+                //Image convert
                 sigImage.setAttribute("src", dataUrl);
                 setTimeout(function () {
                     var myImage = document.getElementById('sig-image');
                     var a;
                     console.log('sas');
                     Tesseract.recognize(myImage).then(function (result) {
+                        //image to text 
                         a = result.text.toString().trim();
                         console.log(a, label.innerHTML);
                         if (a === label.innerHTML) {
