@@ -85,67 +85,13 @@ namespace ChildLearningApp.app {
         protected global::System.Web.UI.WebControls.ImageButton btnNumeric;
         
         /// <summary>
-        /// imgAddtion control.
+        /// imgLearn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgAddtion;
-        
-        /// <summary>
-        /// imgSubstration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgSubstration;
-        
-        /// <summary>
-        /// imgColor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgColor;
-        
-        /// <summary>
-        /// imgAnimal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgAnimal;
-        
-        /// <summary>
-        /// imgMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgMonth;
-        
-        /// <summary>
-        /// imgWeek control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgWeek;
-        
-        /// <summary>
-        /// imgShape control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgShape;
+        protected global::System.Web.UI.WebControls.ImageButton imgLearn;
         
         /// <summary>
         /// imgFindAnimal control.
@@ -157,15 +103,6 @@ namespace ChildLearningApp.app {
         protected global::System.Web.UI.WebControls.ImageButton imgFindAnimal;
         
         /// <summary>
-        /// imgFindNum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgFindNum;
-        
-        /// <summary>
         /// DrawBoard control.
         /// </summary>
         /// <remarks>
@@ -173,24 +110,6 @@ namespace ChildLearningApp.app {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton DrawBoard;
-        
-        /// <summary>
-        /// imgAlphaMatcher control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgAlphaMatcher;
-        
-        /// <summary>
-        /// imgNumberMatcher control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgNumberMatcher;
         
         /// <summary>
         /// btnRhymes control.
@@ -238,24 +157,6 @@ namespace ChildLearningApp.app {
         protected global::System.Web.UI.WebControls.ImageButton imgBanglaNumber;
         
         /// <summary>
-        /// imgBanglaAddition control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaAddition;
-        
-        /// <summary>
-        /// imgBanglaSubstraction control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaSubstraction;
-        
-        /// <summary>
         /// imgBanglaColor control.
         /// </summary>
         /// <remarks>
@@ -265,42 +166,6 @@ namespace ChildLearningApp.app {
         protected global::System.Web.UI.WebControls.ImageButton imgBanglaColor;
         
         /// <summary>
-        /// imgBanglaAnimal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaAnimal;
-        
-        /// <summary>
-        /// imgBanglaMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaMonth;
-        
-        /// <summary>
-        /// imgBanglaWeek control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaWeek;
-        
-        /// <summary>
-        /// imgBanglaShape control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaShape;
-        
-        /// <summary>
         /// imgBanglaAnimalFind control.
         /// </summary>
         /// <remarks>
@@ -308,15 +173,6 @@ namespace ChildLearningApp.app {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton imgBanglaAnimalFind;
-        
-        /// <summary>
-        /// imgBanglaNumberFind control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgBanglaNumberFind;
         
         /// <summary>
         /// imgBanglaDraw control.

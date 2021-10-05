@@ -74,5 +74,10 @@ namespace ChildLearningApp.app
         {
             Prev();
         }
+
+        protected void lnkOk_OnClick(object sender, EventArgs e)
+        {
+            match_OnClick(sender, e);
+        }
     }
 }

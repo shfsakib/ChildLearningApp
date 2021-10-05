@@ -73,5 +73,10 @@ namespace ChildLearningApp.app
         {
             Next();
         }
+
+        protected void lnkOk_OnClick(object sender, EventArgs e)
+        {
+            Next();
+        }
     }
 }

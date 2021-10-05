@@ -142,7 +142,7 @@ namespace ChildLearningApp.app
         protected void btnNumeric_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            Response.Redirect("/app/number-list.aspx");
+            Response.Redirect("/app/number-menu.aspx");
         }
 
 
@@ -160,78 +160,17 @@ namespace ChildLearningApp.app
             lang.Expires = DateTime.Now.AddYears(300);
             Response.Cookies.Add(lang);
             Response.Redirect(Request.RawUrl);
-        }
-
-        protected void imgAddtion_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/addition.aspx");
-        }
-
-        protected void imgSubstration_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/substraction.aspx");
-        }
-
-        protected void imgColor_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/learn-color.aspx");
-        }
-
-        protected void imgAnimal_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/learn-animal.aspx");
-        }
-
-        protected void imgMonth_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/learn-month.aspx");
-        }
-
-        protected void imgWeek_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/learn-week.aspx");
-        }
-
-        protected void imgShape_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/learn-shape.aspx");
-        }
-
+        }   
         protected void imgFindAnimal_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            Response.Redirect("/app/find-animal.aspx");
-        }
-
-        protected void imgFindNum_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/find-number.aspx");
-        }
+            Response.Redirect("/app/find-menu.aspx");
+        } 
 
         protected void DrawBoard_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            Response.Redirect("/app/drawing-board.aspx");
-        }
-
-        protected void imgAlphaMatcher_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/alphabet-matcher.aspx");
-        }
-
-        protected void imgNumberMatcher_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/number-matcher.aspx");
+            Response.Redirect("/app/draw-menu.aspx");
         }
 
         protected void imgBanglaVowel_OnClick(object sender, ImageClickEventArgs e)
@@ -244,66 +183,18 @@ namespace ChildLearningApp.app
         {
             audioBg.Src = "";
             Response.Redirect("/app/bangla-consonent.aspx");
-        }
-
-        protected void imgBanglaNumber_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-number-list.aspx");
-        }
-
-        protected void imgBanglaAddition_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-addition.aspx");
-        }
-
-        protected void imgBanglaSubstraction_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-substration.aspx");
-        }
+        } 
 
         protected void imgBanglaColor_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            Response.Redirect("/app/bangla-color.aspx");
-        }
-
-        protected void imgBanglaAnimal_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-animal.aspx");
-        }
-
-        protected void imgBanglaMonth_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-months.aspx");
-        }
-
-        protected void imgBanglaWeek_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-week.aspx");
-        }
-
-        protected void imgBanglaShape_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/bangla-shape.aspx");
-        }
+            Response.Redirect("/app/bangla-learn-menu.aspx");
+        } 
 
         protected void imgBanglaAnimalFind_OnClick(object sender, ImageClickEventArgs e)
         {
             audioBg.Src = "";
-            Response.Redirect("/app/find-bangla-animal.aspx");
-        }
-
-        protected void imgBanglaNumberFind_OnClick(object sender, ImageClickEventArgs e)
-        {
-            audioBg.Src = "";
-            Response.Redirect("/app/find-bangla-number.aspx");
+            Response.Redirect("/app/bangla-find-menu.aspx");
         }
 
         protected void imgBanglaDraw_OnClick(object sender, ImageClickEventArgs e)
@@ -316,6 +207,17 @@ namespace ChildLearningApp.app
         {
             audioBg.Src = "";
             Response.Redirect("/app/bangla-rhymes.aspx");
-        } 
+        }
+
+        protected void imgLearn_OnClick(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("/app/learn-menu.aspx");
+
+        }
+
+        protected void imgBanglaNumber_OnClick(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("/app/bangla-number-menu.aspx");
+        }
     }
 }

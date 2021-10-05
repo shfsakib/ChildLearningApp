@@ -85,7 +85,6 @@ namespace ChildLearningApp.app
                 alertMsg.Style.Add("color", "red");
                 alertImg.Src = "/MenuLink/app-file/error.gif";
                 audioQuiz.Src = "/MenuLink/app-file/loss.mp3";
-
             }
         }
     }
