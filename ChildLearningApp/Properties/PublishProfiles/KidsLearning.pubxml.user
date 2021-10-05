@@ -328,7 +328,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/30/2021 10:57:23</publishTime>
     </File>
     <File Include="bin/ChildLearningApp.dll">
-      <publishTime>10/04/2021 17:30:54</publishTime>
+      <publishTime>10/05/2021 09:07:41</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>08/30/2021 10:57:28</publishTime>
@@ -1636,7 +1636,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/30/2021 10:57:28</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/04/2021 17:30:56</publishTime>
+      <publishTime>10/05/2021 09:07:45</publishTime>
     </File>
     <File Include="scripts/ai.0.22.9-build00167.js">
       <publishTime>08/30/2021 10:57:28</publishTime>
