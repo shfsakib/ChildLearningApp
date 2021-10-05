@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: "comic sans ms";
+    overflow-x: hidden;
+    background: #313131;
+    box-sizing: border-box;
+}
+
+#canvas {
+    box-shadow: -3px 2px 9px 6px black;
+    cursor: pointer;
+    background: #fff;
+}
+
+.tools {
+    /*display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;*/
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background: white;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+    .tools .color-field {
+        /*height: 40px;
+        width: 40px;
+        min-height: 40px;
+        min-width: 40px;
+        cursor: pointer;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        align-self: center;
+        margin: 5px 5px;*/
+        transition: .1s linear;
+        position: relative;
+        float: left;
+        margin: 5px;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        z-index: 3;
+    }
+
+        .tools .color-field:focus {
+            transition: .1s linear;
+            width: 35px !important;
+            height: 35px !important;
+            margin: 2.5px !important;
+        }
+
+        .tools .color-field:active {
+            transition: .1s linear;
+            width: 35px !important;
+            height: 35px !important;
+            margin: 2.5px !important;
+        }
+
+    .tools button {
+        align-self: center;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+        border: 2px solid #fff;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+.color-picker {
+    align-self: center;
+    margin: 0 10px;
+    height: 50px;
+}
+
+.pen-range {
+    align-self: center;
+    margin: 0 10px;
+}
+ 

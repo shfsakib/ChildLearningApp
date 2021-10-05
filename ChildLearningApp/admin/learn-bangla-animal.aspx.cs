@@ -27,7 +27,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridAnimal, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Animal' ORDER BY Answer DESC");
+            function.LoadGrid(gridAnimal, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Animal' ORDER BY Answer ASC");
         }
         private bool IsAnswer()
         {

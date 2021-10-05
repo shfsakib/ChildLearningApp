@@ -68,6 +68,7 @@ namespace ChildLearningApp.admin
                 if (ans)
                 {
                     function.AlertWithRedirect(this, "Added successfully", "/admin/matching-character-info.aspx");
+                    Load();
                 }
                 else
                 {

@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridWeek, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Week' ORDER BY Answer DESC");
+            function.LoadGrid(gridWeek, $@"SELECT * FROM LearnInfo WHERE Type='Bangla Week' ORDER BY Answer ASC");
         }
         private bool IsAnswer()
         {

@@ -31,7 +31,7 @@ namespace ChildLearningApp.admin
             {
                 shape = "Bangla Shape";
             }
-            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type=N'{shape}' ORDER BY Answer DESC");
+            function.LoadGrid(gridShape, $@"SELECT * FROM LearnInfo WHERE Type=N'{shape}' ORDER BY Answer ASC");
         }
         private bool IsAnswer()
         {

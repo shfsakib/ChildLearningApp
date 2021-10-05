@@ -22,6 +22,11 @@
                                 <asp:Label ID="lblWord" runat="server" Text='<%#Eval("Link")%>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
+                         <asp:TemplateField HeaderText="Type">
+                            <ItemTemplate>
+                                <asp:Label ID="lblType" runat="server" Text='<%#Eval("Type")%>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lnkRemove" class="btn btn-danger" OnClick="lnkRemove_OnClick" runat="server"><i class="fas fa-trash-alt fa-lg"></i>&nbsp;Remove</asp:LinkButton>

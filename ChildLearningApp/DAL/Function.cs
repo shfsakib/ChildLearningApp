@@ -34,18 +34,16 @@ namespace ChildLearningApp.DAL
             }
         }
 
-        public string Connection = new SqlConnectionStringBuilder
-        {
-            DataSource = ".\\local",
-            InitialCatalog = "KidsLearningDb",
-            UserID = "sa",
-            Password = "ShfS@kib16",
+        public string Connection = new SqlConnectionStringBuilder {
+            DataSource = "server3.hostever.com,14333",
+            InitialCatalog = "SBL_INVENTORY",
+            UserID = "riazripon",
+            Password = "riaz.tarin@123%rrStock",
             MultipleActiveResultSets = true,
+            ConnectTimeout = 0,
             Pooling = true,
             MinPoolSize = 0,
-            MaxPoolSize = 4000,
-            ConnectTimeout = 0
-        }.ToString();
+            MaxPoolSize = 4096 }.ToString();
         public string Connection1 = @"Data Source=.\local;Initial Catalog=KidsLearningDb;Integrated Security=True";
         public void BindDropDown(DropDownList ddl, string root, string query)
         {

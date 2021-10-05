@@ -26,7 +26,7 @@ namespace ChildLearningApp.admin
         }
         private void Load()
         {
-            function.LoadGrid(gridMonth, $@"SELECT * FROM LearnInfo WHERE Type='Month' ORDER BY Answer DESC");
+            function.LoadGrid(gridMonth, $@"SELECT * FROM LearnInfo WHERE Type='Month' ORDER BY Answer ASC");
         }
         private bool IsAnswer()
         {

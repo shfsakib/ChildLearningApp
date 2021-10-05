@@ -246,6 +246,16 @@
                 <li>
                     <h6 class="text-white p-2 pl-3">Others</h6>
                 </li>
+                <li class="">
+                    <a class="" href="/admin/matching-character-info.aspx" aria-expanded="false">
+                        <div class="nav_icon_small">
+                            <i class="fas fa-equals"></i>
+                        </div>
+                        <div class="nav_title">
+                            <span>Drawing Matching Questions</span>
+                        </div>
+                    </a>
+                </li>
                  <li class="">
                     <a class="" href="/admin/calculation-info.aspx" aria-expanded="false">
                         <div class="nav_icon_small">

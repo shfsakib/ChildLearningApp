@@ -27,7 +27,7 @@ namespace ChildLearningApp.admin
 
         private void Load()
         {
-            function.LoadGrid(gridColor, $@"SELECT * FROM LearnInfo WHERE Type='Color' ORDER BY Answer DESC");
+            function.LoadGrid(gridColor, $@"SELECT * FROM LearnInfo WHERE Type='Color' ORDER BY Answer ASC");
         }
         private bool IsAnswer()
         {
