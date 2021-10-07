@@ -27,7 +27,7 @@ namespace ChildLearningApp.app
         }
         private void LoadData()
         {
-            function.LoadDataList(alphabetData, $@"SELECT DISTINCT LETTER FROM LetterInfo WHERE LetterType=N'Bangla Number' ORDER BY Letter ASC");
+            function.LoadDataList(alphabetData, $@"SELECT LETTER FROM LetterInfo WHERE LetterType=N'Bangla Number' ORDER BY LetterId ASC");
             lblLetter.Text = function.IsExist($@"SELECT TOP 1 Letter FROM LetterInfo WHERE LetterType=N'Bangla Number' ORDER BY LetterId ASC");
             // audioLetter.Src= function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 LetterPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
@@ -38,7 +38,7 @@ namespace ChildLearningApp.app
             LinkButton linkButton = (LinkButton)sender;
             HiddenField letter = (HiddenField)linkButton.Parent.FindControl("HiddenField2");
             lblLetter.Text = function.IsExist($@"SELECT TOP 1 Letter FROM LetterInfo WHERE LetterType=N'Bangla Number' AND Letter=N'{letter.Value}' ORDER BY LetterId ASC");
-            audioWord.Src = function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY Word ASC");
+            audioWord.Src = function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             // audioLetter.Src= function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 LetterPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
 
