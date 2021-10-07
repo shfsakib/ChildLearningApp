@@ -15,34 +15,91 @@
     <div class="col-md-12">
         <a class="btn btn-primary text-white btn-block" style="font-size: 20px;" id="sig-submitBtn">Submit</a>
         <button class="btn btn-danger btn-block" style="font-size: 20px;" id="sig-clearBtn">Clear</button>
-        <asp:Button ID="match" runat="server" OnClick="match_OnClick" Style="opacity: 0;pointer-events: none;position: absolute;" Text="Match" />
+        <asp:Button ID="match" runat="server" OnClick="match_OnClick" Style="opacity: 0; pointer-events: none; position: absolute;" Text="Match" />
     </div>
     <div class="col-12 pt-3 pb-3">
         <div class="row">
             <div class="col-6">
-                <asp:LinkButton ID="lnkPrev" OnClick="lnkPrev_OnClick" CssClass="btn btn-success btn-block" style="font-size: 20px;" runat="server">Prev</asp:LinkButton>
+                <asp:LinkButton ID="lnkPrev" OnClick="lnkPrev_OnClick" CssClass="btn btn-success btn-block" Style="font-size: 20px;" runat="server">Prev</asp:LinkButton>
             </div>
-             <div class="col-6">
-                <asp:LinkButton ID="lnkNext" OnClick="lnkNext_OnClick" CssClass="btn btn-primary btn-block" style="font-size: 20px;"  runat="server">Next</asp:LinkButton>
+            <div class="col-6">
+                <asp:LinkButton ID="lnkNext" OnClick="lnkNext_OnClick" CssClass="btn btn-primary btn-block" Style="font-size: 20px;" runat="server">Next</asp:LinkButton>
             </div>
         </div>
     </div>
     <div class="col-md-12">
         <img id="sig-image" src="" style="display: none;" alt="Your signature will go here!" />
     </div>
+    <audio src="" id="audioQuiz" runat="server" autoplay></audio>
+    <div class="alertModalBg" id="alertModalBg" runat="server">
+        <div class="successAlertModal">
+            <div class="col-12 text-center pt-3">
+                <img class="alertAnim" id="alertImg" runat="server" src="/MenuLink/app-file/success.gif" />
+            </div>
+            <div class="col-12 text-center p-3">
+                <h3 class="alertMessage" id="alertMsg" runat="server"></h3>
+            </div>
+            <div class="col-12 text-center p-3">
+                <asp:LinkButton ID="lnkOk" CssClass="btn btn-primary" OnClick="lnkOk_OnClick" runat="server">Ok</asp:LinkButton>
+            </div>
+        </div>
+    </div>
+    <style>
+        .successAlertModal {
+            width: 300px;
+            max-width: 300px;
+            min-height: 150px;
+            height: auto;
+            background: white;
+            padding: 0;
+            min-width: 350px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: relative;
+            border-radius: 15px;
+            border: 1px solid #a5a3d1;
+            border-bottom: 15px solid #8C93C7;
+            box-shadow: 2px 2px 5px 2px #a5a3d1;
+        }
 
+        .alertModalBg {
+            position: absolute;
+            width: calc(100%);
+            height: calc(100vh);
+            background: rgba(255, 255, 255, 0);
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        /*Alert modal css*/
+        .alertAnim {
+            width: 75px;
+            height: 75px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <%--<script src="../MenuLink/app-file/tesseract.js"></script>--%>
     <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
 
     <script>
+        //canvas intialization
         const canvas = document.getElementById("sig-canvas");
         let ctx = canvas.getContext("2d");
         let drawColor = "#eaff00";
         let drawWidth = "2";
         ctx.strokeStyle = drawColor;
         ctx.lineWidth = drawWidth;
-
+        //Canvas Dimension
         canvas.width = window.innerWidth - 30;
         canvas.height = 400;
+
+        //OCR CODE Start
         (function () {
             window.requestAnimFrame = (function (callback) {
                 return window.requestAnimationFrame ||
@@ -75,9 +132,9 @@
             }, false);
 
             // Add touch event support for mobile
-            canvas.addEventListener("touchstart", function (e) {
+            //canvas.addEventListener("touchstart", function (e) {
 
-            }, false);
+            //}, false);
 
             canvas.addEventListener("touchmove", function (e) {
                 var touch = e.touches[0];
@@ -169,15 +226,23 @@
 
                 loadText.style.display = 'block';
                 var dataUrl = canvas.toDataURL();
+                //Image convert
                 sigImage.setAttribute("src", dataUrl);
                 setTimeout(function () {
                     var myImage = document.getElementById('sig-image');
                     var a;
+                    console.log('sas');
                     Tesseract.recognize(myImage).then(function (result) {
+                        //image to text 
                         a = result.text.toString().trim();
                         console.log(a, label.innerHTML);
                         if (a === label.innerHTML) {
-                            alert('Perfect, Try another one');
+                            // alert('Perfect, Try another one');
+                            //"/MenuLink/app-file/win.mp3"
+                            document.querySelector("#ContentPlaceHolder1_alertModalBg").style.display = "block";
+                            document.querySelector("#ContentPlaceHolder1_alertMsg").innerText = "Perfect, Try another one!";
+                            document.querySelector("#ContentPlaceHolder1_alertImg").src = "/MenuLink/app-file/success.gif";
+                            document.querySelector("#ContentPlaceHolder1_audioQuiz").src = "/MenuLink/app-file/win.mp3";
                             loadText.style.display = 'none';
                             const canvas = document.getElementById("sig-canvas");
                             let ctx = canvas.getContext("2d");
@@ -185,15 +250,19 @@
                             let drawWidth = "10";
                             ctx.strokeStyle = drawColor;
                             ctx.lineWidth = drawWidth;
-                            Click();
+                            // Click();
                         } else {
-                            alert('Not matched, Better luck next time');
+                            //alert('Not matched, Better luck next time');
+                            document.querySelector("#ContentPlaceHolder1_alertModalBg").style.display = "block";
+                            document.querySelector("#ContentPlaceHolder1_alertMsg").innerText = "Not matched. Better luck next time.";
+                            document.querySelector("#ContentPlaceHolder1_alertImg").src = "/MenuLink/app-file/error.gif";
+                            document.querySelector("#ContentPlaceHolder1_audioQuiz").src = "/MenuLink/app-file/loss.mp3";
                             loadText.style.display = 'none';
                         }
                     });
 
                     clearCanvas();
-                }, 100);
+                }, 10);
             }, false);
 
         })();
@@ -201,7 +270,6 @@
             $('#ContentPlaceHolder1_match').click();
         }
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
             const canvas = document.getElementById("sig-canvas");

@@ -133,92 +133,29 @@
     <Content Include="app\bangla-animal.aspx" />
     <Content Include="app\bangla-color.aspx" />
     <Content Include="app\bangla-consonent.aspx" />
-    <Content Include="app\bangla-find-menu.aspx" />
-    <Content Include="app\bangla-learn-menu.aspx" />
     <Content Include="app\bangla-months.aspx" />
     <Content Include="app\bangla-number-list.aspx" />
-    <Content Include="app\bangla-number-menu.aspx" />
     <Content Include="app\bangla-rhymes.aspx" />
     <Content Include="app\bangla-shape.aspx" />
     <Content Include="app\bangla-substration.aspx" />
     <Content Include="app\bangla-vowel.aspx" />
     <Content Include="app\bangla-week.aspx" />
-    <Content Include="app\draw-menu.aspx" />
     <Content Include="app\drawing-board.aspx" />
     <Content Include="app\find-animal.aspx" />
     <Content Include="app\find-bangla-animal.aspx" />
     <Content Include="app\find-bangla-number.aspx" />
-    <Content Include="app\find-menu.aspx" />
     <Content Include="app\find-number.aspx" />
     <Content Include="app\home.aspx" />
     <Content Include="app\learn-animal.aspx" />
     <Content Include="app\learn-color.aspx" />
-    <Content Include="app\learn-menu.aspx" />
     <Content Include="app\learn-month.aspx" />
     <Content Include="app\learn-shape.aspx" />
     <Content Include="app\learn-week.aspx" />
     <Content Include="app\number-list.aspx" />
     <Content Include="app\number-matcher.aspx" />
-    <Content Include="app\number-menu.aspx" />
     <Content Include="app\quizes.aspx" />
     <Content Include="app\rhymes.aspx" />
     <Content Include="app\substraction.aspx" />
-    <Content Include="Audio\11152951779COD Loud.mp3" />
-    <Content Include="Audio\135315COD Loud.mp3" />
-    <Content Include="Audio\136672COD Tune.mp3" />
-    <Content Include="Audio\148652COD Loud.mp3" />
-    <Content Include="Audio\152448135315COD Loud.mp3" />
-    <Content Include="Audio\16152765448CODLoud.mp3" />
-    <Content Include="Audio\204186COD Loud.mp3" />
-    <Content Include="Audio\20751COD Loud.mp3" />
-    <Content Include="Audio\289481COD Loud.mp3" />
-    <Content Include="Audio\293449COD Loud.mp3" />
-    <Content Include="Audio\298166COD Tune.mp3" />
-    <Content Include="Audio\313147COD Loud.mp3" />
-    <Content Include="Audio\344833COD Loud.mp3" />
-    <Content Include="Audio\373276Call of Duty Mobile - Season 6 Theme Music Behind the Scenes %28mp3cut.net%29.mp3" />
-    <Content Include="Audio\398737COD Loud.mp3" />
-    <Content Include="Audio\4245351779COD Loud.mp3" />
-    <Content Include="Audio\501474COD Loud.mp3" />
-    <Content Include="Audio\51775865448CODLoud.mp3" />
-    <Content Include="Audio\51779COD Loud.mp3" />
-    <Content Include="Audio\524509COD Loud.mp3" />
-    <Content Include="Audio\562357COD Loud.mp3" />
-    <Content Include="Audio\56878320751COD Loud.mp3" />
-    <Content Include="Audio\62605397908065448CODLoud.mp3" />
-    <Content Include="Audio\641604COD Loud.mp3" />
-    <Content Include="Audio\646051COD Loud.mp3" />
-    <Content Include="Audio\649211COD Loud.mp3" />
-    <Content Include="Audio\65448COD Loud.mp3" />
-    <Content Include="Audio\717730COD Loud.mp3" />
-    <Content Include="Audio\758082Call of Duty Mobile - Season 6 Theme Music Behind the Scenes %28mp3cut.net%29.mp3" />
-    <Content Include="Audio\80537520751COD Loud.mp3" />
-    <Content Include="Audio\831809COD Tune.mp3" />
-    <Content Include="Audio\8629065448COD Loud.mp3" />
-    <Content Include="Audio\90126620751COD Loud.mp3" />
-    <Content Include="Audio\903122COD Loud.mp3" />
-    <Content Include="Audio\939144COD Loud.mp3" />
-    <Content Include="Audio\955885COD Loud.mp3" />
-    <Content Include="Audio\972209COD Loud.mp3" />
-    <Content Include="Audio\97908065448CODLoud.mp3" />
-    <Content Include="Audio\212332red.mp3" />
-    <Content Include="Audio\blue.mp3" />
-    <Content Include="Audio\findcow.mp3" />
-    <Content Include="Image\104734484943ball.jpg" />
-    <Content Include="Image\1748253732641.jpg" />
-    <Content Include="Image\2.png" />
-    <Content Include="Image\247647775040a for apple.jpg" />
-    <Content Include="Image\3732641.jpg" />
-    <Content Include="Image\46191775040a for apple.jpg" />
-    <Content Include="Image\484943ball.jpg" />
-    <Content Include="Image\775040a for apple.jpg" />
-    <Content Include="Image\8576171.jpg" />
-    <Content Include="Image\9212609892722.jpg" />
-    <Content Include="Image\9892722.jpg" />
-    <Content Include="Image\B.png" />
-    <Content Include="Image\findcow.mp3" />
-    <Content Include="Image\goru.mp3" />
-    <Content Include="Image\quiz back.jpg" />
     <Content Include="log-in.aspx" />
     <Content Include="MenuLink\app-file\123.png" />
     <Content Include="MenuLink\app-file\addition.png" />
@@ -923,20 +860,6 @@
     <Compile Include="app\bangla-consonent.aspx.designer.cs">
       <DependentUpon>bangla-consonent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="app\bangla-find-menu.aspx.cs">
-      <DependentUpon>bangla-find-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\bangla-find-menu.aspx.designer.cs">
-      <DependentUpon>bangla-find-menu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="app\bangla-learn-menu.aspx.cs">
-      <DependentUpon>bangla-learn-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\bangla-learn-menu.aspx.designer.cs">
-      <DependentUpon>bangla-learn-menu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="app\bangla-months.aspx.cs">
       <DependentUpon>bangla-months.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -950,13 +873,6 @@
     </Compile>
     <Compile Include="app\bangla-number-list.aspx.designer.cs">
       <DependentUpon>bangla-number-list.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="app\bangla-number-menu.aspx.cs">
-      <DependentUpon>bangla-number-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\bangla-number-menu.aspx.designer.cs">
-      <DependentUpon>bangla-number-menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\bangla-rhymes.aspx.cs">
       <DependentUpon>bangla-rhymes.aspx</DependentUpon>
@@ -993,13 +909,6 @@
     <Compile Include="app\bangla-week.aspx.designer.cs">
       <DependentUpon>bangla-week.aspx</DependentUpon>
     </Compile>
-    <Compile Include="app\draw-menu.aspx.cs">
-      <DependentUpon>draw-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\draw-menu.aspx.designer.cs">
-      <DependentUpon>draw-menu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="app\drawing-board.aspx.cs">
       <DependentUpon>drawing-board.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1028,13 +937,6 @@
     <Compile Include="app\find-bangla-number.aspx.designer.cs">
       <DependentUpon>find-bangla-number.aspx</DependentUpon>
     </Compile>
-    <Compile Include="app\find-menu.aspx.cs">
-      <DependentUpon>find-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\find-menu.aspx.designer.cs">
-      <DependentUpon>find-menu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="app\find-number.aspx.cs">
       <DependentUpon>find-number.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1055,13 +957,6 @@
     </Compile>
     <Compile Include="app\learn-color.aspx.designer.cs">
       <DependentUpon>learn-color.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="app\learn-menu.aspx.cs">
-      <DependentUpon>learn-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\learn-menu.aspx.designer.cs">
-      <DependentUpon>learn-menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\learn-month.aspx.cs">
       <DependentUpon>learn-month.aspx</DependentUpon>
@@ -1097,13 +992,6 @@
     </Compile>
     <Compile Include="app\number-matcher.aspx.designer.cs">
       <DependentUpon>number-matcher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="app\number-menu.aspx.cs">
-      <DependentUpon>number-menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="app\number-menu.aspx.designer.cs">
-      <DependentUpon>number-menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\quizes.aspx.cs">
       <DependentUpon>quizes.aspx</DependentUpon>
@@ -1144,7 +1032,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Audio\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
