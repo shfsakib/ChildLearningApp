@@ -21,16 +21,16 @@ namespace ChildLearningApp.app
             if (!IsPostBack)
             {
                 LoadData();
-                audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY Word ASC");
+                audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY LetterId ASC");
 
             }
         }
         private void LoadData()
         {
-            function.LoadDataList(alphabetData, $@"SELECT DISTINCT LETTER FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY Letter ASC");
-            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY Word ASC");
+            function.LoadDataList(alphabetData, $@"SELECT LETTER FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY LetterId ASC");
+            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY LetterId ASC");
             lblLetter.Text = function.IsExist($@"SELECT TOP 1 Letter FROM LetterInfo WHERE LetterType=N'Bangla Consonent' ORDER BY LetterId ASC");
-            function.LoadDataList(wordData, $@"SELECT Word,WordPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY Word ASC");
+            function.LoadDataList(wordData, $@"SELECT Word,WordPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             // audioLetter.Src= function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 LetterPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
         }
@@ -39,10 +39,10 @@ namespace ChildLearningApp.app
             audioLetter.Src = audioLetter.Src = "";
             LinkButton linkButton = (LinkButton)sender;
             HiddenField letter = (HiddenField)linkButton.Parent.FindControl("HiddenField2");
-            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Letter=N'{letter.Value}' ORDER BY Word ASC");
+            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Letter=N'{letter.Value}' ORDER BY LetterId ASC");
             lblLetter.Text = function.IsExist($@"SELECT TOP 1 Letter FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Letter=N'{letter.Value}' ORDER BY LetterId ASC");
-            function.LoadDataList(wordData, $@"SELECT Word,WordPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY Word ASC");
-            audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY Word ASC");
+            function.LoadDataList(wordData, $@"SELECT Word,WordPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
+            audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             // audioLetter.Src= function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
             imgLetter.ImageUrl = function.IsExist($@"SELECT TOP 1 LetterPicture FROM LetterInfo WHERE Letter=N'{lblLetter.Text}' ORDER BY LetterId ASC");
 
@@ -54,8 +54,8 @@ namespace ChildLearningApp.app
             ImageButton image = (ImageButton)sender;
             image.Focus();
             HiddenField word = (HiddenField)image.Parent.FindControl("HiddenField1");
-            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Word=N'{word.Value}' ORDER BY Word ASC");
-            audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Word=N'{word.Value}' ORDER BY Word ASC");
+            imgWord.ImageUrl = function.IsExist($@"SELECT TOP 1 WordPicture FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Word=N'{word.Value}' ORDER BY LetterId ASC");
+            audioWord.Src = function.IsExist($@"SELECT TOP 1 WordAudio FROM LetterInfo WHERE LetterType=N'Bangla Consonent' AND Word=N'{word.Value}' ORDER BY LetterId ASC");
 
         }
 

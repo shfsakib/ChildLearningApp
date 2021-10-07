@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card-title">
-        <h3>Add Bangla Consonent</h3>
+        <h3>Add Bangla Consonant</h3>
     </div>
     <hr />
     <div class="row">

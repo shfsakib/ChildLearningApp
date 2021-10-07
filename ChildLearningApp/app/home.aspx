@@ -46,7 +46,7 @@
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Alphabet</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnNumeric" OnClick="btnNumeric_OnClick" ImageUrl="../MenuLink/app-file/numeric.png" class="button-size bg-pink" runat="server" />
+                                    <asp:ImageButton ID="btnNumeric" OnClick="btnNumeric_OnClick" ImageUrl="../MenuLink/app-file/123.png" class="button-size bg-pink" runat="server" />
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Numbers</h4>
                                 </div>
                                 <div class="col-1"></div>
@@ -54,36 +54,88 @@
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="imgLearn" OnClick="imgLearn_OnClick" ImageUrl="../MenuLink/app-file/learn.png" class="button-size bg-blue" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Learn</h4>
+                                    <asp:ImageButton ID="imgAddtion" OnClick="imgAddtion_OnClick" ImageUrl="../MenuLink/app-file/addition.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Addition</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="imgFindAnimal" OnClick="imgFindAnimal_OnClick" ImageUrl="../MenuLink/app-file/find.png" class="button-size bg-violet" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Find</h4>
+                                    <asp:ImageButton ID="imgSubstration" OnClick="imgSubstration_OnClick" ImageUrl="../MenuLink/app-file/substract.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Subtraction</h4>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="DrawBoard" OnClick="DrawBoard_OnClick" ImageUrl="../MenuLink/app-file/draw.png" class="button-size bg-lime" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Draw</h4>
+                                    <asp:ImageButton ID="imgColor" OnClick="imgColor_OnClick" ImageUrl="../MenuLink/app-file/color.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Colors</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="btnRhymes" OnClick="btnRhymes_OnClick" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size bg-red" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Rhymes</h4>
+                                    <asp:ImageButton ID="imgAnimal" OnClick="imgAnimal_OnClick" ImageUrl="../MenuLink/app-file/animal.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Animal</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgMonth" OnClick="imgMonth_OnClick" ImageUrl="../MenuLink/app-file/month.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Months</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgWeek" OnClick="imgWeek_OnClick" ImageUrl="../MenuLink/app-file/week.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Weeks</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgShape" OnClick="imgShape_OnClick" ImageUrl="../MenuLink/app-file/shapes.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Shapes</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="Imagebutton1" OnClick="imgFindAnimal_OnClick" ImageUrl="../MenuLink/app-file/findAnimal.png" class="button-size bg-violet" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Find Animal</h4>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
 
-                            <div class="row" style="padding-bottom: 50px !important;">
+                            <div class="row">
                                 <div class="col-1"></div>
+
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgFindNum" OnClick="imgFindNum_OnClick" ImageUrl="../MenuLink/app-file/number.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Find Number</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="ImageButton3" OnClick="DrawBoard_OnClick" ImageUrl="../MenuLink/app-file/draw.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Drawing Board</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgAlphaMatcher" OnClick="imgAlphaMatcher_OnClick" ImageUrl="../MenuLink/app-file/alphaMatcher.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Draw Alphabet</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgNumberMatcher" OnClick="imgNumberMatcher_OnClick" ImageUrl="../MenuLink/app-file/findNumber.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Draw Number</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="btnRhymes" OnClick="btnRhymes_OnClick" ImageUrl="../MenuLink/app-file/rhymes.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Rhymes</h4>
+                                </div>
                                 <div class="col-5 button-pad">
                                     <asp:ImageButton ID="btnQuiz" OnClick="btnQuiz_OnClick" ImageUrl="../MenuLink/app-file/quiz.png" class="button-size bg-yellow" runat="server" />
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">Quiz</h4>
                                 </div>
                                 <div class="col-1"></div>
-
                             </div>
                             <% }
                                 else if (langCookie["type"] == "Bn")
@@ -103,34 +155,75 @@
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="imgBanglaNumber" OnClick="imgBanglaNumber_OnClick" ImageUrl="../MenuLink/app-file/banglanumber.png" class="button-size bg-red" runat="server" />
+                                    <asp:ImageButton ID="ImageButton4" OnClick="imgBanglaNumber_OnClick" ImageUrl="../MenuLink/app-file/banglanumber.png" class="button-size bg-red" runat="server" />
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">অংক</h4>
                                 </div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="imgBanglaColor" OnClick="imgBanglaColor_OnClick" ImageUrl="../MenuLink/app-file/learn.png" class="button-size bg-lime" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">শিখা
+                                    <asp:ImageButton ID="imgBanglaAddition" OnClick="imgBanglaAddition_OnClick" ImageUrl="../MenuLink/app-file/bangla-add.png" class="button-size bg-yellow" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">যোগ</h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaSubstraction" OnClick="imgBanglaSubstraction_OnClick" ImageUrl="../MenuLink/app-file/banglasubstract.png" class="button-size bg-lime" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">বিয়োগ</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaColor" OnClick="imgBanglaColor_OnClick" ImageUrl="../MenuLink/app-file/color.png" class="button-size bg-pink" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">রঙের নাম
                                     </h4>
                                 </div>
                                 <div class="col-1"></div>
                             </div>
-
                             <div class="row">
                                 <div class="col-1"></div>
                                 <div class="col-5 button-pad">
-                                    <asp:ImageButton ID="imgBanglaAnimalFind" OnClick="imgBanglaAnimalFind_OnClick" ImageUrl="../MenuLink/app-file/find.png" class="button-size bg-orange" runat="server" />
-                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">খুঁজ
+                                    <asp:ImageButton ID="imgBanglaAnimal" OnClick="imgBanglaAnimal_OnClick" ImageUrl="../MenuLink/app-file/animal.png" class="button-size bg-violet" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">প্রাণীর নাম</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaMonth" OnClick="imgBanglaMonth_OnClick" ImageUrl="../MenuLink/app-file/banglaMonth.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">মাসের নাম
                                     </h4>
                                 </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaWeek" OnClick="imgBanglaWeek_OnClick" ImageUrl="../MenuLink/app-file/banglaweek.png" class="button-size bg-red" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">সপ্তাহের নাম</h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaShape" OnClick="imgBanglaShape_OnClick" ImageUrl="../MenuLink/app-file/shapes.png" class="button-size bg-orange" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">আকৃতি
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="Imagebutton5" OnClick="imgBanglaAnimalFind_OnClick" ImageUrl="../MenuLink/app-file/findAnimal.png" class="button-size bg-blue" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">প্রাণী খুঁজা
+                                    </h4>
+                                </div>
+                                <div class="col-5 button-pad">
+                                    <asp:ImageButton ID="imgBanglaNumberFind" OnClick="imgBanglaNumberFind_OnClick" ImageUrl="../MenuLink/app-file/bangla-number.png" class="button-size bg-green" runat="server" />
+                                    <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">অংক খুঁজা
+                                    </h4>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
                                 <div class="col-5 button-pad">
                                     <asp:ImageButton ID="imgBanglaDraw" OnClick="imgBanglaDraw_OnClick" ImageUrl="../MenuLink/app-file/drawing.png" class="button-size bg-violet" runat="server" />
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">আঁকা
                                     </h4>
                                 </div>
-                                <div class="col-1"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"></div>
-
                                 <div class="col-5 button-pad">
                                     <asp:ImageButton ID="imgBanglaRhymes" OnClick="imgBanglaRhymes_OnClick" ImageUrl="../MenuLink/app-file/bangla_rhymes-btn.png" class="button-size bg-yellow" runat="server" />
                                     <h4 style="font-family: comic sans ms; color: white; margin: 0 auto;">ছড়া

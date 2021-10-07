@@ -185,8 +185,8 @@
                         </div>
                     </a>
                     <ul>
-                        <li><a href="/admin/add-bangla-consonent.aspx">Add Bangla Consonent</a></li>
-                        <li><a href="/admin/bangla-consonent-list.aspx">Bangla Consonent List</a></li>
+                        <li><a href="/admin/add-bangla-consonent.aspx">Add Bangla Consonant</a></li>
+                        <li><a href="/admin/bangla-consonent-list.aspx">Bangla Consonant List</a></li>
                     </ul>
                 </li>
                 <li class="">
