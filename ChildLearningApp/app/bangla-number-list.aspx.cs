@@ -21,7 +21,7 @@ namespace ChildLearningApp.app
             if (!IsPostBack)
             {
                 LoadData();
-                audioWord.Src = function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE LetterType=N'Bangla Number' ORDER BY Word ASC");
+                audioWord.Src = function.IsExist($@"SELECT TOP 1 LetterAudio FROM LetterInfo WHERE LetterType=N'Bangla Number' ORDER BY LetterId ASC");
 
             }
         }
